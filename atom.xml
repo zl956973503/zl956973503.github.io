@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zhou</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2020-04-09T13:20:23.144Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>Zhou</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="/2020/04/09/MySql%E4%B8%AD%E7%9A%84%E9%94%81/"/>
+    <id>/2020/04/09/MySql中的锁/</id>
+    <published>2020-04-09T13:10:15.055Z</published>
+    <updated>2020-04-09T13:20:23.144Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;锁分类&quot;&gt;&lt;a href=&quot;#锁分类&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/2020/04/09/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/"/>
+    <id>/2020/04/09/进程和线程的简单理解/</id>
+    <published>2020-04-09T12:16:09.285Z</published>
+    <updated>2020-04-09T13:05:12.687Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;抽象类比：&quot;&gt;&lt;a href=&quot;#抽象类比：&quot; class=&quot;headerlink&quot; title=&quot;抽象类比：&quot;&gt;&lt;/a&gt;抽象类比：&lt;/h1&gt;&lt;font color=&quot;red&quot;&gt;&lt;code&gt;单CPU：&lt;/code&gt;&lt;/font&gt;一台单核处理器计算机 =
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/2020/04/08/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/"/>
+    <id>/2020/04/08/个人简历/</id>
+    <published>2020-04-08T13:31:34.616Z</published>
+    <updated>2020-04-10T03:34:50.116Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;求职简历&quot;&gt;&lt;a href=&quot;#求职简历&quot; class=&quot;headerlink&quot; title=&quot;求职简历&quot;&gt;&lt;/a&gt;求职简历&lt;/h1&gt;&lt;h1 id=&quot;个人基本信息&quot;&gt;&lt;a href=&quot;#个人基本信息&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/2020/04/08/hexo%20d%20%E4%B9%8B%E5%90%8Egit%20pages%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88/"/>
+    <id>/2020/04/08/hexo d 之后git pages 自定义域名失效/</id>
+    <published>2020-04-08T04:24:30.974Z</published>
+    <updated>2020-04-11T14:13:00.108Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;注：如果你没有购买域名的话，这篇文章边便看不看都无所谓了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/2020/04/08/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"/>
+    <id>/2020/04/08/静态博客图片上传/</id>
+    <published>2020-04-08T00:21:07.061Z</published>
+    <updated>2020-04-18T11:14:32.154Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;先前已经把博客搭建好了，但是写博客没有图片怎么能忍，所以来说说图片上传问题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;目前我知道有两种方法&lt;/p&gt;
+&lt;h1 id=&quot;方法一、创建Images文件夹&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/2020/04/07/Github%20Pages%20+%20Hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
+    <id>/2020/04/07/Github Pages + Hexo搭建静态博客/</id>
+    <published>2020-04-07T07:59:51.295Z</published>
+    <updated>2020-04-09T09:40:26.455Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;写给想要拥有一个自己的网站但没有资金成本的小白与曾经的自己。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/2020/04/07/Django%20+%20Vue%20%E8%B7%A8%E5%9F%9F/"/>
+    <id>/2020/04/07/Django + Vue 跨域/</id>
+    <published>2020-04-07T03:45:30.964Z</published>
+    <updated>2020-04-07T03:57:04.142Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;解决跨域问题——django解决方案&quot;&gt;&lt;a href=&quot;#解决跨域问题——django解决方案&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/2020/04/07/ORM%E6%93%8D%E4%BD%9C/"/>
+    <id>/2020/04/07/ORM操作/</id>
+    <published>2020-04-07T03:44:10.740Z</published>
+    <updated>2020-04-07T03:57:22.471Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Django模型之ORM操作&quot;&gt;&lt;a href=&quot;#Django模型之ORM操作&quot; class=&quot;headerlink&quot; title=&quot;Django模型之ORM操作&quot;&gt;&lt;/a&gt;Django模型之ORM操作&lt;/h3&gt;&lt;h4 id=&quot;ORM介绍&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/2020/04/07/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
+    <id>/2020/04/07/虚拟环境/</id>
+    <published>2020-04-07T03:35:18.370Z</published>
+    <updated>2020-04-07T03:57:08.874Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;虚拟环境&quot;&gt;&lt;a href=&quot;#虚拟环境&quot; class=&quot;headerlink&quot; title=&quot;虚拟环境&quot;&gt;&lt;/a&gt;虚拟环境&lt;/h1&gt;&lt;h3 id=&quot;为什么需要虚拟环境：&quot;&gt;&lt;a href=&quot;#为什么需要虚拟环境：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="/2020/01/14/django%E7%AE%80%E4%BB%8B/"/>
+    <id>/2020/01/14/django简介/</id>
+    <published>2020-01-14T10:32:00.362Z</published>
+    <updated>2020-04-07T03:57:16.251Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;框架定义&quot;&gt;&lt;a href=&quot;#框架定义&quot; class=&quot;headerlink&quot; title=&quot;框架定义&quot;&gt;&lt;/a&gt;框架定义&lt;/h3&gt;&lt;p&gt;​        &lt;strong&gt;软件框架（software
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2020/01/14/hello-world/"/>
+    <id>/2020/01/14/hello-world/</id>
+    <published>2020-01-14T10:27:29.977Z</published>
+    <updated>2020-01-14T10:27:29.977Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-Theme-Sakura</title>
+    <link href="/2018/12/12/Hexo-Theme-Sakura/"/>
+    <id>/2018/12/12/Hexo-Theme-Sakura/</id>
+    <published>2018-12-12T14:16:01.000Z</published>
+    <updated>2020-04-18T12:35:08.675Z</updated>
+    
+    <summary type="html">
+    
+      hexo-sakura主题使用教程
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+  </entry>
+  
+</feed>
