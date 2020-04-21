@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-04-21T12:38:20.956Z</updated>
+  <updated>2020-04-21T13:09:22.655Z</updated>
   <id>/</id>
   
   <author>
@@ -21,11 +21,33 @@
     <link href="/2020/04/21/vue%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%AE%80%E5%8D%95%E8%AF%AD%E6%B3%95/"/>
     <id>/2020/04/21/vue安装以及简单语法/</id>
     <published>2020-04-20T16:00:00.000Z</published>
-    <updated>2020-04-21T12:38:20.956Z</updated>
+    <updated>2020-04-21T13:09:22.655Z</updated>
     
     <summary type="html">
     
       vue安装
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo博客上传后自定义域名无法访问博客</title>
+    <link href="/2020/04/21/hexo%20d%20%E4%B9%8B%E5%90%8Egit%20pages%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88/"/>
+    <id>/2020/04/21/hexo d 之后git pages 自定义域名失效/</id>
+    <published>2020-04-20T16:00:00.000Z</published>
+    <updated>2020-04-21T12:42:04.252Z</updated>
+    
+    <summary type="html">
+    
+      第一次push自定义域名可以访问，但修改之后再次push自定义域名无法访问
     
     </summary>
     
@@ -48,28 +70,6 @@
     <summary type="html">
     
       先介绍两种方法 1.创建Images文件夹 2.使用图床
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo博客上传后自定义域名无法访问博客</title>
-    <link href="/2020/04/21/hexo%20d%20%E4%B9%8B%E5%90%8Egit%20pages%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88/"/>
-    <id>/2020/04/21/hexo d 之后git pages 自定义域名失效/</id>
-    <published>2020-04-20T16:00:00.000Z</published>
-    <updated>2020-04-21T02:28:16.360Z</updated>
-    
-    <summary type="html">
-    
-      第一次push自定义域名可以访问，但修改之后再次push自定义域名无法访问
     
     </summary>
     
@@ -180,15 +180,15 @@
   </entry>
   
   <entry>
-    <title>Django简介</title>
-    <link href="/2020/04/02/django%E7%AE%80%E4%BB%8B/"/>
-    <id>/2020/04/02/django简介/</id>
+    <title>Django + Vue 跨域</title>
+    <link href="/2020/04/02/Django%20+%20Vue%20%E8%B7%A8%E5%9F%9F/"/>
+    <id>/2020/04/02/Django + Vue 跨域/</id>
     <published>2020-04-01T16:00:00.000Z</published>
-    <updated>2020-04-21T02:28:51.183Z</updated>
+    <updated>2020-04-21T02:28:46.094Z</updated>
     
     <summary type="html">
     
-      Django 是从真实世界的应用中成长起来的，它是由堪萨斯（Kansas）州 Lawrence 城中的一个网络开发小组编写的。它诞生于 2003 年秋天，那时 Lawrence Journal-World 报纸的程序员 Adrian Holovaty 和 Simon Willison 开始用 Python 来编写程序。
+      Django + Vue 跨域
     
     </summary>
     
@@ -202,15 +202,15 @@
   </entry>
   
   <entry>
-    <title>Django + Vue 跨域</title>
-    <link href="/2020/04/02/Django%20+%20Vue%20%E8%B7%A8%E5%9F%9F/"/>
-    <id>/2020/04/02/Django + Vue 跨域/</id>
+    <title>Django简介</title>
+    <link href="/2020/04/02/django%E7%AE%80%E4%BB%8B/"/>
+    <id>/2020/04/02/django简介/</id>
     <published>2020-04-01T16:00:00.000Z</published>
-    <updated>2020-04-21T02:28:46.094Z</updated>
+    <updated>2020-04-21T02:28:51.183Z</updated>
     
     <summary type="html">
     
-      Django + Vue 跨域
+      Django 是从真实世界的应用中成长起来的，它是由堪萨斯（Kansas）州 Lawrence 城中的一个网络开发小组编写的。它诞生于 2003 年秋天，那时 Lawrence Journal-World 报纸的程序员 Adrian Holovaty 和 Simon Willison 开始用 Python 来编写程序。
     
     </summary>
     
