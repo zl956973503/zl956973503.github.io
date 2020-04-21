@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Zhou</title>
+  <title itemprop="name">Category: python | Zhou</title>
   
     <link rel="shortcut icon" href="/img/custom/favicon.ico">
   
   <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
   <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
@@ -48,7 +49,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp".split(",");
+  var bg = "https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/01.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/02.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/03.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/04.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/05.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/06.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/07.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/08.webp".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert('朋友，IE浏览器未适配哦~');
@@ -61,7 +62,9 @@
   </style>
 </head>
 </html>
-<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+
+<body
+  class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
   <div class="scrollbar" id="bar">
   </div>
   <a href="#" class="cd-top faa-float animated"></a>
@@ -367,223 +370,106 @@
   </div>
 </header>
 
-      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+      
 <div class="pattern-center-blank"></div>
-
+<div class="pattern-center ">
+  <div class="pattern-attachment-img">
+    <img data-src="python.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+  </div>
+  <header class="pattern-header ">
+    <h1 class="cat-title">python.zh</h1>
+    <span class="cat-des">
+      <p>python.en</p>
+    </span>
+  </header>
+</div>
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-        <div class="toc"></div>
-        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
-        
-          <header class="entry-header">
-            <h1 class="entry-title"></h1>
-            <p class="entry-census">&nbsp;·&nbsp;2020-4-7&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
-
-            <hr>
-          </header>
-        
-        <div class="entry-content">
-          <h3 id="解决跨域问题——django解决方案"><a href="#解决跨域问题——django解决方案" class="headerlink" title="解决跨域问题——django解决方案"></a>解决跨域问题——django解决方案</h3><p><strong>1、安装django-core-headers</strong></p>
-<pre><code class="python">pip install django-core-headers
-</code></pre>
-<p><strong>2、配置settings文件</strong></p>
-<ul>
-<li><p><strong>加入到INSTALLED_APPS下面</strong></p>
-<pre><code class="python"> INSTALLED_APPS = [
-    # 第三方框架
-    &#39;corsheaders&#39;,  # 解决跨域问题
-
-]
-</code></pre>
-</li>
-<li><p><strong>配置MIDDLEWARE中间件，放在SessionMiddleware和CommonMiddleware中间。</strong></p>
-<pre><code class="python">MIDDLEWARE = [
-    &#39;django.contrib.sessions.middleware.SessionMiddleware&#39;,
-    &#39;corsheaders.middleware.CorsMiddleware&#39;,  # 解决跨域问题，必须放在这个位置，加载顺序
-    &#39;django.middleware.common.CommonMiddleware&#39;,
-
-]
-</code></pre>
-</li>
-<li><p><strong>配置允许跨域访问的域名</strong></p>
-<pre><code class="python">CORS_ORIGIN_ALLOW_ALL = True   # 解决跨域，配置允许跨域访问的域名，为True时，允许所有的域名
-</code></pre>
-<p><strong>注意：这三项都是在django项目下的seetings中配置的</strong></p>
-</li>
-</ul>
-<h3 id="解决跨域问题——VUE解决方案"><a href="#解决跨域问题——VUE解决方案" class="headerlink" title="解决跨域问题——VUE解决方案"></a>解决跨域问题——VUE解决方案</h3><pre><code class="vue">proxyTable: {
-    &#39;/api&#39;: {  //使用&quot;/api&quot;来代替&quot;http://f.apiplus.c&quot; 
-    target: &#39;http://127.0.0.1:8000/&#39;, //源地址 
-    changeOrigin: true, //改变源 
-    pathRewrite: { 
-      &#39;^/api&#39;: &#39;&#39; //路径重写 
-      } 
-  } 
-}
-</code></pre>
-<h3 id="安装axios"><a href="#安装axios" class="headerlink" title="安装axios"></a>安装axios</h3><p><strong>1、安装axios</strong></p>
-<pre><code class="vue">cnpm install --save axios
-</code></pre>
-<p><strong>2、配制axios,在src文件下的mian.js中配制</strong></p>
-<pre><code class="python">import axios from &#39;axios&#39;
-Vue.prototype.axios = axios
-</code></pre>
-<p><strong>3、axios使用</strong></p>
-<pre><code class="python">axios完整写法：
-
-this.axios({
-  method: &#39;post&#39;,
-  url: &#39;/user/12345&#39;,
-  data: {
-    firstName: &#39;Fred&#39;,
-    lastName: &#39;Flintstone&#39;
-  }
-}).then((res)=&gt;{
-      console.log(res)
-}).catch((error)=&gt;{
-      console.log(error)
- });
-
-post请求
-
-this.axios.post(&#39;&#39;,{}).then((res)=&gt;{}).catch((error)=&gt;{})
-
-get请求
-
-&lt;script&gt;
-    import Vue from &#39;vue&#39;
-    import axios from &#39;axios&#39;
-    export default{
-      name: &#39;card&#39;,
-      mounted:function () {
-        //vue页面加载时自动执行
-        this.send()
-      },
-      data:{
-        url_array: []
-
-      },
-      methods:{
-
-        send(){
-          var self = this
-              axios({
-                  method:&#39;get&#39;,
-                  url:&#39;http://127.0.0.1:8000/myapp/api_type/&#39;
-              }).then(function(res){
-                  console.log(res.data.li_list);
-                  self.url_array = res.data.li_list
-                  console.log(self.url_array)
-              });
-          }        
-      }
-    }
-
-
-&lt;/script&gt;
-</code></pre>
-
-        </div>
-        <!-- .entry-content -->
-        <div class="single-reward">
-          <div class="reward-open">赏
-            <div class="reward-main">
-              <ul class="reward-row">
-                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/donate/AliPayQR.jpg"></li>
-                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/donate/WeChanQR.jpg"></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-        <footer class="post-footer">
-          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-          <div class="post-tags">
-          </div>
-          <div class="post-share">
-            <div class="social-share sharehidden share-component"></div>
-            <i class="iconfont show-share icon-forward"></i>
-          </div>
-        </footer><!-- .entry-footer -->
-      </article>
-      <!-- #post-## -->
-      <div class="toc" style="background: none;"></div>
-      <section class="post-squares nextprev">
-        
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/2020/04/07/Github Pages + Hexo搭建静态博客/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                </h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-        
-          
-            <div class="post-nepre half next">
-          
-            <a href="/2020/04/07/ORM操作/" rel="next">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
-              </div>
-              <span class="label">
-              Next Post</span>
-              <div class="info">
-                <h3>
-                </h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-      </section>
       
-<div id="vcomments"></div>
-<script>
-  window.onload = function(){
-      var valine = new Valine();
-      valine.init({
-        el: '#vcomments',
-        appId: "GIGgtUFFhF1eP4QqGwrhtcnQ-gzGzoHsz",
-        appKey: "F7yAoS7oBrhfUctA9jVLVRGR",
-        path: window.location.pathname,
-        placeholder: "你是我一生只会遇见一次的惊喜 ..."
-      })
-  }
-</script>
-
-      <section class="author-profile">
-        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="" class="profile gravatar"><img src="" itemprop="image" alt="" height="70" width="70"></a>
-          <div class="meta">
-            <span class="title">Author</span>
-            <h3 itemprop="name">
-            <a href="" itemprop="url" rel="author"></a>
-            </h3>
-          </div>
+  <!-- 首页默认取最最新文章集 -->
+  
+    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <div class="post-entry">
+    <div class="feature">
+      <a href="/2020/04/09/进程和线程的简单理解/">
+        <div class="overlay">
+          <i class="iconfont icon-text">
+          </i>
         </div>
-        <hr>
-        <p><i class="iconfont icon-write"></i></p>
-      </section>
-    </main><!-- #main -->
-  </div><!-- #primary -->
+        <img width="150" height="150" src="https://2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
+      </a>
+    </div>
+    <h1 class="entry-title">
+    <a href="/2020/04/09/进程和线程的简单理解/">
+    进程和线程的简单理解</a>
+    </h1>
+    <div class="p-time">
+      <i class="iconfont icon-time">
+      </i>
+    2020-4-9</div>
+    <p>
+    单CPU：一台单核处理器计算机 = 一个车间；多CPU：一台多核处理器计算机 = 一座工厂；进程：一个车间 = 一个进程； （即一个运行的程序）多进程：一座工厂可以同时运行多个车间；CPU和进程：单CPU只能同时运行单个进程，多CPU可以同时运行多个进程。</p>
+    <footer class="entry-footer">
+      <div class="post-more">
+        <a href="/2020/04/09/进程和线程的简单理解/">
+          <i class="iconfont icon-caidan">
+          </i>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <hr>
+</article>
+  
+
+
+      <div class="clearer">
+      </div>
+    </main>
+    <!--  -->
+    
+  </div>
 </div>
 
+<!-- 
+  
+    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <div class="post-entry">
+    <div class="feature">
+      <a href="/2020/04/09/进程和线程的简单理解/">
+        <div class="overlay">
+          <i class="iconfont icon-text">
+          </i>
+        </div>
+        <img width="150" height="150" src="https://2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
+      </a>
+    </div>
+    <h1 class="entry-title">
+    <a href="/2020/04/09/进程和线程的简单理解/">
+    进程和线程的简单理解</a>
+    </h1>
+    <div class="p-time">
+      <i class="iconfont icon-time">
+      </i>
+    2020-4-9</div>
+    <p>
+    单CPU：一台单核处理器计算机 = 一个车间；多CPU：一台多核处理器计算机 = 一座工厂；进程：一个车间 = 一个进程； （即一个运行的程序）多进程：一座工厂可以同时运行多个车间；CPU和进程：单CPU只能同时运行单个进程，多CPU可以同时运行多个进程。</p>
+    <footer class="entry-footer">
+      <div class="post-more">
+        <a href="/2020/04/09/进程和线程的简单理解/">
+          <i class="iconfont icon-caidan">
+          </i>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <hr>
+</article>
+  
 
-
-    </div>    
+ -->
+    </div>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
@@ -641,6 +527,7 @@ get请求
 
 
 <!-- <script src="/js/tocbot.js"></script> -->
+<script src="https://cdn.jsdelivr.net/gh/yremp/live2d@1.0/autoload.js"></script>
 <script type="text/javascript" src="/js/lib.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="/js/InsightSearch.js"></script>
@@ -712,6 +599,32 @@ $(document).ready(function() {
         <i class="iconfont js-toggle-search iconsearch icon-search"></i>
       </div>
     </div>
+
+    <div class="changeSkin-gear no-select" style="background: none; visibility: visible; bottom: 0px;">
+      <div class="keys"> <span id="open-skinMenu"> 切换主题 | SCHEME TOOL &nbsp;<i
+            class="iconfont icon-gear inline-block rotating"></i> </span></div>
+    </div>
+
+    <div class="skin-menu no-select show">
+      <div class="theme-controls row-container">
+        <ul class="menu-list">
+          <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+          <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+          <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+          <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+          <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+          <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+          <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+          <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+        </ul>
+      </div>
+      <div class="font-family-controls row-container"> <button type="button" class="control-btn-serif selected"
+          data-mode="serif" onclick="mashiro_global.font_control.change_font()">Serif</button> <button type="button"
+          class="control-btn-sans-serif" data-mode="sans-serif" onclick="mashiro_global.font_control.change_font()">Sans
+          Serif</button></div>
+    </div>
+    <canvas id="night-mode-cover"></canvas>
+
   </section>
   <div id="mo-nav" class="">
   <div class="m-avatar">
@@ -984,4 +897,5 @@ $(document).ready(function() {
   });
 </script>
 </body>
+
 </html>

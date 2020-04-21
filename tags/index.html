@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="/img/custom/favicon.ico">
   
   <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
   <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
@@ -48,7 +49,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp".split(",");
+  var bg = "https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/01.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/02.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/03.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/04.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/05.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/06.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/07.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/08.webp".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert('朋友，IE浏览器未适配哦~');
@@ -61,7 +62,9 @@
   </style>
 </head>
 </html>
-<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+
+<body
+  class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
   <div class="scrollbar" id="bar">
   </div>
   <a href="#" class="cd-top faa-float animated"></a>
@@ -425,7 +428,7 @@
       </section>
   </div><!-- #primary -->
 </div>
-    </div>    
+    </div>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
@@ -483,6 +486,7 @@
 
 
 <!-- <script src="/js/tocbot.js"></script> -->
+<script src="https://cdn.jsdelivr.net/gh/yremp/live2d@1.0/autoload.js"></script>
 <script type="text/javascript" src="/js/lib.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="/js/InsightSearch.js"></script>
@@ -554,6 +558,32 @@ $(document).ready(function() {
         <i class="iconfont js-toggle-search iconsearch icon-search"></i>
       </div>
     </div>
+
+    <div class="changeSkin-gear no-select" style="background: none; visibility: visible; bottom: 0px;">
+      <div class="keys"> <span id="open-skinMenu"> 切换主题 | SCHEME TOOL &nbsp;<i
+            class="iconfont icon-gear inline-block rotating"></i> </span></div>
+    </div>
+
+    <div class="skin-menu no-select show">
+      <div class="theme-controls row-container">
+        <ul class="menu-list">
+          <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+          <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+          <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+          <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+          <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+          <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+          <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+          <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+        </ul>
+      </div>
+      <div class="font-family-controls row-container"> <button type="button" class="control-btn-serif selected"
+          data-mode="serif" onclick="mashiro_global.font_control.change_font()">Serif</button> <button type="button"
+          class="control-btn-sans-serif" data-mode="sans-serif" onclick="mashiro_global.font_control.change_font()">Sans
+          Serif</button></div>
+    </div>
+    <canvas id="night-mode-cover"></canvas>
+
   </section>
   <div id="mo-nav" class="">
   <div class="m-avatar">
@@ -826,4 +856,5 @@ $(document).ready(function() {
   });
 </script>
 </body>
+
 </html>
