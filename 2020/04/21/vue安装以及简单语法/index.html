@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Tag: 悦读 | Zhou</title>
+  <title itemprop="name">vue安装及基本语法 | Zhou</title>
   
     <link rel="shortcut icon" href="/img/custom/favicon.ico">
   
@@ -370,102 +370,179 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/banner/reading.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://i.loli.net/2020/04/21/KyNwSLDRrm7EzPH.jpg);" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/21/KyNwSLDRrm7EzPH.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      vue安装及基本语法</h1>
+      <p class="entry-census">
+        <span>
+          <a href="zhoulei.icu">
+            <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/01.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="zhoulei.icu">zhou</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-4-21<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">悦读</h1>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/04/01/个人简历/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://i.loli.net/2020/04/20/4qKBXmNMoki3jyG.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/04/01/个人简历/">
-    个人简历</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-4-1</div>
-    <p>
-    个人简历</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/04/01/个人简历/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2018/12/12/Hexo-Theme-Sakura/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://i.loli.net/2020/04/20/4qKBXmNMoki3jyG.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2018/12/12/Hexo-Theme-Sakura/">
-    Hexo-Theme-Sakura</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2018-12-12</div>
-    <p>
-    hexo-sakura主题使用教程</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2018/12/12/Hexo-Theme-Sakura/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!-- 
-      <nav class="navigator">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
-        <a class="extend prev" rel="prev" href="/tags/悦读/"><i class="iconfont icon-back"></i></a><a class="page-number" href="/tags/悦读/">1</a><span class="page-number current">2</span>
-      </nav>
-     -->
-    
-  </div>
+        <div class="entry-content">
+          <h1 id="一、-node安装"><a href="#一、-node安装" class="headerlink" title="一、 node安装"></a>一、 node安装</h1><p>如果不确定自己是否安装了node,可以在命令行工具内执行： <code>node -v</code>  （检查一下 版本）；</p>
+<p><img src="https://i.loli.net/2020/04/21/iWZxCYLJ8aKBklh.png" alt="img"></p>
+<p>如果 执行结果显示： xx 不是内部命令，说明你还没有安装node , node 安装地址：<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">http://nodejs.cn/download/</a></p>
+<p>注 ：安装 vue-cli 脚手架目前需要node版本为 v4.0 以上；</p>
+<h1 id="二、-vue-cli-全局安装"><a href="#二、-vue-cli-全局安装" class="headerlink" title="二、 vue-cli 全局安装"></a>二、 vue-cli 全局安装</h1><p> 命令行执行 : </p>
+<pre><code class="text">npm install -g vue-cli  
+</code></pre>
+<p>// 加-g是安装到全局</p>
+<p>安装完成以后 可以输入命令 ：<code>vue</code> 回车，可以看到针对vue的命令行；</p>
+<p><img src="https://i.loli.net/2020/04/21/z49Mfl3oYjhr7G2.png" alt="img"></p>
+<p>**: 如果npm在国内的网络环境下可能会比较慢，解决方案：</p>
+<p>  使用淘宝镜像:</p>
+<ol>
+<li>官方网址：<a href="http://npm.taobao.org/" target="_blank" rel="noopener">http://npm.taobao.org</a>；</li>
+<li>安装：npm install cnpm -g –registry=<a href="https://registry.npm.taobao.org；" target="_blank" rel="noopener">https://registry.npm.taobao.org；</a>  注意：安装完后最好查看其版本号cnpm -v或关闭命令提示符重新打开，安装完直接使用有可能会出现错误</li>
+<li>注：cnpm跟npm用法完全一致，只是在执行命令时将npm改为cnpm（以下操作将以cnpm代替npm）</li>
+<li>如何更新npm的方法：  可以使用 <code>npm install -g npm</code> 来更新版本</li>
+</ol>
+<h1 id="三、初始化项目"><a href="#三、初始化项目" class="headerlink" title="三、初始化项目"></a>三、初始化项目</h1><p>命令为    <strong>vue init webpack 项目名</strong></p>
+<p>项目名称随意，我这里想把名称写为demo，所以命令为</p>
+<pre><code class="text">vue init webpack demo
+</code></pre>
+<p> <img src="https://images2015.cnblogs.com/blog/850375/201706/850375-20170629115835055-1541497865.png" alt="img"></p>
+<p>执行之后将会 自动初始化一个文件夹 ：<strong>demo</strong></p>
+<p>手动打开demo文件夹 可以看到 已经初始化好了 一个基本的项目：</p>
+<p><img src="https://i.loli.net/2020/04/21/Ts5ERztAdnP6hVv.png" alt="img"></p>
+<h1 id="四、启动项目"><a href="#四、启动项目" class="headerlink" title="四、启动项目"></a>四、启动项目</h1><p>继续执行： cd demo (这是进入到demo文件夹的命令)</p>
+<p> 然后执行 安装 ：npm install</p>
+<p> <img src="https://i.loli.net/2020/04/21/X8pUIqxAiGRmhtF.png" alt="img"></p>
+<p>注： npm install 执行可以进行vue已经vue的插件安装，在第三步的时候，已经初始化了项目，并且在 package.json 里面已经有相关配置，所以在这里可以直接安装；</p>
+<p> 安装完成之后再执行命令： </p>
+<pre><code>npm run dev 
+</code></pre><p>然后可以看到</p>
+<p><img src="https://i.loli.net/2020/04/21/NRrtUOi1h9ISJEC.png" alt></p>
+<p>然后将 后边的的 <code>http://localhost:8080/</code> 复制粘贴到浏览器地址栏</p>
+<p>整个项目就已经启动了：</p>
+<p><img src="https://i.loli.net/2020/04/21/zPCFZ8dYTnqNKDO.png" alt="img"></p>
+<h1 id="五、项目文件配置介绍"><a href="#五、项目文件配置介绍" class="headerlink" title="五、项目文件配置介绍"></a>五、项目文件配置介绍</h1><p>build 和 config  是关于webpack的配置，里面包括一些server,和端口；</p>
+<p>node_modules: 安装依赖代码库；</p>
+<p>src :  存放源码；</p>
+<p>static：存放第三方静态资源的，static里面的.gitkeep，如果为空，也可以提交到gitHub上面，正常情况下，是不可以提交的。</p>
+<p>入口文件： index.html    和 main.js</p>
+<h2 id="Vue基础语法"><a href="#Vue基础语法" class="headerlink" title="Vue基础语法"></a>Vue基础语法</h2><ul>
+<li>V-model 数据双向绑定<ul>
+<li>单向：数据变 -&gt; 页面变</li>
+</ul>
+</li>
+<li>V-bind：属性绑定</li>
+<li>V-on：事件绑定</li>
+<li>V-clock：避免差值表达式所带来的闪烁问题</li>
+<li>V-HTML：会将绑定的内容转义输出为HTML，<code>&lt;h1&gt;&lt;/h1&gt;</code></li>
+<li>V-Text：不会转义输出</li>
+<li>V-if：不保留不存在的条件语句</li>
+<li>V-show：保留存在的，只是样式设置为了display:none</li>
+<li>V-for：<code>v in xxx</code></li>
+</ul>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/04/21/静态博客图片上传/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2019/06/74857125_p0.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://2heng.xin/wp-content/uploads//2019/06/74857125_p0.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                静态博客图片上传</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GIGgtUFFhF1eP4QqGwrhtcnQ-gzGzoHsz",
+        appKey: "F7yAoS7oBrhfUctA9jVLVRGR",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="zhoulei.icu" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/01.jpg" itemprop="image" alt="zhou" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="zhoulei.icu" itemprop="url" rel="author">zhou</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
+
     </div>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
