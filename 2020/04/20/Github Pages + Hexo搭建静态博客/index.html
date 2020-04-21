@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Mysql中的锁 | Zhou</title>
+  <title itemprop="name">Github Pages + Hexo搭建静态博客 | Zhou</title>
   
     <link rel="shortcut icon" href="/img/custom/favicon.ico">
   
@@ -376,11 +376,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://2heng.xin/wp-content/uploads//2017/09/千夜-鬼脸_64616411-1024x725.jpg);" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2017/09/千夜-鬼脸_64616411-1024x725.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://2heng.xin/wp-content/uploads//2018/02/illust_66799182_20180128_182352-1024x614.png);" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2018/02/illust_66799182_20180128_182352-1024x614.png">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      Mysql中的锁</h1>
+      Github Pages + Hexo搭建静态博客</h1>
       <p class="entry-census">
         <span>
           <a href="zhoulei.icu">
@@ -392,7 +392,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2020-4-4<span class="bull">
+        2020-4-20<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -406,50 +406,271 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="锁分类"><a href="#锁分类" class="headerlink" title="锁分类"></a>锁分类</h1><ol>
-<li><strong>按操作划分：</strong>DML锁，DDL锁</li>
-<li><strong>按锁的粒度划分</strong>：表级锁、行级锁、页级锁</li>
-<li><strong>按锁级别划分：</strong>共享锁、排他锁</li>
-<li><strong>按加锁方式划分：</strong>自动锁、显示锁</li>
-<li><strong>按使用方式划分：</strong>乐观锁、悲观锁</li>
-</ol>
-<h2 id="乐观锁实现方法"><a href="#乐观锁实现方法" class="headerlink" title="乐观锁实现方法"></a>乐观锁实现方法</h2><ol>
-<li>每次获取商品时，不对该商品加锁。</li>
-<li>在更新数据的时候需要比较程序中的库存量与数据库中的库存量是否相等，如果相等则进行更新</li>
-<li>反之程序重新获取库存量，再次进行比较，直到两个库存量的数值相等才进行数据更新。</li>
-</ol>
-<hr>
-<pre><code>#### 乐观锁实现加一操作代码
-# 我们可以看到，只有当对数量-1操作时才会加锁，只有当程序中值和数据库中的值相等时才正真执行。
-&#39;&#39;&#39;
-//不加锁
-select id,name,stock where id=1;
-//业务处理
-begin;
-update shop set stock=stock-1 where id=1 and stock=stock;
-commit;
-&#39;&#39;&#39;
-</code></pre><h2 id="悲观锁"><a href="#悲观锁" class="headerlink" title="悲观锁"></a>悲观锁</h2><ol>
-<li>每次获取商品时，对该商品加排他锁。</li>
-<li>也就是在用户A获取获取 id=1 的商品信息时对该行记录加锁，期间其他用户阻塞等待访问该记录。</li>
-</ol>
-<pre><code>#### 悲观锁实现加一操作代码
-# 我们可以看到，首先通过begin开启一个事物，在获得shop信息和修改数据的整个过程中都对数据加锁，保证了数据的一致性。
-&#39;&#39;&#39;
-begin;
-select id,name,stock as old_stock from shop  where id=1 for update;
-update shop set stock=stock-1 where id=1 and stock=old_stock;
-commit
-&#39;&#39;&#39;
-</code></pre><h2 id="排它锁"><a href="#排它锁" class="headerlink" title="排它锁"></a>排它锁</h2><ol>
-<li>排它锁又叫写锁，如果事务T对A加上排它锁，则其它事务都不能对A加任何类型的锁。获准排它锁的事务既能读数据，又能写数据。</li>
-<li>用法 ：  SELECT … FOR UPDATE</li>
-</ol>
-<h2 id="共享锁-share-lock"><a href="#共享锁-share-lock" class="headerlink" title="共享锁(share lock)"></a>共享锁(share lock)</h2><ol>
-<li>共享锁又叫读锁，如果事务T对A加上共享锁，则其它事务只能对A再加共享锁，不能加其它锁。</li>
-<li>获准共享锁的事务只能读数据，不能写数据。</li>
-<li>用法： SELECT … LOCK IN SHARE MODE;</li>
-</ol>
+          <blockquote>
+<p>写给想要拥有一个自己的网站但没有资金成本的小白与曾经的自己。</p>
+</blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>以下的链接除了github仓库，其他都不是我本人的 ，是制作博客主题的作者的链接，请不要混淆。</p>
+<p>虽说是网站，对于个人来说，或许一般叫作博客。<br>但我不希望它仅仅是一个博客，而是能够成为一个处于自己现实生活之外、自由、实验、不用畏惧他人眼光甚至可以独断专行的地方。</p>
+<p>已经有所基础的同学大可跳读或者直接关闭。</p>
+<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><ul>
+<li>Hexo</li>
+<li>静态博客</li>
+<li>无服务器</li>
+<li>GitHub Pages</li>
+<li>hexo-theme-yun</li>
+</ul>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h2><blockquote>
+<p><strong>什么是 Node.js ？</strong></p>
+<p>这得从什么是 JS 说起，JS 也就是 JavaScript。（为什么有种从盘古开天辟地开始的感觉）没错，JavaScript 就是网页的盘古。JavaScript 是一种编程语言，我们所见到的网页中的交互和逻辑处理几乎都是由 JavaScript 完成。<br>JavaScript 语法简单，易学易用。（当然也请不要小瞧它，虽然它入门门槛低，但上限同样也很高。包括但不限于实现网站前后端，手机桌面应用程序，机器学习，计算机图形学等。）<br>在 Node.js 诞生前，JavaScript 都运行于浏览器端。也就是说，它是鱼，浏览器是装满了水的水缸。<br>2008 年，Chrome V8 诞生。2009 年，Node.js 诞生。并成为 GitHub 早期最著名的开源项目。GitHub 可能大家已有所了解，后续再说。<br>Node.js 便是一个基于 Chrome V8 引擎的 JavaScript 运行环境。（当年第一次看到这句话时，我也一脸懵逼。）按照我的理解，JavaScript 是鱼，Chrome V8 就是抽水机，Node.js 则把这台抽水机也装在你电脑上。于是你的电脑也有了 Node.js 这个和浏览器相似的水缸，也可以在里面运行 JavaScript 了！<br>当然 Node.js 和浏览器端还是因为自身定位和一些历史原因而有些许区别的，不再展开。</p>
+</blockquote>
+<p>建议下载<strong>长期支持版</strong>而非<strong>当前发布版</strong>（因为如果是最新版，容易出现一些奇妙的 bug）。</p>
+<p>全部默认下一步进行安装。</p>
+<p>Windows 打开命令提示符。<br>Linux 用户右上角关闭本标签页。</p>
+<p>后续如提到输入命令，均默认指打开终端进行输入。</p>
+<p>输入 <code>node --version</code>，如果得到的版本号与你方才安装的一致，那么 Node.js 就已经成功安装。</p>
+<h2 id="Git-与-GitHub"><a href="#Git-与-GitHub" class="headerlink" title="Git 与 GitHub"></a>Git 与 GitHub</h2><h3 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h3><blockquote>
+<p>Git 是一个开源的分布式版本控制系统，由 Linus Torvalds（同时也是 Linux 的作者）为了管理 Linux 开发而开发。<br>简而言之，是一个版本管理工具。譬如设计师设计好了第三版的海报，客户却说还是要第一版吧，这时便可以通过 Git 快速回退到最初的版本。<br>你只需要把每次更改的状态（Git 会自动进行检测，你只要掌握基础的几条命令就可以了）告诉 Git，而不需要每个版本都保存一份压缩包，既方便也能大大节约空间。<br>（当然这主要只对代码文本起作用，因为 Git 的本质是记录各行代码的增减，倘若是像视频、海报这类二进制文件来说便体现不出丝毫优势了。当然想要应对这种场景还有 <a href="https://git-lfs.github.com/" target="_blank" rel="noopener">Git LFS</a>。）</p>
+</blockquote>
+<h3 id="注册-GitHub"><a href="#注册-GitHub" class="headerlink" title="注册 GitHub"></a>注册 GitHub</h3><blockquote>
+<p>GitHub 一听便与 Git 有所渊源。<code>Git</code> 在英文中是懒人、饭桶之意。<code>Hub</code> 则是中心、集线器的意思。譬如 USB 集线器就是 USB Hub。所以 GitHub 就是饭桶中心（<del>大雾</del>）。<br>GitHub 是全世界最大的开源项目与代码托管平台，也是众多开发者的交流场所。<del>还是全球最大的同性交友网站</del>。<br>而代码托管本身用到的正是上文提到的 Git 技术。</p>
+</blockquote>
+<p>注册 <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> 账号。（虽然都是英文，但不必畏惧，也并不会造成使用障碍，只要记得最常用的选项含义即可，以及善用手头的翻译软件。谷歌浏览器的话在页面右击鼠标便有 【翻译成中文】的选项）</p>
+<blockquote>
+<p>注意：注册时的英文用户名将成为你可以使用的免费域名前缀。</p>
+</blockquote>
+<p>登录 GitHub。</p>
+<blockquote>
+<p>为什么要用 GitHub？<br>对于平民玩家来说，在初次尝试建立自己的网站时，也许并不会有闲钱或者说决心来购买自己的服务器与域名。<br>而 GitHub 则提供了 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> 这一服务。<br>用户们可以利用这一服务，部署自己的静态站点。</p>
+</blockquote>
+<p>点击右上角的 <code>+</code> -&gt; <code>New repository</code> 新建仓库。</p>
+<p><img src="https://i.loli.net/2020/04/07/v7Of3zlJjKPMr8k.png" alt="1586247696486"></p>
+<blockquote>
+<p>我这里因为已经有同名仓库，所以提示了重复。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2020/04/07/6cVUSuJGYDNjC8E.png" alt="1586247707629"></p>
+<p>仓库名称务必为 <code>你的用户名.github.io</code>，用户名是英文，大小写无所谓，但建议统一小写。（因为你会发现时常切换大小写很麻烦）</p>
+<blockquote>
+<p>为什么必须这个作为仓库名？<br>GitHub Pages 服务的命名规范，同时它也将成为你的专属域名。当然，你也可以购置自己的专属域名并用它来提供内容。</p>
+</blockquote>
+<p>点击 <code>Create repository</code>。</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">Hexo</a></p>
+<ul>
+<li>GitHub: <a href="http://github.com/hexojs/hexo" target="_blank" rel="noopener">http://github.com/hexojs/hexo</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">官方文档</a>（直接参考文档也是一个不错的选择）</li>
+</ul>
+<blockquote>
+<p><strong>为嘛使用 Hexo ？</strong><br>Hexo 是一个快速、简洁而强大的博客框架，基于 Node.js，同样托管于 GitHub 之上。生态中拥有众多插件主题。你可以基于它快速生成一些静态页面。<br>你可以使用别人的各种主题与插件，也可以自己定制开发想要的功能。<br><strong>为什么不是…?</strong><br>其他常用的博客框架还有 <a href="https://wordpress.org/" target="_blank" rel="noopener">WordPress</a>，<a href="http://typecho.org/" target="_blank" rel="noopener">Typecho</a>，<a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a> 等，但这些往往都需要购置自己的服务器，而无法静态化地部署到 GitHub Pages 上。（当然，相应的功能和灵活性也大大提升。）静态化站点还有一个优势就是访问速度往往更快。<br>静态网站生成器还有 <a href="https://vuepress.vuejs.org/" target="_blank" rel="noopener">Vuepress</a>，<a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener">Gatsby</a> 等。但这些多是为了写文档而量身定制的，你也可以使用它们，但是相较 Hexo 的博客定位，它们关于博客的插件和主题以及解决办法会少得多。<br>Hexo 提供的功能与 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 几乎都有，（生成大量文件时，甚至比 Hexo 更快）不过它是基于 GO 语言。日后你想对自己的网站进行自定义，即便是 Hugo，你编写前端的交互仍旧需要使用 JavaScript，所以选择基于 JavaScript 的 Hexo 可以降低学习成本。（其实是我找不到好看的hugo主题）</p>
+</blockquote>
+<p>在终端中输入以下命令：</p>
+<pre><code class="sh">npm install hexo-cli -g
+# 如果安装失败，可能是没有权限，可以尝试头部加上 sudo 重新执行
+# sudo npm install hexo-cli -g
+</code></pre>
+<blockquote>
+<p><code>npm</code> 是随 Node.js 一起被安装的包管理工具，你可以理解成 Node.js 自带的应用商店。<br><code>install</code> 自然是安装。<br><code>hexo-cli</code> 则是 <code>hexo</code> 的终端工具，可以帮助你生成一些模版文件，之后再用到。<br><code>-g</code> 代表的是全局安装。也就是在任何地方都可以使用，否则会只能在安装的目录下使用。</p>
+</blockquote>
+<p>此时，请先通过 <code>cd</code> 进入你本地电脑打算存储网站代码的文件夹目录。（或者右键文件夹 Git Bash Here）</p>
+<blockquote>
+<p><a href="https://baike.baidu.com/item/cd/3516393" target="_blank" rel="noopener">cd | DOS 命令</a><br><a href="https://baike.baidu.com/item/cd/3516411" target="_blank" rel="noopener">cd （LINUXSHELL 命令）</a></p>
+</blockquote>
+<p>譬如：</p>
+<blockquote>
+<p>注意：这里是你自定义的目录，请不要复制粘贴</p>
+</blockquote>
+<pre><code class="sh"># &#39;#&#39; 字符后的文字代表注释，不需要输入
+# Windows
+cd C:\Users\YunYou\Documents\GitHub\
+# macOS
+# cd /Users/yunyou/github/
+</code></pre>
+<p>接下来输入：</p>
+<pre><code class="sh">hexo init 你的名字.github.io
+</code></pre>
+<blockquote>
+<p><code>hexo</code> 正是因为我们之前安装了 <code>hexo-cli</code> 这一个包，所以我们可以在终端中使用 <code>hexo</code> 这一命令。<br><code>init</code> 初始化博客的模版文件。后面跟的是你要新建的文件夹，最好和你此前新建的仓库名一致。</p>
+</blockquote>
+<pre><code class="sh"># 进入你的博客文件夹
+cd 你的名字.github.io
+# 默认安装所有 `package.json` 文件中提到的包
+npm install
+# 你也可以缩写成 hexo s
+hexo server
+</code></pre>
+<p><code>server</code> 代表开启本地的 Hexo 服务器，这时你就可以打开浏览器，在地址栏中输入 <code>localhost:4000</code> 就可以看到本地的网页了。</p>
+<p>按 <code>Ctrl + C</code> 终端服务器的运行。</p>
+<p>至此，基础的模版页面便已经搭建好了。</p>
+<h4 id="使用-Hexo-主题"><a href="#使用-Hexo-主题" class="headerlink" title="使用 Hexo 主题"></a>使用 Hexo 主题</h4><p>Hexo 默认提供的是 <a href="https://github.com/hexojs/hexo-theme-landscape" target="_blank" rel="noopener">hexo-theme-landscape</a> 主题。<br>默认主题样式简单，功能较少。所以大多数人并不会使用默认主题。</p>
+<p>这里是别人开发的主题 我只是下载用用 <a href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank" rel="noopener">hexo-theme-yun</a>。</p>
+<p>如果有人看这篇文章的话，麻烦点击<a href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/YunYouJun/hexo-theme-yun?style=social" alt="GitHub stars"></a> 请去github收藏一下作者的主题</p>
+<h5 id="下载-Hexo-主题"><a href="#下载-Hexo-主题" class="headerlink" title="下载 Hexo 主题"></a>下载 Hexo 主题</h5><p>进入终端（确保路径处于你此前使用 Hexo 初始化好的文件夹目录下，即 <code>xxx.github.io</code>，后简称为 <code>Hexo 目录</code>），输入以下命令。</p>
+<blockquote>
+<p>实际上你也可以直接在 VS Code 中使用终端。</p>
+</blockquote>
+<pre><code class="sh">git clone https://github.com/YunYouJun/hexo-theme-yun themes/yun
+</code></pre>
+<blockquote>
+<p>这里便使用到了我们此前安装的 Git，<code>git clone</code> 即代表克隆（也就是复制的作用）本主题（托管于 GitHub，链接便是主题所在的地址），<code>themes/yun</code> 则代表放在你 Hexo 文件夹下的 <code>themes/yun</code> 文件夹里（没有该文件夹会自动新建）。</p>
+</blockquote>
+<h5 id="编辑-Hexo-配置"><a href="#编辑-Hexo-配置" class="headerlink" title="编辑 Hexo 配置"></a>编辑 Hexo 配置</h5><p>在你此前通过 Hexo 初始化生成的文件目录下，会存在一个 <code>_config.yml</code> 文件。</p>
+<blockquote>
+<p><code>yml</code> 是 <a href="https://baike.baidu.com/item/YAML/1067697" target="_blank" rel="noopener">YAML</a> 文件的后缀名，YAML 是 “YAML Ain’t a Markup Language”（YAML 不是一种标记语言） 的缩写，但它实际上还是一种标记语言。你可以将其理解为存储数据的一种文本格式，这也是其诞生的目的。 如果你听说过 JSON，那你就更能明白它是干什么的了。</p>
+</blockquote>
+<p>它是 Hexo 的配置文件，关于各配置选项的意义你可以查看 <a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">配置 | Hexo</a>。</p>
+<p>在 <code>_config.yml</code> 中找到 <code>theme</code> 这个字段，将其后的 <code>landscape</code> 修改为 <code>yun</code>。</p>
+<pre><code class="yml">theme: yun
+</code></pre>
+<blockquote>
+<p>pug 是一种模板引擎，可以渲染为 HTML 字符串。类似的还有 ejs，swig 等，语法和设计理念有所不同。<br>stylus 是一种 CSS 预处理器，可以渲染为 CSS。类似的还有 scss，less，同样只是语法和设计理念有所差异。</p>
+</blockquote>
+<p>由于主题使用了 pug 和 stylus，而 Hexo 自带的一般是 ejs 与 stylus，所以你可能还需要输入以下命令安装渲染器。</p>
+<pre><code class="sh">npm install hexo-render-pug hexo-renderer-stylus
+</code></pre>
+<p>这时再像此前那般使用 <code>hexo server</code> 重新启动服务器，你就可以看到一个不一样的主题风格的页面了。</p>
+<h5 id="自定义主题配置"><a href="#自定义主题配置" class="headerlink" title="自定义主题配置"></a>自定义主题配置</h5><p>当启动时，会使用主题的默认配置。但这不一定是你想要的。<br>所以你可以对主题进行一些自定义。</p>
+<p>主题的配置文件放在 <code>themes/yun/_config.yml</code> 文件中。<br>且慢，你最好不要直接修改主题的默认配置。倘若日后主题升级更新了怎么办吗，难道还要重新配置一遍吗？</p>
+<p>最好的解决方案就是在博客根目录下（不是主题目录）新建 <code>source/_data/yun.yml</code>。（若 <code>source/_data</code> 目录不存在，请新建）</p>
+<p>本主题将自定义配置与默认配置进行合并，因此你只需要在 <code>yun.yml</code> 文件中自定义你需要的配置即可，其余仍将自动采用默认配置。</p>
+<p>譬如我们需要更换头像。在 <code>yun.yml</code> 中填写。</p>
+<blockquote>
+<p>你可以在 <code>source</code> 文件夹下新建 <code>images</code> 文件夹，用来存储你的图片。<br>也可以使用 <a href="https://sm.ms/" target="_blank" rel="noopener">SM.MS</a> 等图床工具上传你的图片文件，获取在线链接。</p>
+</blockquote>
+<pre><code class="yml">avatar:
+  url: /images/avatar.jpg # 你的头像图片地址
+  rounded: true
+  opacity: 1
+</code></pre>
+<p>更换主题色彩，比如换成黑色，黑色的十六进制颜色代码是 <code>#000000</code>。</p>
+<pre><code class="yml">colors:
+  primary: &quot;#000000&quot;
+</code></pre>
+<p>这时你的主题色调就会变为黑色。</p>
+<p>这只是一个配置项的简单示例，更多配置你可以参考我的<a href="https://yun.yunyoujun.cn/" target="_blank" rel="noopener">主题文档</a>或直接在 <code>theme/yun/_config.yml</code> 中查看，并根据自己的需要进行配置。</p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><p>至今我们的工作都是在本地进行，想必你也很想放到线上与小伙伴们分享。<br>这便轮到了 GitHub Pages 的出场，不过 GitHub Pages 只支持纯静态文件。</p>
+<p>所以我们需要使用以下命令先来生成站点的静态文件。</p>
+<pre><code class="sh"># 如果进行多次生成，为了避免受错误缓存影响，最好使用 hexo clean 先清除一遍。
+hexo generate
+# 缩写为 hexo g
+</code></pre>
+<p>此时你的文件夹目录下会出现 <code>public</code> 这个文件夹，里面存放的就是你站点的静态文件。</p>
+<h3 id="与远程仓库建立关联"><a href="#与远程仓库建立关联" class="headerlink" title="与远程仓库建立关联"></a>与远程仓库建立关联</h3><p>接下来我们将本地的仓库与此前在 GitHub 上建立的仓库建立关联。</p>
+<pre><code class="sh">git init # 初始化 Git 仓库，只需要执行一次即可
+</code></pre>
+<p>在将其部署到 GitHub Pages 上之前，我们最好先建立一个分支。</p>
+<blockquote>
+<p>什么是分支？<br>Git 提供了版本管理功能，其中还有一个分支功能，你现在可以简单地将其理解为平行世界。</p>
+</blockquote>
+<p><code>你的名字.github.io</code> 部署后，GitHub Pages 将默认使用你的 master 分支作为静态文件部署。<br>所以我们最好新建一个 hexo 分支（命名无所谓）用来存储 Hexo 地源代码，master 分支则用来存储部署后的静态文件。</p>
+<pre><code class="sh">git checkout -b hexo
+</code></pre>
+<p>这时便成功建立了一个 hexo 分支。（此后的工作都将在 hexo 分支下进行）</p>
+<p>你可以通过 <code>git branch -v</code> 来查看当前有哪些分支，使用 <code>git branch 分支名</code> 来切换到对应的分支。</p>
+<blockquote>
+<p><a href="https://www.yunyoujun.cn/note/git-learn-note/" target="_blank" rel="noopener">Git 学习笔记</a></p>
+</blockquote>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>为了更方便的部署到 GitHub Pages，Hexo 提供了 <code>hexo-deployer-git</code> 插件。</p>
+<p>老规矩，安装。</p>
+<pre><code class="sh">npm install hexo-deployer-git
+</code></pre>
+<p>在 <code>_config.yml</code> 中配置。</p>
+<pre><code class="yml">deploy:
+  type: git
+  repo: 你此前新建的仓库的链接 # 比如：https://github.com/zl956973503/zl956973503.github.io
+  branch: master # 默认使用 master 分支
+  message: Update Hexo Static Content # 你可以自定义此次部署更新的说明
+</code></pre>
+<p>保存，部署！</p>
+<blockquote>
+<p>第一次可能需要你输入用户名与密码。<br>密码输入的时候不会出现 ***，不要害怕，已经输入进去了。</p>
+</blockquote>
+<pre><code class="sh">hexo deploy
+</code></pre>
+<p>等待完成后，打开网址 <code>https://你的名字.github.io</code> 就能看到你的线上网站了。</p>
+<blockquote>
+<p>使用 https，http 可能无法正常打开。HTTPS 是多了安全加密的 HTTP，Chrome 浏览器已经默认会显示 <code>http</code> 链接为不安全。<br>为了安全，建议开启强制 https 跳转。<code>项目地址页面 -&gt; Settings -&gt; Options -&gt; GitHub Pages -&gt; Enforce HTTPS</code>。（翻到下面）<br>此时，http 网址会自动重定向到 https</p>
+</blockquote>
+<h3 id="备份与自动部署"><a href="#备份与自动部署" class="headerlink" title="备份与自动部署"></a>备份与自动部署</h3><p>我们当前只是将生成的静态文件部署到了云端。</p>
+<p>为了以防万一，我们应该将网站的源代码文件也推送到 GitHub 仓库备份。</p>
+<pre><code class="sh"># 与远程 Git 仓库建立连接，只此一次即可
+git remote add origin https://github.com/你的用户名/你的名字.github.io
+</code></pre>
+<p>接下来准备提交，这几句命令将是你以后每次备份所需要输入。</p>
+<pre><code class="sh"># 添加到缓存区
+git add -A
+git commit -m &quot;这次做了什么更改，简单描述下即可&quot;
+# 推送至远程仓库
+git push
+# 第一次提交，你可能需设置一下默认提交分支
+# git push --set-upstream origin hexo
+</code></pre>
+<p>每次推送都要输入这三条命令，你可能觉得有些麻烦。<br>那么你可以编写 bash 脚本。</p>
+<p>譬如，在根目录下新建 <code>update.sh</code>。</p>
+<pre><code class="sh"># 如果没有消息后缀，默认提交信息为 `:pencil: update content`
+info=$1
+if [&quot;$info&quot; = &quot;&quot;];
+then info=&quot;:pencil: update content&quot;
+fi
+git add -A
+git commit -m &quot;$info&quot;
+git push origin hexo
+</code></pre>
+<p>此后更新的话，只需要在终端执行 <code>sh update.sh</code> 即可。</p>
+<p>更新麻烦，每次部署也很麻烦，可以使用持续集成进行自动部署。</p>
+<blockquote>
+<p>什么是持续集成？<br>持续集成是一种软件开发实践。对软件进行自动化构建，以此来发现错误。<br>Travis CI 就是一个线上持续集成服务的提供商。它可以拉取你每次推送到 GitHub 上的代码，然后根据你的要求对其进行构建。<br>我们可以趁机让它自动生成网站静态文件，然后自动帮我们部署。<br>除此之外，你还可以使用 <a href="https://help.github.com/en/actions/getting-started-with-github-actions/about-github-actions" target="_blank" rel="noopener">GitHub Actions</a> ，<a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a> 等服务。<br>GitHub Actions 相比 Travis 等，自身便拥有仓库的 Token，不再需要额外设置，可以直接使用 <code>secrets.GITHUB_TOKEN</code>。<br>推荐一个专门用来部署 gh-pages 的 Actions <a href="https://github.com/peaceiris/actions-gh-pages" target="_blank" rel="noopener">actions-gh-pages</a></p>
+</blockquote>
+<p>关于更多更具体的自动化部署方案和操作步骤，可以参考 ChrAlpha 的 <a href="https://blog.ichr.me/post/automated-deployment-of-serverless-static-blog/" target="_blank" rel="noopener">初探无后端静态博客自动化部署方案</a>。</p>
+<p>他在文章中详细介绍了 Netlify 、GitHub Actions 和 Travis CI 的部署方法。</p>
+<p>你也可以参考 Hexo 的官方文档 <a href="https://hexo.io/zh-cn/docs/github-pages" target="_blank" rel="noopener">将 Hexo 部署到 GitHub Pages</a></p>
+<p>我就不在此画蛇添足。</p>
+<p>至此，你的站点便基本搭建完成，此后继续对主题进行自定义吧。</p>
+<p><a href="https://yun.yunyoujun.cn/" target="_blank" rel="noopener">Yun 主题文档</a></p>
+<h3 id="开始写作"><a href="#开始写作" class="headerlink" title="开始写作"></a>开始写作</h3><h4 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h4><p>输入以下命令即可新建 <code>xxx.md</code> 文件。</p>
+<pre><code class="sh">hexo new post xxx
+</code></pre>
+<blockquote>
+<p><code>md</code> 是 <code>Markdown</code> 的后缀名，是一种简洁方便的文本标记语言。你只需要记住简单的几种语法，就可以快速进行编写。<br>为什么使用 Markdown？<br>首先 Hexo 本身就是将 Markdown 转化为静态的 Html 文件，来方便用户编写文章。<br>Markdown 就好似介于 Word 与 TXT 文本之间。Word 体积大、大部分功能实际上根本用不到，且最后的文档常常带有许多冗余信息。<br>而 TXT 却无法实现加粗、标题、下划线、水平分割线等常用的功能。<br>（这里所说的 TXT 只是一种纯文本格式的代称，实际上 Markdown 也是纯文本文件，不过通过语法和 Markdown 编译器，我们就可以看到一些简单的样式。）</p>
+</blockquote>
+<p>譬如本文就是通过 Markdown 编写。</p>
+<pre><code class="md"># 一级标题
+
+## 二级标题
+
+**加粗文字**
+</code></pre>
+<blockquote>
+<p>更多语法（虽然说是更多，但是其实也没多少）：<a href="https://github.com/younghz/Markdown" target="_blank" rel="noopener">Markdown 基本语法</a></p>
+</blockquote>
+<h4 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h4><p>你可以新建一些自己的自定义页面。</p>
+<p>譬如直接在 Hexo 目录下的 <code>source</code> 文件夹下直接新建 HTML 进行编写。</p>
+<p>也可以通过以下命令来新建页面。（当然还是 Markdown，不过也是可以在 Markdown 里写 HTML 的，也会被渲染出来。）</p>
+<pre><code class="md">hexo new page xxx
+</code></pre>
+<p>说到这里，就不得不提一提本主题的特色功能了。</p>
+<p>生成你的老婆列表页面。按一定格式书写即可。见<a href="https://yun.yunyoujun.cn/guide/page.html#girls" target="_blank" rel="noopener">文档</a>。</p>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><h3 id="如何绑定你的自定义域名？"><a href="#如何绑定你的自定义域名？" class="headerlink" title="如何绑定你的自定义域名？"></a>如何绑定你的自定义域名？</h3><p>首先，你得有个自己的域名。</p>
+<p>可以去 <a href="https://www.aliyun.com/" target="_blank" rel="noopener">阿里云</a> 购买服务器</p>
+<p>并使用 CNAME 解析到 <code>你的名字.github.io</code>。（当然 A 记录直接解析到 GitHub Pages IP 地址也可以。）</p>
+<blockquote>
+<p><a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain" target="_blank" rel="noopener">Managing a custom domain for your GitHub Pages site</a></p>
+</blockquote>
+<p>在 <code>Hexo</code> 工作目录下 <code>source</code> 文件夹下新建 <code>CNAME</code> 文件（没有后缀名）。</p>
+<blockquote>
+<p>CNAME 即相当于告诉 GitHub 允许将 xxx.github.io 为你的域名提供服务。<br>source 目录下的文件除了特殊的 markdown 会被解析为 html，其余都会原样复制到生成的静态文件夹中。<br>所以你需要在 source 文件夹下建有 CNAME，它会在生成静态文件时，将 CNAME 拷贝到静态文件夹并部署到 master 分支。<br>如果只是在 GitHub 上设置（<code>项目地址页面 -&gt; Settings -&gt; Options -&gt; GitHub Pages -&gt; Custom domain</code>），它会自动添加到 master 分支上，但随后不包含 CNAME 的部署会将其覆盖。</p>
+</blockquote>
+<p>内容填写你的域名即可。</p>
+<blockquote>
+<p><a href="https://help.github.com/en/github/working-with-github-pages/about-custom-domains-and-github-pages" target="_blank" rel="noopener">About custom domains and GitHub Pages</a></p>
+</blockquote>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>个人网站同样可以用来做许多事情，你可以将其用来记录生活、回忆、创作、学习笔记、开发经验等（包括作为一个试验平台）。<br>可以与熟悉的人分享，也可以作为另一个世界另一个自己的展示。</p>
+<p>多年后，回看起自己当初写下的内容，未尝不是件有趣的事情。</p>
+<p>善始者众，善终者寡。</p>
+<blockquote>
+<p>臣闻善作者，不必善成；善始者，不必善终。「史记·乐毅列传」</p>
+</blockquote>
+<p>希望大家能有毅力坚持下去，不忘初心。</p>
+<blockquote>
+<p>永远相信美好的事情即将发生</p>
+</blockquote>
 
         </div>
         <!-- .entry-content -->
@@ -481,15 +702,15 @@ commit
           
             <div class="post-nepre half previous">
           
-            <a href="/2020/04/09/进程和线程的简单理解/" rel="prev">
+            <a href="/2020/04/21/静态博客图片上传/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2019/06/74857125_p0.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://2heng.xin/wp-content/uploads//2019/06/74857125_p0.png">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                进程和线程的简单理解</h3>
+                静态博客图片上传</h3>
                 <hr>
               </div>
             </a>
@@ -499,15 +720,15 @@ commit
           
             <div class="post-nepre half next">
           
-            <a href="/2020/04/03/ORM操作/" rel="next">
+            <a href="/2020/04/09/进程和线程的简单理解/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2017/08/pixiv54752415-1024x481.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://2heng.xin/wp-content/uploads//2017/08/pixiv54752415-1024x481.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                ORM操作</h3>
+                进程和线程的简单理解</h3>
                 <hr>
               </div>
             </a>

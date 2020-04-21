@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-04-21T02:00:07.149Z</updated>
+  <updated>2020-04-21T02:22:29.328Z</updated>
   <id>/</id>
   
   <author>
@@ -18,14 +18,67 @@
   
   <entry>
     <title>hexo博客上传后自定义域名无法访问博客</title>
-    <link href="/2020/04/10/hexo%20d%20%E4%B9%8B%E5%90%8Egit%20pages%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88/"/>
-    <id>/2020/04/10/hexo d 之后git pages 自定义域名失效/</id>
-    <published>2020-04-09T16:00:00.000Z</published>
-    <updated>2020-04-21T02:00:07.149Z</updated>
+    <link href="/2020/04/21/hexo%20d%20%E4%B9%8B%E5%90%8Egit%20pages%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88/"/>
+    <id>/2020/04/21/hexo d 之后git pages 自定义域名失效/</id>
+    <published>2020-04-20T16:00:00.000Z</published>
+    <updated>2020-04-21T02:22:29.328Z</updated>
     
     <summary type="html">
     
       第一次push自定义域名可以访问，但修改之后再次push自定义域名无法访问
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>静态博客图片上传</title>
+    <link href="/2020/04/21/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"/>
+    <id>/2020/04/21/静态博客图片上传/</id>
+    <published>2020-04-20T16:00:00.000Z</published>
+    <updated>2020-04-21T02:21:47.803Z</updated>
+    
+    <summary type="html">
+    
+      先介绍两种方法 1.创建Images文件夹 2.使用图床
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github Pages + Hexo搭建静态博客</title>
+    <link href="/2020/04/20/Github%20Pages%20+%20Hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
+    <id>/2020/04/20/Github Pages + Hexo搭建静态博客/</id>
+    <published>2020-04-19T16:00:00.000Z</published>
+    <updated>2020-04-21T02:21:28.518Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;写给想要拥有一个自己的网站但没有资金成本的小白与曾经的自己。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -52,59 +105,6 @@
     </summary>
     
       <category term="python" scheme="/categories/python/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>静态博客图片上传</title>
-    <link href="/2020/04/08/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"/>
-    <id>/2020/04/08/静态博客图片上传/</id>
-    <published>2020-04-07T16:00:00.000Z</published>
-    <updated>2020-04-21T01:57:03.925Z</updated>
-    
-    <summary type="html">
-    
-      先介绍两种方法 1.创建Images文件夹 2.使用图床
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github Pages + Hexo搭建静态博客</title>
-    <link href="/2020/04/07/Github%20Pages%20+%20Hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
-    <id>/2020/04/07/Github Pages + Hexo搭建静态博客/</id>
-    <published>2020-04-06T16:00:00.000Z</published>
-    <updated>2020-04-21T01:59:33.860Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;写给想要拥有一个自己的网站但没有资金成本的小白与曾经的自己。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="web" scheme="/tags/web/"/>
@@ -202,15 +202,15 @@
   </entry>
   
   <entry>
-    <title>创建虚拟环境</title>
-    <link href="/2020/04/01/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
-    <id>/2020/04/01/虚拟环境/</id>
+    <title>个人简历</title>
+    <link href="/2020/04/01/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/"/>
+    <id>/2020/04/01/个人简历/</id>
     <published>2020-03-31T16:00:00.000Z</published>
-    <updated>2020-04-21T01:57:26.470Z</updated>
+    <updated>2020-04-21T01:53:14.455Z</updated>
     
     <summary type="html">
     
-      虚拟环境相当于一个抽屉，在这个抽屉中安装的任何软件包都不会影响到其他抽屉。并且在项目中，我可以指定这个项目的虚拟环境来配合我的项目。
+      个人简历
     
     </summary>
     
@@ -224,15 +224,15 @@
   </entry>
   
   <entry>
-    <title>个人简历</title>
-    <link href="/2020/04/01/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/"/>
-    <id>/2020/04/01/个人简历/</id>
+    <title>创建虚拟环境</title>
+    <link href="/2020/04/01/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
+    <id>/2020/04/01/虚拟环境/</id>
     <published>2020-03-31T16:00:00.000Z</published>
-    <updated>2020-04-21T01:53:14.455Z</updated>
+    <updated>2020-04-21T01:57:26.470Z</updated>
     
     <summary type="html">
     
-      个人简历
+      虚拟环境相当于一个抽屉，在这个抽屉中安装的任何软件包都不会影响到其他抽屉。并且在项目中，我可以指定这个项目的虚拟环境来配合我的项目。
     
     </summary>
     
