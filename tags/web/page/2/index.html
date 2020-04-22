@@ -81,7 +81,12 @@
         </a>
       </div>
       <div class="header-info">
-        <p>Live your life with passion! With some drive!</p>
+        <!-- 原代码 -->
+        <!-- <p>Live your life with passion! With some drive!</p> -->
+        <!-- 添加一言API、诗词  包括下边两行-->
+        <p id="jinrishici-sentence">正在加载今日诗词....</p>
+        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
         <div class="top-social_v2">
           <li id="bg-pre">
             <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
@@ -390,6 +395,39 @@
     <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
   <div class="post-entry">
     <div class="feature">
+      <a href="/2020/04/01/个人简历/">
+        <div class="overlay">
+          <i class="iconfont icon-text">
+          </i>
+        </div>
+        <img width="150" height="150" src="https://i.loli.net/2020/04/20/4qKBXmNMoki3jyG.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
+      </a>
+    </div>
+    <h1 class="entry-title">
+    <a href="/2020/04/01/个人简历/">
+    个人简历</a>
+    </h1>
+    <div class="p-time">
+      <i class="iconfont icon-time">
+      </i>
+    2020-4-1</div>
+    <p>
+    个人简历</p>
+    <footer class="entry-footer">
+      <div class="post-more">
+        <a href="/2020/04/01/个人简历/">
+          <i class="iconfont icon-caidan">
+          </i>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <hr>
+</article>
+  
+    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <div class="post-entry">
+    <div class="feature">
       <a href="/2020/04/01/虚拟环境/">
         <div class="overlay">
           <i class="iconfont icon-text">
@@ -647,6 +685,9 @@ $(document).ready(function() {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> 
     <!-- 这条在sakura中已有，可不添加 -->
     <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+    <!-- 预加载 -->
+    <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 
   </section>
   <div id="mo-nav" class="">
