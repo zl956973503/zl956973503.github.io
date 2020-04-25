@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Category: 技术 | Zhou</title>
+  <title itemprop="name">Python操作Redis的5种数据类型 | Zhou</title>
   
     <link rel="shortcut icon" href="/img/custom/favicon.ico">
   
@@ -376,440 +376,184 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/banner/coding.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://i.loli.net/2020/04/25/B3MxCVEUyWa7294.jpg);" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/25/B3MxCVEUyWa7294.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Python操作Redis的5种数据类型</h1>
+      <p class="entry-census">
+        <span>
+          <a href="zhoulei.icu">
+            <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/01.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="zhoulei.icu">zhou</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-4-25<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">野生技术协会</h1>
-    <span class="cat-des">
-      <p>Geek – Only for Love</p>
-    </span>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/04/03/ORM操作/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://2heng.xin/wp-content/uploads//2017/08/pixiv54752415-1024x481.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/04/03/ORM操作/">
-    ORM操作</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-4-3</div>
-    <p>
-    ORM操作</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/04/03/ORM操作/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/04/02/Django + Vue 跨域/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://2heng.xin/wp-content/uploads//2019/12/2572384-1024x640.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/04/02/Django + Vue 跨域/">
-    Django + Vue 跨域</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-4-2</div>
-    <p>
-    Django + Vue 跨域</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/04/02/Django + Vue 跨域/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/04/02/django简介/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1587444382189&amp;di=93643a90e99f17bd53165984bc89b1d9&amp;imgtype=0&amp;src=http%3A%2F%2Fn.sinaimg.cn%2Ftranslate%2Fw1280h720%2F20171204%2Fqa_i-fypikwt6342432.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/04/02/django简介/">
-    Django简介</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-4-2</div>
-    <p>
-    Django 是从真实世界的应用中成长起来的，它是由堪萨斯（Kansas）州 Lawrence 城中的一个网络开发小组编写的。它诞生于 2003 年秋天，那时 Lawrence Journal-World 报纸的程序员 Adrian Holovaty 和 Simon Willison 开始用 Python 来编写程序。</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/04/02/django简介/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/04/01/虚拟环境/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://2heng.xin/wp-content/uploads//2018/06/child-1024x576.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/04/01/虚拟环境/">
-    创建虚拟环境</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-4-1</div>
-    <p>
-    虚拟环境相当于一个抽屉，在这个抽屉中安装的任何软件包都不会影响到其他抽屉。并且在项目中，我可以指定这个项目的虚拟环境来配合我的项目。</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/04/01/虚拟环境/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/04/01/个人简历/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://i.loli.net/2020/04/20/4qKBXmNMoki3jyG.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/04/01/个人简历/">
-    个人简历</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-4-1</div>
-    <p>
-    个人简历</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/04/01/个人简历/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2018/12/12/Hexo-Theme-Sakura/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://i.loli.net/2020/04/20/4qKBXmNMoki3jyG.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2018/12/12/Hexo-Theme-Sakura/">
-    Hexo-Theme-Sakura</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2018-12-12</div>
-    <p>
-    hexo-sakura主题使用教程</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2018/12/12/Hexo-Theme-Sakura/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!-- 
-      <nav class="navigator">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
-        <a class="extend prev" rel="prev" href="/categories/技术/"><i class="iconfont icon-back"></i></a><a class="page-number" href="/categories/技术/">1</a><span class="page-number current">2</span>
-      </nav>
-     -->
-    
-  </div>
+        <div class="entry-content">
+          <h1 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h1><pre><code class="python">import redis
+</code></pre>
+<h1 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h1><pre><code class="python">#定义ip和端口
+host = &#39;localhost&#39;
+port = 6379
+
+#建立连接
+r = redis.Redis(host=host,port=port)
+</code></pre>
+<h1 id="五大类型操作"><a href="#五大类型操作" class="headerlink" title="五大类型操作"></a>五大类型操作</h1><blockquote>
+<p>以下结果中 ‘ ’ 单引号外边的 <strong>b</strong> 表示 <strong>字节</strong> 类型</p>
+</blockquote>
+<h3 id="字符串类型-String"><a href="#字符串类型-String" class="headerlink" title="字符串类型　String"></a>字符串类型　String</h3><pre><code class="python"># ex过期时间 单位秒S
+r.set(&#39;name&#39;, &#39;Jack&#39;, ex=20)
+ret = r.get(&#39;name&#39;)
+
+print(ret)
+
+结果
+过期前： b&#39;Jack&#39;
+过期后： None
+</code></pre>
+<h3 id="列表类型-list"><a href="#列表类型-list" class="headerlink" title="列表类型　list　"></a>列表类型　list　</h3><pre><code class="python">r.lpush(&#39;object&#39;, &#39;one&#39;)
+r.lpush(&#39;object&#39;, &#39;two&#39;)
+r.lpush(&#39;object&#39;, &#39;three&#39;)
+r.lpush(&#39;object&#39;, &#39;four&#39;)
+r.lpush(&#39;object&#39;, &#39;five&#39;)
+r.lpush(&#39;object&#39;, &#39;six&#39;)
+ret = r.lrange(&#39;object&#39;, 0, 5)
+
+print(ret[::-1], len(ret))
+
+结果
+[b&#39;one&#39;, b&#39;two&#39;, b&#39;three&#39;, b&#39;four&#39;, b&#39;five&#39;, b&#39;six&#39;] 6
+</code></pre>
+<h3 id="哈希类型-hash"><a href="#哈希类型-hash" class="headerlink" title="哈希类型  hash"></a>哈希类型  hash</h3><pre><code class="python">r.hset(&#39;userinfo&#39;, &#39;name&#39;, &#39;Jack&#39;)
+r.hset(&#39;userinfo&#39;, &#39;age&#39;, 20)
+r.hset(&#39;userinfo&#39;, &#39;phone&#39;, &#39;110110110110&#39;)
+r.hset(&#39;userinfo&#39;, &#39;email&#39;, &#39;123@gmail.com&#39;)
+ret = r.hgetall(&#39;userinfo&#39;)
+
+print(ret)
+
+结果
+{b&#39;name&#39;: b&#39;Jack&#39;, b&#39;age&#39;: b&#39;20&#39;, b&#39;phone&#39;: b&#39;110110110110&#39;, b&#39;email&#39;: b&#39;123@gmail.com&#39;}
+</code></pre>
+<h3 id="有序集合类型-sorted-set"><a href="#有序集合类型-sorted-set" class="headerlink" title="有序集合类型　sorted set"></a>有序集合类型　sorted set</h3><pre><code class="python">r.zadd(&quot;ret1&quot;, n1=11, n2=22)
+r.zadd(&quot;ret2&quot;, &#39;m1&#39;, 22, &#39;m2&#39;, 44)
+
+print(r.zcard(&quot;ret1&quot;))
+print(r.zcard(&quot;ret2&quot;))
+print(r.zrange(&quot;ret1&quot;, 0, -1))
+print(r.zrange(&quot;ret2&quot;, 0, -1, withscores=True))
+
+结果
+2
+2
+[b&#39;n1&#39;, b&#39;n2&#39;]
+[(b&#39;m1&#39;, 22.0), (b&#39;m2&#39;, 44.0)]
+</code></pre>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/04/24/生成图片验证码/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/25/3vuyzlZ7rKQ14PW.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2020/04/25/3vuyzlZ7rKQ14PW.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                生成图片验证码</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GIGgtUFFhF1eP4QqGwrhtcnQ-gzGzoHsz",
+        appKey: "F7yAoS7oBrhfUctA9jVLVRGR",
+        notify: "true", //邮件提醒
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="zhoulei.icu" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/01.jpg" itemprop="image" alt="zhou" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="zhoulei.icu" itemprop="url" rel="author">zhou</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
 
-<!-- 
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/04/03/ORM操作/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://2heng.xin/wp-content/uploads//2017/08/pixiv54752415-1024x481.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/04/03/ORM操作/">
-    ORM操作</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-4-3</div>
-    <p>
-    ORM操作</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/04/03/ORM操作/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/04/02/Django + Vue 跨域/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://2heng.xin/wp-content/uploads//2019/12/2572384-1024x640.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/04/02/Django + Vue 跨域/">
-    Django + Vue 跨域</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-4-2</div>
-    <p>
-    Django + Vue 跨域</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/04/02/Django + Vue 跨域/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/04/02/django简介/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1587444382189&amp;di=93643a90e99f17bd53165984bc89b1d9&amp;imgtype=0&amp;src=http%3A%2F%2Fn.sinaimg.cn%2Ftranslate%2Fw1280h720%2F20171204%2Fqa_i-fypikwt6342432.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/04/02/django简介/">
-    Django简介</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-4-2</div>
-    <p>
-    Django 是从真实世界的应用中成长起来的，它是由堪萨斯（Kansas）州 Lawrence 城中的一个网络开发小组编写的。它诞生于 2003 年秋天，那时 Lawrence Journal-World 报纸的程序员 Adrian Holovaty 和 Simon Willison 开始用 Python 来编写程序。</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/04/02/django简介/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/04/01/虚拟环境/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://2heng.xin/wp-content/uploads//2018/06/child-1024x576.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/04/01/虚拟环境/">
-    创建虚拟环境</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-4-1</div>
-    <p>
-    虚拟环境相当于一个抽屉，在这个抽屉中安装的任何软件包都不会影响到其他抽屉。并且在项目中，我可以指定这个项目的虚拟环境来配合我的项目。</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/04/01/虚拟环境/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/04/01/个人简历/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://i.loli.net/2020/04/20/4qKBXmNMoki3jyG.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/04/01/个人简历/">
-    个人简历</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-4-1</div>
-    <p>
-    个人简历</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/04/01/个人简历/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2018/12/12/Hexo-Theme-Sakura/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://i.loli.net/2020/04/20/4qKBXmNMoki3jyG.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2018/12/12/Hexo-Theme-Sakura/">
-    Hexo-Theme-Sakura</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2018-12-12</div>
-    <p>
-    hexo-sakura主题使用教程</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2018/12/12/Hexo-Theme-Sakura/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
 
- -->
+
     </div>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
