@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-04-26T10:20:07.857Z</updated>
+  <updated>2020-04-27T09:06:20.080Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>selenium自动登陆</title>
+    <link href="/2020/04/27/selenium%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/"/>
+    <id>/2020/04/27/selenium自动登陆/</id>
+    <published>2020-04-26T16:00:00.000Z</published>
+    <updated>2020-04-27T09:06:20.080Z</updated>
+    
+    <summary type="html">
+    
+      selenium自动登陆
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="python" scheme="/tags/python/"/>
+    
+      <category term="后端" scheme="/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="vue" scheme="/tags/vue/"/>
+    
+  </entry>
   
   <entry>
     <title>利用百度智能云识别图片验证码</title>
@@ -67,7 +91,7 @@
     <link href="/2020/04/24/%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
     <id>/2020/04/24/生成图片验证码/</id>
     <published>2020-04-23T16:00:00.000Z</published>
-    <updated>2020-04-25T11:24:32.225Z</updated>
+    <updated>2020-04-26T08:43:15.465Z</updated>
     
     <summary type="html">
     
@@ -314,28 +338,6 @@
   </entry>
   
   <entry>
-    <title>Django简介</title>
-    <link href="/2020/04/02/django%E7%AE%80%E4%BB%8B/"/>
-    <id>/2020/04/02/django简介/</id>
-    <published>2020-04-01T16:00:00.000Z</published>
-    <updated>2020-04-21T02:28:51.183Z</updated>
-    
-    <summary type="html">
-    
-      Django 是从真实世界的应用中成长起来的，它是由堪萨斯（Kansas）州 Lawrence 城中的一个网络开发小组编写的。它诞生于 2003 年秋天，那时 Lawrence Journal-World 报纸的程序员 Adrian Holovaty 和 Simon Willison 开始用 Python 来编写程序。
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Django + Vue 跨域</title>
     <link href="/2020/04/02/Django%20+%20Vue%20%E8%B7%A8%E5%9F%9F/"/>
     <id>/2020/04/02/Django + Vue 跨域/</id>
@@ -358,15 +360,15 @@
   </entry>
   
   <entry>
-    <title>创建虚拟环境</title>
-    <link href="/2020/04/01/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
-    <id>/2020/04/01/虚拟环境/</id>
-    <published>2020-03-31T16:00:00.000Z</published>
-    <updated>2020-04-21T02:28:40.660Z</updated>
+    <title>Django简介</title>
+    <link href="/2020/04/02/django%E7%AE%80%E4%BB%8B/"/>
+    <id>/2020/04/02/django简介/</id>
+    <published>2020-04-01T16:00:00.000Z</published>
+    <updated>2020-04-21T02:28:51.183Z</updated>
     
     <summary type="html">
     
-      虚拟环境相当于一个抽屉，在这个抽屉中安装的任何软件包都不会影响到其他抽屉。并且在项目中，我可以指定这个项目的虚拟环境来配合我的项目。
+      Django 是从真实世界的应用中成长起来的，它是由堪萨斯（Kansas）州 Lawrence 城中的一个网络开发小组编写的。它诞生于 2003 年秋天，那时 Lawrence Journal-World 报纸的程序员 Adrian Holovaty 和 Simon Willison 开始用 Python 来编写程序。
     
     </summary>
     
@@ -389,6 +391,28 @@
     <summary type="html">
     
       个人简历
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>创建虚拟环境</title>
+    <link href="/2020/04/01/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
+    <id>/2020/04/01/虚拟环境/</id>
+    <published>2020-03-31T16:00:00.000Z</published>
+    <updated>2020-04-21T02:28:40.660Z</updated>
+    
+    <summary type="html">
+    
+      虚拟环境相当于一个抽屉，在这个抽屉中安装的任何软件包都不会影响到其他抽屉。并且在项目中，我可以指定这个项目的虚拟环境来配合我的项目。
     
     </summary>
     
