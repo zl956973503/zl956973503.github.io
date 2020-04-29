@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-04-28T09:27:41.621Z</updated>
+  <updated>2020-04-29T09:38:33.441Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Django + Vue 上传图片</title>
+    <link href="/2020/04/29/Django%20+%20Vue%20%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/"/>
+    <id>/2020/04/29/Django + Vue 上传图片/</id>
+    <published>2020-04-28T16:00:00.000Z</published>
+    <updated>2020-04-29T09:38:33.441Z</updated>
+    
+    <summary type="html">
+    
+      Django + Vue 上传图片
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="django" scheme="/tags/django/"/>
+    
+      <category term="vue" scheme="/tags/vue/"/>
+    
+  </entry>
   
   <entry>
     <title>微博第三方登录</title>
@@ -54,11 +76,11 @@
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
+      <category term="vue" scheme="/tags/vue/"/>
+    
       <category term="python" scheme="/tags/python/"/>
     
       <category term="后端" scheme="/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="vue" scheme="/tags/vue/"/>
     
   </entry>
   
@@ -197,15 +219,15 @@
   </entry>
   
   <entry>
-    <title>hexo博客上传后自定义域名无法访问博客</title>
-    <link href="/2020/04/21/hexo%20d%20%E4%B9%8B%E5%90%8Egit%20pages%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88/"/>
-    <id>/2020/04/21/hexo d 之后git pages 自定义域名失效/</id>
+    <title>静态博客图片上传</title>
+    <link href="/2020/04/21/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"/>
+    <id>/2020/04/21/静态博客图片上传/</id>
     <published>2020-04-20T16:00:00.000Z</published>
-    <updated>2020-04-21T12:42:04.252Z</updated>
+    <updated>2020-04-21T02:28:35.401Z</updated>
     
     <summary type="html">
     
-      第一次push自定义域名可以访问，但修改之后再次push自定义域名无法访问
+      先介绍两种方法 1.创建Images文件夹 2.使用图床
     
     </summary>
     
@@ -219,15 +241,15 @@
   </entry>
   
   <entry>
-    <title>静态博客图片上传</title>
-    <link href="/2020/04/21/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"/>
-    <id>/2020/04/21/静态博客图片上传/</id>
+    <title>hexo博客上传后自定义域名无法访问博客</title>
+    <link href="/2020/04/21/hexo%20d%20%E4%B9%8B%E5%90%8Egit%20pages%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88/"/>
+    <id>/2020/04/21/hexo d 之后git pages 自定义域名失效/</id>
     <published>2020-04-20T16:00:00.000Z</published>
-    <updated>2020-04-21T02:28:35.401Z</updated>
+    <updated>2020-04-21T12:42:04.252Z</updated>
     
     <summary type="html">
     
-      先介绍两种方法 1.创建Images文件夹 2.使用图床
+      第一次push自定义域名可以访问，但修改之后再次push自定义域名无法访问
     
     </summary>
     
@@ -444,28 +466,6 @@
       <category term="web" scheme="/tags/web/"/>
     
       <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hello-world</title>
-    <link href="/2018/12/20/hello-world/"/>
-    <id>/2018/12/20/hello-world/</id>
-    <published>2018-12-20T15:13:48.000Z</published>
-    <updated>2020-04-20T13:43:05.837Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
     
   </entry>
   
