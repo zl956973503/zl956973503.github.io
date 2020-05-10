@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-04-29T09:38:33.441Z</updated>
+  <updated>2020-05-10T10:36:59.904Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vue国际化</title>
+    <link href="/2020/05/10/vue%E5%9B%BD%E9%99%85%E5%8C%96/"/>
+    <id>/2020/05/10/vue国际化/</id>
+    <published>2020-05-09T16:00:00.000Z</published>
+    <updated>2020-05-10T10:36:59.904Z</updated>
+    
+    <summary type="html">
+    
+      Vue国际化（中英双语）
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="vue" scheme="/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>七牛云上传文件</title>
+    <link href="/2020/04/30/%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/"/>
+    <id>/2020/04/30/七牛云上传文件/</id>
+    <published>2020-04-29T16:00:00.000Z</published>
+    <updated>2020-04-30T04:10:51.482Z</updated>
+    
+    <summary type="html">
+    
+      django + vue 七牛云上传文件
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="django" scheme="/tags/django/"/>
+    
+      <category term="vue" scheme="/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Django + Vue 上传图片</title>
     <link href="/2020/04/29/Django%20+%20Vue%20%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/"/>
     <id>/2020/04/29/Django + Vue 上传图片/</id>
     <published>2020-04-28T16:00:00.000Z</published>
-    <updated>2020-04-29T09:38:33.441Z</updated>
+    <updated>2020-04-29T10:00:11.334Z</updated>
     
     <summary type="html">
     
@@ -54,9 +96,9 @@
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="web" scheme="/tags/web/"/>
-    
       <category term="django" scheme="/tags/django/"/>
+    
+      <category term="web" scheme="/tags/web/"/>
     
   </entry>
   
@@ -212,9 +254,31 @@
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
+      <category term="vue" scheme="/tags/vue/"/>
+    
       <category term="web" scheme="/tags/web/"/>
     
-      <category term="vue" scheme="/tags/vue/"/>
+  </entry>
+  
+  <entry>
+    <title>vue安装及基本语法</title>
+    <link href="/2020/04/21/vue%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%AE%80%E5%8D%95%E8%AF%AD%E6%B3%95/"/>
+    <id>/2020/04/21/vue安装以及简单语法/</id>
+    <published>2020-04-20T16:00:00.000Z</published>
+    <updated>2020-04-21T13:09:22.655Z</updated>
+    
+    <summary type="html">
+    
+      vue安装
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
@@ -250,28 +314,6 @@
     <summary type="html">
     
       第一次push自定义域名可以访问，但修改之后再次push自定义域名无法访问
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue安装及基本语法</title>
-    <link href="/2020/04/21/vue%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%AE%80%E5%8D%95%E8%AF%AD%E6%B3%95/"/>
-    <id>/2020/04/21/vue安装以及简单语法/</id>
-    <published>2020-04-20T16:00:00.000Z</published>
-    <updated>2020-04-21T13:09:22.655Z</updated>
-    
-    <summary type="html">
-    
-      vue安装
     
     </summary>
     
@@ -382,28 +424,6 @@
   </entry>
   
   <entry>
-    <title>Django简介</title>
-    <link href="/2020/04/02/django%E7%AE%80%E4%BB%8B/"/>
-    <id>/2020/04/02/django简介/</id>
-    <published>2020-04-01T16:00:00.000Z</published>
-    <updated>2020-04-21T02:28:51.183Z</updated>
-    
-    <summary type="html">
-    
-      Django 是从真实世界的应用中成长起来的，它是由堪萨斯（Kansas）州 Lawrence 城中的一个网络开发小组编写的。它诞生于 2003 年秋天，那时 Lawrence Journal-World 报纸的程序员 Adrian Holovaty 和 Simon Willison 开始用 Python 来编写程序。
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Django + Vue 跨域</title>
     <link href="/2020/04/02/Django%20+%20Vue%20%E8%B7%A8%E5%9F%9F/"/>
     <id>/2020/04/02/Django + Vue 跨域/</id>
@@ -426,37 +446,15 @@
   </entry>
   
   <entry>
-    <title>创建虚拟环境</title>
-    <link href="/2020/04/01/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
-    <id>/2020/04/01/虚拟环境/</id>
-    <published>2020-03-31T16:00:00.000Z</published>
-    <updated>2020-04-21T02:28:40.660Z</updated>
+    <title>Django简介</title>
+    <link href="/2020/04/02/django%E7%AE%80%E4%BB%8B/"/>
+    <id>/2020/04/02/django简介/</id>
+    <published>2020-04-01T16:00:00.000Z</published>
+    <updated>2020-04-21T02:28:51.183Z</updated>
     
     <summary type="html">
     
-      虚拟环境相当于一个抽屉，在这个抽屉中安装的任何软件包都不会影响到其他抽屉。并且在项目中，我可以指定这个项目的虚拟环境来配合我的项目。
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人简历</title>
-    <link href="/2020/04/01/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/"/>
-    <id>/2020/04/01/个人简历/</id>
-    <published>2020-03-31T16:00:00.000Z</published>
-    <updated>2020-04-21T02:28:24.254Z</updated>
-    
-    <summary type="html">
-    
-      个人简历
+      Django 是从真实世界的应用中成长起来的，它是由堪萨斯（Kansas）州 Lawrence 城中的一个网络开发小组编写的。它诞生于 2003 年秋天，那时 Lawrence Journal-World 报纸的程序员 Adrian Holovaty 和 Simon Willison 开始用 Python 来编写程序。
     
     </summary>
     
