@@ -283,15 +283,15 @@
   </entry>
   
   <entry>
-    <title>静态博客图片上传</title>
-    <link href="/2020/04/21/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"/>
-    <id>/2020/04/21/静态博客图片上传/</id>
+    <title>hexo博客上传后自定义域名无法访问博客</title>
+    <link href="/2020/04/21/hexo%20d%20%E4%B9%8B%E5%90%8Egit%20pages%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88/"/>
+    <id>/2020/04/21/hexo d 之后git pages 自定义域名失效/</id>
     <published>2020-04-20T16:00:00.000Z</published>
-    <updated>2020-04-21T02:28:35.401Z</updated>
+    <updated>2020-04-21T12:42:04.252Z</updated>
     
     <summary type="html">
     
-      先介绍两种方法 1.创建Images文件夹 2.使用图床
+      第一次push自定义域名可以访问，但修改之后再次push自定义域名无法访问
     
     </summary>
     
@@ -305,15 +305,15 @@
   </entry>
   
   <entry>
-    <title>hexo博客上传后自定义域名无法访问博客</title>
-    <link href="/2020/04/21/hexo%20d%20%E4%B9%8B%E5%90%8Egit%20pages%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88/"/>
-    <id>/2020/04/21/hexo d 之后git pages 自定义域名失效/</id>
+    <title>静态博客图片上传</title>
+    <link href="/2020/04/21/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"/>
+    <id>/2020/04/21/静态博客图片上传/</id>
     <published>2020-04-20T16:00:00.000Z</published>
-    <updated>2020-04-21T12:42:04.252Z</updated>
+    <updated>2020-04-21T02:28:35.401Z</updated>
     
     <summary type="html">
     
-      第一次push自定义域名可以访问，但修改之后再次push自定义域名无法访问
+      先介绍两种方法 1.创建Images文件夹 2.使用图床
     
     </summary>
     
