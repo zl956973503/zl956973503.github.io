@@ -96,9 +96,9 @@
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="web" scheme="/tags/web/"/>
-    
       <category term="django" scheme="/tags/django/"/>
+    
+      <category term="web" scheme="/tags/web/"/>
     
   </entry>
   
@@ -254,9 +254,9 @@
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="web" scheme="/tags/web/"/>
-    
       <category term="vue" scheme="/tags/vue/"/>
+    
+      <category term="web" scheme="/tags/web/"/>
     
   </entry>
   
@@ -424,15 +424,15 @@
   </entry>
   
   <entry>
-    <title>Django + Vue 跨域</title>
-    <link href="/2020/04/02/Django%20+%20Vue%20%E8%B7%A8%E5%9F%9F/"/>
-    <id>/2020/04/02/Django + Vue 跨域/</id>
+    <title>Django简介</title>
+    <link href="/2020/04/02/django%E7%AE%80%E4%BB%8B/"/>
+    <id>/2020/04/02/django简介/</id>
     <published>2020-04-01T16:00:00.000Z</published>
-    <updated>2020-04-21T02:28:46.094Z</updated>
+    <updated>2020-04-21T02:28:51.183Z</updated>
     
     <summary type="html">
     
-      Django + Vue 跨域
+      Django 是从真实世界的应用中成长起来的，它是由堪萨斯（Kansas）州 Lawrence 城中的一个网络开发小组编写的。它诞生于 2003 年秋天，那时 Lawrence Journal-World 报纸的程序员 Adrian Holovaty 和 Simon Willison 开始用 Python 来编写程序。
     
     </summary>
     
@@ -446,15 +446,15 @@
   </entry>
   
   <entry>
-    <title>Django简介</title>
-    <link href="/2020/04/02/django%E7%AE%80%E4%BB%8B/"/>
-    <id>/2020/04/02/django简介/</id>
+    <title>Django + Vue 跨域</title>
+    <link href="/2020/04/02/Django%20+%20Vue%20%E8%B7%A8%E5%9F%9F/"/>
+    <id>/2020/04/02/Django + Vue 跨域/</id>
     <published>2020-04-01T16:00:00.000Z</published>
-    <updated>2020-04-21T02:28:51.183Z</updated>
+    <updated>2020-04-21T02:28:46.094Z</updated>
     
     <summary type="html">
     
-      Django 是从真实世界的应用中成长起来的，它是由堪萨斯（Kansas）州 Lawrence 城中的一个网络开发小组编写的。它诞生于 2003 年秋天，那时 Lawrence Journal-World 报纸的程序员 Adrian Holovaty 和 Simon Willison 开始用 Python 来编写程序。
+      Django + Vue 跨域
     
     </summary>
     
