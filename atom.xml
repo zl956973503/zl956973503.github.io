@@ -96,9 +96,9 @@
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="django" scheme="/tags/django/"/>
-    
       <category term="web" scheme="/tags/web/"/>
+    
+      <category term="django" scheme="/tags/django/"/>
     
   </entry>
   
@@ -254,9 +254,9 @@
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="vue" scheme="/tags/vue/"/>
-    
       <category term="web" scheme="/tags/web/"/>
+    
+      <category term="vue" scheme="/tags/vue/"/>
     
   </entry>
   
