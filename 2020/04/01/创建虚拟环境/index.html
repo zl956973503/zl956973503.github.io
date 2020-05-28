@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">hexo博客上传后自定义域名无法访问博客 | Zhou</title>
+  <title itemprop="name">创建虚拟环境 | Zhou</title>
   
     <link rel="shortcut icon" href="/img/custom/favicon.ico">
   
   <meta http-equiv="x-dns-prefetch-control" content="on">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <!-- 第一种看板娘 -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
   <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
@@ -80,7 +81,12 @@
         </a>
       </div>
       <div class="header-info">
-        <p>Live your life with passion! With some drive!</p>
+        <!-- 原代码 -->
+        <!-- <p>Live your life with passion! With some drive!</p> -->
+        <!-- 添加一言API、诗词  包括下边两行-->
+        <p id="jinrishici-sentence">正在加载今日诗词....</p>
+        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
         <div class="top-social_v2">
           <li id="bg-pre">
             <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
@@ -376,11 +382,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://2heng.xin/wp-content/uploads//2017/11/IMG_20171127_161530-1024x576.jpg);" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2017/11/IMG_20171127_161530-1024x576.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://2heng.xin/wp-content/uploads//2018/06/child-1024x576.jpg);" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2018/06/child-1024x576.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      hexo博客上传后自定义域名无法访问博客</h1>
+      创建虚拟环境</h1>
       <p class="entry-census">
         <span>
           <a href="zhoulei.icu">
@@ -392,7 +398,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2020-4-10<span class="bull">
+        2020-4-1<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -406,21 +412,37 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <blockquote>
-<p>注：如果你没有购买域名的话，这篇文章边便看不看都无所谓了。</p>
-</blockquote>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>之前的博客说过，使用hexo d 之后可以将博客上传至github上，但是之后每次更新博客新建md文件，使用 hexo d 再次上传到github pages仓库，settings中的<code>custom domain</code>就变成空的了。</p>
-<p><img src="https://i.loli.net/2020/04/08/nV26wBNjOXHte51.png" alt></p>
-<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>在 <code>hexo</code> 生成的博客的 <code>source</code> 目录下新建一个 <code>CNAME</code> 文件，然后在这个文件中填入自己的域名，这样就不会每次上传之后，<code>gitpages</code> 里的 <code>custom domain</code> 都被重置掉啦。</p>
-<p><img src="https://i.loli.net/2020/04/08/LgeMHiwStWQpO4B.png" alt></p>
+          <p>Python 3.4+自带了venv模块，用于创建虚拟环境，每个虚拟环境都可以安装一套独立的第三方模块。</p>
+<p>本文在Windows 10上操作。</p>
+<p><strong>1、创建一个虚拟环境：</strong></p>
+<pre><code>D:\&gt;mkdir test_venv
+D:\&gt;cd test_venv
+D:\test_venv&gt;python -m venv test
+</code></pre><p>第三行，使用venv模块创建一个名为test的虚拟环境。</p>
+<p>执行后，生成了一个test目录，内有1个文件、3个目录：</p>
 <blockquote>
-<p>注：</p>
-<p>文件名为 CNAME，全部大写，没有后缀。</p>
-<p>内容只能有域名，前边不能有www. 或者 http: 等。</p>
+<p> test<br>   │  pyvenv.cfg<br>   │<br>   ├─Include<br>   ├─Lib<br>   └─Scripts</p>
 </blockquote>
-<p>如何创建没有后缀的文件（只要创建文本文档的时候把后缀名也给删掉，直接写文件名就好啦。）</p>
-<p><img src="https://i.loli.net/2020/04/08/VJ56agkUOSwrfEx.gif" alt></p>
-<p>可以用记事本方式打开 或者 编辑器打开编辑内容。</p>
+<p><strong>2、启用虚拟环境：</strong></p>
+<pre><code>D:\test_venv&gt;test\Scripts\activate.bat
+(test) D:\test_venv&gt;
+</code></pre><p>执行那个activate.bat文件，启用后，提示符前面会出现虚拟环境的名字(test)。</p>
+<p><strong>3、用pip给虚拟环境安装模块：</strong></p>
+<p>用pip list看一下已有的模块，能看到只有两个Python自带的模块：</p>
+<pre><code>(test) D:\test_venv&gt;pip list
+pip (8.1.1)
+setuptools (20.10.1)
+You are using pip version 8.1.1, however version 8.1.2 is available.
+You should consider upgrading via the &#39;python -m pip install --upgrade pip&#39; command.
+</code></pre><p>提示pip有新版本，按提示用’python -m pip install –upgrade pip’命令更新就好了。</p>
+<p>在虚拟环境里，千万别用’pip install –upgrade pip’更新pip，这会破坏pip。</p>
+<p>现在，给虚拟环境安装django试试：</p>
+<pre><code>(test) D:\test_venv&gt;pip install django
+</code></pre><p>已成功安装django。</p>
+<p><strong>4、退出虚拟环境：</strong></p>
+<pre><code>(test) D:\test_venv&gt;test\Scripts\deactivate.bat
+D:\test_venv&gt;
+</code></pre><p>执行deactivate.bat后，退出虚拟环境，此时命令行提示符前的(test)消失了。</p>
 
         </div>
         <!-- .entry-content -->
@@ -449,19 +471,36 @@
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/04/01/个人简历/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/20/4qKBXmNMoki3jyG.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2020/04/20/4qKBXmNMoki3jyG.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                个人简历</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
         
           
-            <div class="post-nepre full next">
+            <div class="post-nepre half next">
           
-            <a href="/2020/04/09/进程和线程的简单理解/" rel="next">
+            <a href="/2018/12/20/hello-world/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                进程和线程的简单理解</h3>
+                hello-world</h3>
                 <hr>
               </div>
             </a>
@@ -477,6 +516,8 @@
         el: '#vcomments',
         appId: "GIGgtUFFhF1eP4QqGwrhtcnQ-gzGzoHsz",
         appKey: "F7yAoS7oBrhfUctA9jVLVRGR",
+        notify: true, //邮件提醒
+        avatar:'wavatar', //用不同面孔和背景组合生成的头像
         path: window.location.pathname,
         placeholder: "你是我一生只会遇见一次的惊喜 ..."
       })
@@ -552,6 +593,11 @@
     <p style="font-family: 'Ubuntu', sans-serif;">
         <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
         </span>
+        <br>
+        <span><a style="display:inline-block"
+          href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral" target="blank" title="又拍云"><img
+            height="30" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png" alt="upyun" width="80" heigth='30'></a>
+        </span>
       </p>
     </div>
   </div><!-- .site-info -->
@@ -560,7 +606,8 @@
 
 
 <!-- <script src="/js/tocbot.js"></script> -->
-<script src="https://cdn.jsdelivr.net/gh/yremp/live2d@1.0/autoload.js"></script>
+<!-- 第一种看板娘 -->
+<!-- <script src="https://cdn.jsdelivr.net/gh/yremp/live2d@1.0/autoload.js"></script> -->
 <script type="text/javascript" src="/js/lib.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="/js/InsightSearch.js"></script>
@@ -658,6 +705,35 @@ $(document).ready(function() {
     </div>
     <canvas id="night-mode-cover"></canvas>
 
+    <!-- 背景特效 -->
+    <!-- 背景出现樱花飘落 -->
+    <script src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"></script>
+    <!-- 背景显示飘动的彩带 -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/piao.js"></script> -->
+    <!-- 背景出现雪花飘落 第一种 -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/xuehuapiaoluo.js"></script> -->
+    <!-- 背景出现雪花飘落 第二种 -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/snow.js"></script> -->
+
+
+    <!-- 鼠标点击特效 -->
+    <!-- 点击出现社会主义彩色文字 -->
+    <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script>
+    <!-- 点击出现爱心 -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script> -->
+    <!-- 点击出现彩色气球爆炸效果 -->
+    <!-- <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/clickBom.js"></script> -->
+  
+    <!-- 添加看板娘 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> 
+    <!-- 这条在sakura中已有，可不添加 -->
+    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+    <!-- 预加载 -->
+    <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+  <!-- 实现换肤功能 -->
   </section>
   <div id="mo-nav" class="">
   <div class="m-avatar">
@@ -897,7 +973,7 @@ $(document).ready(function() {
 </style>
 <meting-js
 
-    id="2660651585"
+    id="2423720388"
 
     server="netease"
 
