@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">静态博客图片上传 | Zhou</title>
+  <title itemprop="name">python的几个数据类型方法 | Zhou</title>
   
     <link rel="shortcut icon" href="/img/custom/favicon.ico">
   
@@ -382,11 +382,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://2heng.xin/wp-content/uploads//2019/06/74857125_p0.png);" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2019/06/74857125_p0.png">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://s1.ax1x.com/2020/07/06/UC1HPS.md.jpg);" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s1.ax1x.com/2020/07/06/UC1HPS.md.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      静态博客图片上传</h1>
+      python的几个数据类型方法</h1>
       <p class="entry-census">
         <span>
           <a href="zhoulei.icu">
@@ -398,7 +398,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2020-4-21<span class="bull">
+        2020-7-6<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -412,39 +412,154 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <blockquote>
-<p>先前已经把博客搭建好了，但是写博客没有图片怎么能忍，所以来说说图片上传问题</p>
-</blockquote>
-<p>目前我知道有两种方法</p>
-<h1 id="方法一、创建Images文件夹"><a href="#方法一、创建Images文件夹" class="headerlink" title="方法一、创建Images文件夹"></a>方法一、创建Images文件夹</h1><p>1、<code>cd</code>到博客等根目录下 查看<code>_config.yml</code>文件 查找 <code>post_asset_folder</code> 字段确定<code>post_asset_folder</code> 设置为<code>true</code> -&gt; <code>post_asset_folder:true</code></p>
-<p>2、当您设置 <code>post_asset_folder</code>  参数后，在建立文件时，Hexo 会自动建立一个与文章同名的文件夹，您可以把与该文章相关的所有资源都放到那个文件夹，这样你就可以更方便的使用资源。</p>
-<p>3、在博客的根目录执行命令来进行插件的安装。</p>
-<blockquote>
-<p>npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a> –save</p>
-</blockquote>
-<p>4、然后创建一文章 <code>hexo new &quot;test&quot;</code> 然后查看博客的 <code>../source/_posts</code> 目录下的文件，会看到存在一个<code>test 文件夹</code> 和 <code>test.md</code> 文件</p>
-<p>5、将所需要的图片资源放到<code>test 文件夹</code> 内 目录结构如下：</p>
-<p>6、书写文章使用<code>test文件内</code> 的图片</p>
-<p>7、使用<code>hexo s</code> 命令运行本地博客如图</p>
-<p>8、使用<code>hexo clean</code> <code>hexo g</code> <code>hexo deploy</code> 将本地博客推送到远程。</p>
-<h1 id="方法二、使用图床"><a href="#方法二、使用图床" class="headerlink" title="方法二、使用图床"></a>方法二、使用图床</h1><blockquote>
-<p>简单说图床就是一个在网络上存储图片的地方，目的是为了节省本地服务器空间，加快图片打开速度，主要是个人博客和网站使用，我也就是想省一下github pages空间</p>
-</blockquote>
-<p><strong>这里推荐几个图床网站</strong></p>
-<p><a href="https://sm.ms/" target="_blank" rel="noopener">SM.SM</a>    <a href="https://moetu.org/" target="_blank" rel="noopener">meotu</a>    <a href="https://www.z4a.net/" target="_blank" rel="noopener">z4a</a>    <a href="https://www.superbed.cn/" target="_blank" rel="noopener">聚合图床</a>    <a href="https://niupic.com/" target="_blank" rel="noopener">牛图网</a>    <a href="https://imgbb.com/" target="_blank" rel="noopener">imgbb</a>    </p>
-<p>详细介绍请看这里 <a href="https://www.jianshu.com/p/c35091dcba84" target="_blank" rel="noopener">https://www.jianshu.com/p/c35091dcba84</a></p>
-<p>我以<a href="https://sm.ms/" target="_blank" rel="noopener">SM.SM</a>为例</p>
-<blockquote>
-<p>首先进入该网站,看下图。</p>
-</blockquote>
-<p><img src="https://i.loli.net/2020/04/09/bj75UMnpxsztmYQ.gif" alt></p>
-<blockquote>
-<p>上传成功后点击<code>image URL</code>，并复制下方的链接。</p>
-</blockquote>
-<p><img src="https://i.loli.net/2020/04/08/QjYEvSsxkGFlwBA.png" alt></p>
-<p>使用md语法插入图片，将链接粘贴到 <code>输入图片路径中链接</code>中，稍等片刻，图片便会加载好出现。</p>
-<p><img src="https://i.loli.net/2020/04/08/RcbaHvS8BxjFsNy.png" alt></p>
-<p>接着便是<code>hexo g</code> …. 等等正常操作了</p>
+          <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>（1）字符串转换成列表</p>
+<pre><code>a = &quot;aaleade&quot;
+b = list(a)
+print(b)
+</code></pre><p>（2）列表转换成字符串</p>
+<pre><code>a = [11,22,33,&quot;alex&quot;]
+s = &quot;&quot;
+for L in a:
+    s = s +str(L)
+print(s)
+</code></pre><p>（3）replace()  替换</p>
+<pre><code>a = &quot;alex&quot;
+print(a.replace(&quot;l&quot;,&quot;aaa&quot;))
+</code></pre><p>（4）find() 寻找子序列，找到返回第一个索引值，没找到返回 -1,可指定开始位置和结束位置</p>
+<pre><code>a = &quot;alex&quot;
+print(a.find(&quot;l&quot;,0,3))
+</code></pre><p>（5）join()  拼接</p>
+<pre><code>a = &quot;alex&quot;
+print(&quot;+&quot;.join(a))
+</code></pre><p>（6）strip() 删除两边空白</p>
+<pre><code>a = &quot;    alex   &quot;
+print(a.strip())
+</code></pre><p>（7）split() 拆分 可指定拆分为几份</p>
+<pre><code>a = &quot;alex&quot;
+print(a.split(&quot;l&quot;,2))
+</code></pre><p>（8）upper() 全部转换成大写</p>
+<pre><code>a = &quot;alex&quot;
+print(a.upper())
+</code></pre><p>（8）lower() 全部转换成大写</p>
+<pre><code>a = &quot;ALEX&quot;
+print(a.lower())
+</code></pre><p>（9）format() 格式化，将一个字符串中的占位符替换为指定的值</p>
+<pre><code># 第一种方法
+a = &quot;{name},{age}&quot;
+print(a.format(name=&quot;alex&quot;,age=19))
+
+# 第二种方法
+a = &quot;{name},{age}&quot;
+print(a.format(**{&quot;name&quot;:&quot;alex&quot;,&quot;age&quot;:19}))
+
+# 第三种方法
+a = &quot;{0},{1}&quot;
+print(a.format(&quot;alex&quot;,19))
+</code></pre><p>（10）startswith() 以什么开头 endswith() 以什么结尾</p>
+<pre><code>a = &quot;alex&quot;
+print(a.startswith(&quot;al&quot;))
+print(a.endswith(&quot;ex&quot;))
+</code></pre><p>（11）center() 填充 默认空白 可指定填充内容</p>
+<pre><code>a = &quot;aelx&quot;
+print(a.center(20,&quot;*&quot;))
+</code></pre><h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><p>（1）append() 追加</p>
+<pre><code>a = [11,22,&quot;123&quot;]
+a.append(&quot;asd&quot;)
+print(a)
+</code></pre><p>（2）extend() 追加 可迭代对象</p>
+<pre><code>a = [11,22,&quot;123&quot;]
+a.extend(&quot;asd&quot;)
+print(a)
+</code></pre><p>（3）insert() 从指定位置插入元素</p>
+<pre><code>a = [11,22,&quot;123&quot;]
+a.insert(0,&quot;asd&quot;)
+print(a)
+</code></pre><p>（4）pop() 移除列表中的一个元素（默认是最后一个），并且返回该元素的值</p>
+<pre><code>a = [11,22,&quot;123&quot;]
+print(a.pop())
+print(a.pop(0))
+</code></pre><p>（5）remove() 移除列表中某个值的第一个匹配项</p>
+<pre><code>a = [11,22,&quot;123&quot;]
+a.remove(11)   
+print(a)
+</code></pre><p>（6）reverse() 将列表中的元素反向存放</p>
+<pre><code>a = [11,22,&quot;123&quot;]
+a.reverse() 
+print(a)
+</code></pre><p>（7）sort() 对列表进行排序</p>
+<pre><code>a = [1,3,2,4]
+a.sort()
+print(a)
+</code></pre><h1 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h1><p>（1）get() 根据key获取值，key不在时，可以指定值默认（None）</p>
+<pre><code>a = {
+        &quot;k1&quot;:2,
+        &quot;k2&quot;:3
+}
+v = a.get(&quot;k111&quot;,111)
+print(v)
+</code></pre><p>（2）update() 更新</p>
+<pre><code># 第一种写法
+a = {
+        &quot;k1&quot;:2,
+        &quot;k2&quot;:3
+}
+v = a.update({&quot;k111&quot;:123,&quot;kk122&quot;:333})
+print(a)
+
+# 第二种写法
+a = {
+        &quot;k1&quot;:2,
+        &quot;k2&quot;:3
+}
+v = a.update(k111=123,kk122=333)
+print(a)
+</code></pre><p>（3）keys() 获取key值</p>
+<pre><code>a = {
+        &quot;k1&quot;:2,
+        &quot;k2&quot;:3
+}
+for L in a.keys():
+     print(L)
+</code></pre><p>（4）values() 获取value值</p>
+<pre><code>a = {
+        &quot;k1&quot;:2,
+        &quot;k2&quot;:3
+}
+for L in a.values():
+     print(L)
+</code></pre><p>（5）items() 获取key、value值</p>
+<pre><code>a = {
+        &quot;k1&quot;:2,
+        &quot;k2&quot;:3
+}
+for L in a.items():
+     print(L)
+</code></pre><p>（6）clear() 清除字典中所有的项</p>
+<pre><code>a = {
+        &quot;k1&quot;:2,
+        &quot;k2&quot;:3
+}
+a.clear()
+print(a)
+</code></pre><p>（7）del 删除键指定key</p>
+<pre><code>dict = {&#39;Name&#39;: &#39;Zara&#39;, &#39;Age&#39;: 7, &#39;Class&#39;: &#39;First&#39;}
+del dict[&#39;Name&#39;]
+print(dict)
+</code></pre><h1 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h1><p>（1）元组之间的连接组合</p>
+<pre><code>tup1 = (12, 34.56)
+tup2 = (&#39;abc&#39;, &#39;xyz&#39;)
+tup3 = tup1 + tup2
+print(tup3)
+</code></pre><p>（2）删除元组</p>
+<pre><code>tup = (&#39;physics&#39;, &#39;chemistry&#39;, 1997, 2000) 
+print(tup)
+del (tup)
+print (&quot;After deleting tup : &quot;)
+print (tup)
+
+#因为已经被删除，所以会报错 ：“NameError: name &#39;tup&#39; is not defined”
+
+</code></pre><h1 id="参考自菜鸟教程"><a href="#参考自菜鸟教程" class="headerlink" title="参考自菜鸟教程"></a>参考自菜鸟教程</h1><p><a href="https://www.runoob.com/python/python-tuples.html" target="_blank" rel="noopener">https://www.runoob.com/python/python-tuples.html</a> </p>
 
         </div>
         <!-- .entry-content -->
@@ -473,36 +588,19 @@
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/2020/04/21/vue安装以及简单语法/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/21/KyNwSLDRrm7EzPH.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2020/04/21/KyNwSLDRrm7EzPH.jpg">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                vue安装及基本语法</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
         
           
-            <div class="post-nepre half next">
+            <div class="post-nepre full next">
           
-            <a href="/2020/04/20/Github Pages + Hexo搭建静态博客/" rel="next">
+            <a href="/2020/05/14/HeyUI + Django实现分页/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2018/02/illust_66799182_20180128_182352-1024x614.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://2heng.xin/wp-content/uploads//2018/02/illust_66799182_20180128_182352-1024x614.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s1.ax1x.com/2020/05/13/YaFbU1.md.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://s1.ax1x.com/2020/05/13/YaFbU1.md.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                Github Pages + Hexo搭建静态博客</h3>
+                HeyUI + Django实现分页</h3>
                 <hr>
               </div>
             </a>
