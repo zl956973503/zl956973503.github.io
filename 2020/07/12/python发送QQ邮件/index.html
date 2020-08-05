@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Zhou</title>
+  <title itemprop="name">python发送QQ邮件 | Zhou</title>
   
     <link rel="shortcut icon" href="/img/custom/favicon.ico">
   
@@ -376,519 +376,253 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 0px;"></div>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(http://upyun.zhoulei.icu/blog_images/73923117.jpg);" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://upyun.zhoulei.icu/blog_images/73923117.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      python发送QQ邮件</h1>
+      <p class="entry-census">
+        <span>
+          <a href="zhoulei.icu">
+            <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/01.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="zhoulei.icu">zhou</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-7-12<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
 <div id="content" class="site-content">
-  
-  <div class="notice" style="margin-top:60px">
-    <i class="iconfont icon-notification">
-    </i>
-    <div class="notice-content">欢迎访问我的小站</div>
-  </div>
-  
-  <div class="top-feature-row">
-  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
-  <i class="fa fa-anchor" aria-hidden="true">
-  </i>
-  START:DASH!!</h1>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/theme-sakura/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/startdash/sakura.md.png">
-        </div>
-        <div class="info">
-          <h3>Sakura</h3>
-          <p>本站 hexo 主题</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="http://space.bilibili.com/271849279" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/startdash/bilibili.jpg">
-        </div>
-        <div class="info">
-          <h3>Bilibili</h3>
-          <p>博主的b站视频</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/startdash/wangshiwu.jpg">
-        </div>
-        <div class="info">
-          <h3>hojun的万事屋</h3>
-          <p>技术服务</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-</div>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
-      <i class="fa fa-envira" aria-hidden="true"></i>
-      Discovery</h1>
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h4 id="第一步，登录QQ邮箱，-走到设置-开启pop3服务-和SMTP服务"><a href="#第一步，登录QQ邮箱，-走到设置-开启pop3服务-和SMTP服务" class="headerlink" title="第一步，登录QQ邮箱， 走到设置 开启pop3服务 和SMTP服务"></a>第一步，登录QQ邮箱， 走到设置 开启pop3服务 和SMTP服务</h4><h4 id="SMTP-服务相当于一个服务器-发送邮件使用SMTP服务器"><a href="#SMTP-服务相当于一个服务器-发送邮件使用SMTP服务器" class="headerlink" title="SMTP 服务相当于一个服务器 发送邮件使用SMTP服务器"></a>SMTP 服务相当于一个服务器 发送邮件使用SMTP服务器</h4><h4 id="第二步-开启成功后，我们会拿到秘钥串-，也就是相当于我们登录SMTP服务-我们就有了一个权限（发送邮件的权限）代码登录的时候我们输入自己的QQ邮箱，密码相当于秘钥串。"><a href="#第二步-开启成功后，我们会拿到秘钥串-，也就是相当于我们登录SMTP服务-我们就有了一个权限（发送邮件的权限）代码登录的时候我们输入自己的QQ邮箱，密码相当于秘钥串。" class="headerlink" title="第二步 开启成功后，我们会拿到秘钥串 ，也就是相当于我们登录SMTP服务 我们就有了一个权限（发送邮件的权限）代码登录的时候我们输入自己的QQ邮箱，密码相当于秘钥串。"></a>第二步 开启成功后，我们会拿到秘钥串 ，也就是相当于我们登录SMTP服务 我们就有了一个权限（发送邮件的权限）代码登录的时候我们输入自己的QQ邮箱，密码相当于秘钥串。</h4><h4 id="第三步-代码完成-引入SMTPlib包（SMTP相关）和关于email操作的包-（发送邮件的相关）"><a href="#第三步-代码完成-引入SMTPlib包（SMTP相关）和关于email操作的包-（发送邮件的相关）" class="headerlink" title="第三步 代码完成   引入SMTPlib包（SMTP相关）和关于email操作的包 （发送邮件的相关）"></a>第三步 代码完成   引入SMTPlib包（SMTP相关）和关于email操作的包 （发送邮件的相关）</h4><h4 id="问题1-发送的是什么？-邮件-，邮件的内容当然由关于邮件部分的包或者模块来操作。-问题2-是谁来发送这个问题？-SMTP-服务器来发送-，由SMTP相关的模块来构造。"><a href="#问题1-发送的是什么？-邮件-，邮件的内容当然由关于邮件部分的包或者模块来操作。-问题2-是谁来发送这个问题？-SMTP-服务器来发送-，由SMTP相关的模块来构造。" class="headerlink" title="问题1 发送的是什么？ 邮件 ，邮件的内容当然由关于邮件部分的包或者模块来操作。 问题2 是谁来发送这个问题？ SMTP 服务器来发送 ，由SMTP相关的模块来构造。"></a>问题1 发送的是什么？ 邮件 ，邮件的内容当然由关于邮件部分的包或者模块来操作。 问题2 是谁来发送这个问题？ SMTP 服务器来发送 ，由SMTP相关的模块来构造。</h4><h1 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h1><pre><code class="python">from email.mime.text import MIMEText
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email.header import Header
+from email import encoders
+from email.header import Header
+from email.utils import parseaddr, formataddr
+</code></pre>
+<h1 id="发送纯文本格式邮件"><a href="#发送纯文本格式邮件" class="headerlink" title="发送纯文本格式邮件"></a>发送纯文本格式邮件</h1><pre><code class="python">def _format_addr(s):
+     name, addr = parseaddr(s)                      # 解析邮件地址，name为邮件人，addr为邮件地址
+     return formataddr((Header(name, &#39;utf-8&#39;).encode(), addr))      # 格式化邮件地址
+
+
+from_addr = &#39;xxxx@qq.com&#39;  #发送者邮箱
+password = &#39;xxxx&#39;   #输入密码,此密码为邮箱的授权码
+to_addr = &#39;xxxx@qq.com&#39;   #收件人地址
+smtp_server = &#39;smtp.qq.com&#39;     #SMTP服务器地址
+
+
+#这里有三个参数，第一个参数为邮件正文，第二个参数为邮件类型，传入&#39;plain&#39;表示纯文本，第三个参数&#39;utf-8&#39;是编码，以保证兼容多语言
+msg = MIMEText(&#39;hello,send by Python.....&#39;,&#39;plain&#39;,&#39;utf-8&#39;)
+
+msg[&#39;From&#39;] = _format_addr(&#39;学生 &lt;%s&gt;&#39; % from_addr)     # 添加发件人
+msg[&#39;To&#39;] = _format_addr(&#39;老师 &lt;%s&gt;&#39; % to_addr)       # 添加收件人
+msg[&#39;Subject&#39;] = Header(&#39;SMTP测试&#39;, &#39;utf-8&#39;).encode()   # 添加邮件主题
+
+
+
+server = smtplib.SMTP(smtp_server, 25)     # SMTP协议默认端口是25
+server.set_debuglevel(1)                   # 打印和SMTP服务器交互的所有信息
+server.login(from_addr, password)          # 登录SMTP服务器
+server.sendmail(from_addr, [to_addr], msg.as_string())   #发邮件
+server.quit()
+
+</code></pre>
+<h1 id="发送HTML格式的邮件"><a href="#发送HTML格式的邮件" class="headerlink" title="发送HTML格式的邮件"></a>发送HTML格式的邮件</h1><p>在构造MIMEText对象时，把HTML字符串传进去，再把第二个参数由plain变为html就可以了：</p>
+<pre><code class="python">#注意将第二个参数改为html
+msg = MIMEText(&#39;&lt;html&gt;&lt;h1&gt;你好！&lt;h1&gt;&lt;html&gt;&#39;,&#39;html&#39;,&#39;utf-8&#39;)
+</code></pre>
+<h1 id="发送txt格式的邮件"><a href="#发送txt格式的邮件" class="headerlink" title="发送txt格式的邮件"></a>发送txt格式的邮件</h1><p>首先要创建MIMEMultipart()实例，然后构造附件，如果有多个附件，可依次构造，最后利用smtplib.smtp发送。</p>
+<pre><code class="python">def _format_addr(s):
+     name, addr = parseaddr(s)                      # 解析邮件地址，name为邮件人，addr为邮件地址
+     return formataddr((Header(name, &#39;utf-8&#39;).encode(), addr))      # 格式化邮件地址
+
+
+from_addr = &#39;xxxx@qq.com&#39;  #发送者邮箱
+password = &#39;xxxx&#39;   #输入密码,此密码为邮箱的授权码
+to_addr = &#39;xxxx@qq.com&#39;   #收件人地址
+smtp_server = &#39;smtp.qq.com&#39;     #SMTP服务器地址
+
+#创建一个带附件的实例
+msg = MIMEMultipart()
+#邮件正文内容
+msg.attach(MIMEText(&#39;这是测试Python发送附件功能....&#39;,&#39;plain&#39;,&#39;utf-8&#39;))
+
+msg[&#39;From&#39;] = _format_addr(&#39;学生 &lt;%s&gt;&#39; % from_addr)     # 添加发件人
+msg[&#39;To&#39;] = _format_addr(&#39;老师 &lt;%s&gt;&#39; % to_addr)       # 添加收件人
+msg[&#39;Subject&#39;] = Header(&#39;SMTP测试&#39;, &#39;utf-8&#39;).encode()   # 添加邮件主题
+
+#添加附件
+mime = MIMEApplication(open(&#39;123.txt&#39;,&#39;rb&#39;).read())
+mime.add_header(&#39;Content-Disposition&#39;, &#39;attachment&#39;, filename=&quot;123.txt&quot;)
+
+msg.attach(mime)
+
+
+server = smtplib.SMTP(smtp_server, 25)     # SMTP协议默认端口是25
+server.starttls()
+server.set_debuglevel(1)                   # 打印和SMTP服务器交互的所有信息
+server.login(from_addr, password)          # 登录SMTP服务器
+server.sendmail(from_addr, [to_addr], msg.as_string())   #发邮件
+server.quit()
+
+</code></pre>
+<h1 id="发送图片附件"><a href="#发送图片附件" class="headerlink" title="发送图片附件"></a>发送图片附件</h1><pre><code class="python">#创建一个带附件的实例
+msg = MIMEMultipart()
+msg.attach(MIMEText(&#39;这是测试Python发送附件功能....&#39;,&#39;plain&#39;,&#39;utf-8&#39;))
+
+msg[&#39;From&#39;] = _format_addr(&#39;学生 &lt;%s&gt;&#39; % from_addr)     # 添加发件人
+msg[&#39;To&#39;] = _format_addr(&#39;老师 &lt;%s&gt;&#39; % to_addr)       # 添加收件人
+msg[&#39;Subject&#39;] = Header(&#39;SMTP测试&#39;, &#39;utf-8&#39;).encode()   # 添加邮件主题
+
+
+with open(&#39;123.jpg&#39;, &#39;rb&#39;) as f:     # 打开需要添加的附件
+    # 创建MIMEBase对象，即附件内容
+    mime = MIMEBase(&#39;image&#39;, &#39;jpg&#39;, filename=&#39;123.jpg&#39;)
+    # 添加必要的头文件
+    mime.add_header(&#39;Content-Disposition&#39;, &#39;attachment&#39;, filename=&#39;123.jpg&#39;)
+    mime.add_header(&#39;Content-ID&#39;, &#39;&lt;0&gt;&#39;)
+    mime.add_header(&#39;X-Attachment-ID&#39;, &#39;0&#39;)
+    mime.set_payload(f.read())                               # 读进附件的内容
+    encoders.encode_base64(mime)                              # 用base64编码
+    msg.attach(mime)   
+</code></pre>
+<p>然后，按正常的邮件发送流程补充代码即可</p>
+<p>若想在邮件正文中显示图片，需要先把图片作为附件，然后在HTML中通过引用src=”cid:0”就可以把附件作为图片嵌入了</p>
+<pre><code class="python">msg.attach(MIMEText(&#39;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello, my friend...&lt;/h1&gt;&#39; +
+     &#39;&lt;p&gt;&lt;img src=&quot;cid:0&quot;&gt;&lt;/p&gt;&#39; +
+     &#39;&lt;/body&gt;&lt;/html&gt;&#39;, &#39;html&#39;, &#39;utf-8&#39;))
+</code></pre>
+<p>这个时候图片不再作为附件发送，而是直接在邮件正文中显示。</p>
+<p>如果有多张图片，则給它们编号后，引用不同的cid:x即可。</p>
+<h1 id="同时发送纯文本和html格式"><a href="#同时发送纯文本和html格式" class="headerlink" title="同时发送纯文本和html格式"></a>同时发送纯文本和html格式</h1><p>通过创建MIMEMultipart对象，我们可以让邮件内容即支持plain，也支持HTML。</p>
+<p>在创建MIMEMultipart时指定subtype是alternative：</p>
+<pre><code class="python">msg = MIMEMultipart(&#39;alternative&#39;)
+msg[&#39;From&#39;] = ...
+msg[&#39;To&#39;] = ...
+msg[&#39;Subject&#39;] = ...
+
+msg.attach(MIMEText(&#39;Hello, my friend...&#39;, &#39;plain&#39;, &#39;utf-8&#39;))
+msg.attach(MIMEText(&#39;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello, my friend...&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&#39;, &#39;html&#39;, &#39;utf-8&#39;))
+</code></pre>
+<p>一旦收件人无法查看HTML格式的邮件，就会自动变为plain格式查看。</p>
+<h1 id="STMP加密"><a href="#STMP加密" class="headerlink" title="STMP加密"></a>STMP加密</h1><p>使用标准的25端口连接SMTP服务器时，使用的是明文传输，在发送的过程有可能被窃听。</p>
+<p>想要给邮件加密，添加starttls()方法即可：</p>
+<pre><code class="python">server = smtplib.SMTP(smtp_server, 25)
+server.starttls()
+</code></pre>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>只要掌握了各种邮件类型的构造方法，正确设置好邮件头，就可以顺利发出。</p>
+<p>构造一个邮件对象就是一个Messag对象，如果构造一个MIMEText对象，就表示一个文本邮件对象，如果构造一个MIMEImage对象，就表示一个作为附件的图片，要把多个对象组合起来，就用MIMEMultipart对象，而MIMEBase可以表示任何对象。它们的继承关系如下：</p>
+<pre><code>Message
++- MIMEBase
+   +- MIMEMultipart
+   +- MIMENonMultipart
+      +- MIMEMessage
+      +- MIMEText
+      +- MIMEImage
+</code></pre><p>可详细参考此文档：<a href="https://cloud.tencent.com/developer/article/1445126" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1445126</a></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/07/11/python的几个数据类型方法/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://upyun.zhoulei.icu/blog_images/illust_49566364_20180413_110553.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://upyun.zhoulei.icu/blog_images/illust_49566364_20180413_110553.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                python数据类型方法</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GIGgtUFFhF1eP4QqGwrhtcnQ-gzGzoHsz",
+        appKey: "F7yAoS7oBrhfUctA9jVLVRGR",
+        notify: true, //邮件提醒
+        avatar:'wavatar', //用不同面孔和背景组合生成的头像
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-  <div class="post-thumb">
-    <a href="/2020/04/25/Python操作Redis的5种数据类型/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/25/B3MxCVEUyWa7294.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-25 00:04</div>
-      <a href="/2020/04/25/Python操作Redis的5种数据类型/" class="post-title">
-        <h3>Python操作Redis的5种数据类型</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/django/">django<em>·</em></a>
-          
-            <a href="/tags/python/">python<em>·</em></a>
-          
-            <a href="/tags/后端/">后端<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>Python操作Redis的5种数据类型</p>
-        <div class="post-bottom">
-          <a href="/2020/04/25/Python操作Redis的5种数据类型/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="zhoulei.icu" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/01.jpg" itemprop="image" alt="zhou" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="zhoulei.icu" itemprop="url" rel="author">zhou</a>
+            </h3>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/24/生成图片验证码/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/25/3vuyzlZ7rKQ14PW.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-24 00:04</div>
-      <a href="/2020/04/24/生成图片验证码/" class="post-title">
-        <h3>生成图片验证码</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/django/">django<em>·</em></a>
-          
-            <a href="/tags/后端/">后端<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>生成图片验证码</p>
-        <div class="post-bottom">
-          <a href="/2020/04/24/生成图片验证码/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/23/md5加密/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/20/52JI4kirojPqATU.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-23 12:04</div>
-      <a href="/2020/04/23/md5加密/" class="post-title">
-        <h3>MD5加密</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/django/">django<em>·</em></a>
-          
-            <a href="/tags/后端/">后端<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>django使用hashlib库来实现md加密</p>
-        <div class="post-bottom">
-          <a href="/2020/04/23/md5加密/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/23/vs code添加open with code功能，实现右键打开文件夹/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/20/pHuhAjgDWqNLolI.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-23 00:04</div>
-      <a href="/2020/04/23/vs code添加open with code功能，实现右键打开文件夹/" class="post-title">
-        <h3>VS Code添加open with code功能，实现右键打开文件夹</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>VS Code添加open with code功能，实现右键打开文件夹</p>
-        <div class="post-bottom">
-          <a href="/2020/04/23/vs code添加open with code功能，实现右键打开文件夹/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/22/Vue目录详解/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/22/ZIgF9JV82q3wEzM.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-22 00:04</div>
-      <a href="/2020/04/22/Vue目录详解/" class="post-title">
-        <h3>Vue目录详解</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/vue/">vue<em>·</em></a>
-          
-            <a href="/tags/web/">web<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>解释一下vue目录下每个文件的作用</p>
-        <div class="post-bottom">
-          <a href="/2020/04/22/Vue目录详解/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/21/hexo d 之后git pages 自定义域名失效/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2017/11/IMG_20171127_161530-1024x576.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-21 00:04</div>
-      <a href="/2020/04/21/hexo d 之后git pages 自定义域名失效/" class="post-title">
-        <h3>hexo博客上传后自定义域名无法访问博客</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>第一次push自定义域名可以访问，但修改之后再次push自定义域名无法访问</p>
-        <div class="post-bottom">
-          <a href="/2020/04/21/hexo d 之后git pages 自定义域名失效/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/21/vue安装以及简单语法/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/21/KyNwSLDRrm7EzPH.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-21 00:04</div>
-      <a href="/2020/04/21/vue安装以及简单语法/" class="post-title">
-        <h3>vue安装及基本语法</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>vue安装</p>
-        <div class="post-bottom">
-          <a href="/2020/04/21/vue安装以及简单语法/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/21/静态博客图片上传/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2019/06/74857125_p0.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-21 00:04</div>
-      <a href="/2020/04/21/静态博客图片上传/" class="post-title">
-        <h3>静态博客图片上传</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>先介绍两种方法 1.创建Images文件夹 2.使用图床</p>
-        <div class="post-bottom">
-          <a href="/2020/04/21/静态博客图片上传/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/20/Github Pages + Hexo搭建静态博客/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2018/02/illust_66799182_20180128_182352-1024x614.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-20 00:04</div>
-      <a href="/2020/04/20/Github Pages + Hexo搭建静态博客/" class="post-title">
-        <h3>Github Pages + Hexo搭建静态博客</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2020/04/20/Github Pages + Hexo搭建静态博客/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/09/进程和线程的简单理解/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-9 00:04</div>
-      <a href="/2020/04/09/进程和线程的简单理解/" class="post-title">
-        <h3>进程和线程的简单理解</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/python/">python</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>单CPU：一台单核处理器计算机 = 一个车间；多CPU：一台多核处理器计算机 = 一座工厂；进程：一个车间 = 一个进程； （即一个运行的程序）多进程：一座工厂可以同时运行多个车间；CPU和进程：单CPU只能同时运行单个进程，多CPU可以同时运行多个进程。</p>
-        <div class="post-bottom">
-          <a href="/2020/04/09/进程和线程的简单理解/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-
-
-    </main>
-      <!-- 首页默认取最最新文章集 -->
-    <!-- 
-      <nav class="navigator">
-        
-        <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-back"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="iconfont icon-right"></i></a>
-      </nav>
-     -->
-  </div>
-  
-    <div id="pagination"><a href="/page/3/" class="">Previous</a></div>
-  
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>
     <div class="ins-search">

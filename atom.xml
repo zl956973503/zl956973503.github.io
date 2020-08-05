@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-07-06T03:08:08.219Z</updated>
+  <updated>2020-08-05T07:12:47.031Z</updated>
   <id>/</id>
   
   <author>
@@ -17,30 +17,68 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>python的几个数据类型方法</title>
-    <link href="/2020/07/06/python%E7%9A%84%E5%87%A0%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%96%B9%E6%B3%95/"/>
-    <id>/2020/07/06/python的几个数据类型方法/</id>
-    <published>2020-07-05T16:00:00.000Z</published>
-    <updated>2020-07-06T03:08:08.219Z</updated>
+    <title>python发送QQ邮件</title>
+    <link href="/2020/07/12/python%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6/"/>
+    <id>/2020/07/12/python发送QQ邮件/</id>
+    <published>2020-07-11T16:00:00.000Z</published>
+    <updated>2020-08-05T07:12:47.031Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;字符串&quot;&gt;&lt;a href=&quot;#字符串&quot; class=&quot;headerlink&quot; title=&quot;字符串&quot;&gt;&lt;/a&gt;字符串&lt;/h1&gt;&lt;p&gt;（1）字符串转换成列表&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;a = &amp;quot;aaleade&amp;quot;
-b =
-        
-      
+      发送邮件一般使用在注册和验证用户之类的功能点
     
     </summary>
     
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
       <category term="python" scheme="/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python数据类型方法</title>
+    <link href="/2020/07/11/python%E7%9A%84%E5%87%A0%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%96%B9%E6%B3%95/"/>
+    <id>/2020/07/11/python的几个数据类型方法/</id>
+    <published>2020-07-10T16:00:00.000Z</published>
+    <updated>2020-08-05T07:12:13.872Z</updated>
+    
+    <summary type="html">
+    
+      python字符串、列表、字典等方法
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+      <category term="python基础" scheme="/tags/python%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法面试题</title>
+    <link href="/2020/07/10/%E7%AE%97%E6%B3%95%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>/2020/07/10/算法面试题/</id>
+    <published>2020-07-09T16:00:00.000Z</published>
+    <updated>2020-08-05T06:59:48.962Z</updated>
+    
+    <summary type="html">
+    
+      总结一些python面试题
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+      <category term="面试题" scheme="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
@@ -421,50 +459,6 @@ b =
     </summary>
     
       <category term="python" scheme="/categories/python/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mysql中的锁</title>
-    <link href="/2020/04/04/MySql%E4%B8%AD%E7%9A%84%E9%94%81/"/>
-    <id>/2020/04/04/MySql中的锁/</id>
-    <published>2020-04-03T16:00:00.000Z</published>
-    <updated>2020-04-21T02:29:14.972Z</updated>
-    
-    <summary type="html">
-    
-      1.按操作划分：DML锁，DDL锁 2.按锁的粒度划分：表级锁、行级锁、页级锁 3.按锁级别划分：共享锁、排他锁 4.按加锁方式划分：自动锁、显示锁 5.按使用方式划分：乐观锁、悲观锁
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ORM操作</title>
-    <link href="/2020/04/03/ORM%E6%93%8D%E4%BD%9C/"/>
-    <id>/2020/04/03/ORM操作/</id>
-    <published>2020-04-02T16:00:00.000Z</published>
-    <updated>2020-04-21T02:29:20.424Z</updated>
-    
-    <summary type="html">
-    
-      ORM操作
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="web" scheme="/tags/web/"/>

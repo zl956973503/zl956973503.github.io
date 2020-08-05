@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Zhou</title>
+  <title itemprop="name">算法面试题 | Zhou</title>
   
     <link rel="shortcut icon" href="/img/custom/favicon.ico">
   
@@ -376,519 +376,320 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 0px;"></div>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(http://upyun.zhoulei.icu/blog_images/illust_34844544_20180329_131717.jpg);" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://upyun.zhoulei.icu/blog_images/illust_34844544_20180329_131717.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      算法面试题</h1>
+      <p class="entry-census">
+        <span>
+          <a href="zhoulei.icu">
+            <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/01.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="zhoulei.icu">zhou</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-7-10<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
 <div id="content" class="site-content">
-  
-  <div class="notice" style="margin-top:60px">
-    <i class="iconfont icon-notification">
-    </i>
-    <div class="notice-content">欢迎访问我的小站</div>
-  </div>
-  
-  <div class="top-feature-row">
-  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
-  <i class="fa fa-anchor" aria-hidden="true">
-  </i>
-  START:DASH!!</h1>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/theme-sakura/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/startdash/sakura.md.png">
-        </div>
-        <div class="info">
-          <h3>Sakura</h3>
-          <p>本站 hexo 主题</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="http://space.bilibili.com/271849279" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/startdash/bilibili.jpg">
-        </div>
-        <div class="info">
-          <h3>Bilibili</h3>
-          <p>博主的b站视频</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/startdash/wangshiwu.jpg">
-        </div>
-        <div class="info">
-          <h3>hojun的万事屋</h3>
-          <p>技术服务</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-</div>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
-      <i class="fa fa-envira" aria-hidden="true"></i>
-      Discovery</h1>
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="获取指定和的对应索引"><a href="#获取指定和的对应索引" class="headerlink" title="获取指定和的对应索引"></a>获取指定和的对应索引</h1><pre><code class="python">def get_num_index(llist,target):
+        &#39;&#39;&#39;
+        :param target: 俩个下标值的和
+        :param llist: 查看下标所用的列表
+        :return: 返回符合条件的两个下标值
+        &#39;&#39;&#39;
+        y=0
+        for x,val in enumerate(llist):
+            y += 1
+            if llist[x] +llist[y]==target:
+                return (x,y)
+
+if __name__ == &#39;__main__&#39;:
+    print(get_num_index([1,2,3,4,5,6],5))
+</code></pre>
+<h1 id="为何输出为6，6，6，6"><a href="#为何输出为6，6，6，6" class="headerlink" title="为何输出为6，6，6，6"></a>为何输出为6，6，6，6</h1><pre><code class="python">def num():
+    &#39;&#39;&#39;
+    :param i=i  外面每循环一次就把i赋值一次   最后可以得到不同的值  如没有 则等外面的循环完毕 i就赋值一个固定的值 3
+    :return: 返回的是一个列表推导式，里面是一个函数
+    &#39;&#39;&#39;
+    return [lambda x,i=i:i*x for i in range(4)]
+if __name__ == &#39;__main__&#39;:
+    print([m(2) for m in num()])
+</code></pre>
+<p>当我们执行 m(2) 时，运行到num()内部函数，发现变量 i 并不是num()中的变量，于是就到外部函数num中寻找变量 i ，但此时外部的 for 已经循环完毕，最后的 i =3 。所以，每次</p>
+<p>执行m(2)，i 的值都是 3 ，因此，最终结果会是 [6, 6, 6, 6] </p>
+<h1 id="生成器斐波那契"><a href="#生成器斐波那契" class="headerlink" title="生成器斐波那契"></a>生成器斐波那契</h1><pre><code class="python">def fib(max):
+    a,b = 0,1
+    while max &gt; 0:
+        a,b = b,a+b
+        max-=1
+        yield a
+
+
+for i in fib(10):
+    print(i) 
+</code></pre>
+<h1 id="迭代器斐波那契"><a href="#迭代器斐波那契" class="headerlink" title="迭代器斐波那契"></a>迭代器斐波那契</h1><pre><code class="python">class fibonacci(object):
+
+    def __init__(self,n):
+
+        self.n = n
+        self.current = 0
+        self.a = 0
+        self.b = 1
+
+    def __next__(self):
+        if self.current &lt; self.n:
+            self.a,self.b = self.b,self.a+self.b
+            self.current += 1
+            return self.a
+
+        else:
+            raise StopIteration
+
+    def __iter__(self):
+        return self
+
+
+fib = fibonacci(15)
+for num in fib:
+    print(num)
+</code></pre>
+<h1 id="可迭代对象去重"><a href="#可迭代对象去重" class="headerlink" title="可迭代对象去重"></a>可迭代对象去重</h1><pre><code class="python">class Solution():
+    def isUnique(self,astr:str)-&gt;bool:
+        mes_dict={}
+        for i in astr:
+            if mes_dict.get(i,&quot;&quot;):
+                return False
+            else:
+                mes_dict[i] =1
+        return True
+
+s=Solution()
+print(s.isUnique(&#39;1233&#39;))
+</code></pre>
+<h1 id="回文数"><a href="#回文数" class="headerlink" title="回文数"></a>回文数</h1><p>判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</p>
+<pre><code>示例1：
+
+输入: 121
+输出: true
+1
+2
+示例2：
+
+输入: -121
+输出: false
+解释: 从左向右，为 -121 。 从右向左读，为121- 。 因此它不是一个回文数
+1
+2
+3
+示例3：
+
+输入: 10
+输出: false
+解释: 从右向左读，为 01 。 因此它不是一个回文数
+</code></pre><p>代码</p>
+<pre><code class="python">def Palindrome():
+
+    num = input()
+    if num == num[::-1]:
+        print(&#39;true&#39;)
+    else:
+        print(&#39;flase&#39;)
+        print(&#39;从左向右读, 为 %s 。 从右向左读, 为 %s 。因此它不是一个回文数&#39; % (num,num[::-1]))
+
+</code></pre>
+<h1 id="队列实现栈"><a href="#队列实现栈" class="headerlink" title="队列实现栈"></a>队列实现栈</h1><p>栈需要有四个方法</p>
+<p>push(x)     入栈</p>
+<p>pop()  移除栈顶元素</p>
+<p>top()  获取栈顶元素</p>
+<p>empty() – 返回栈是否为空</p>
+<pre><code class="python">class Stack():
+
+
+    def __init__(self):
+        #初始化一个空列表
+        self.stack = []
+
+    def push(self,x):
+        &#39;&#39;&#39;
+        :param x :要添加的元素
+        &#39;&#39;&#39;
+        #列表尾部添加元素
+        self.stack.append(x)
+
+    def top(self):
+        #获取列表尾部元素
+        return self.stack[-1]
+
+    def pop(self):
+        #获取列表尾部元素并将这个元素从列表中删除
+        return self.stack.pop()
+
+    def empty(self):
+        if not self.stack:  #如果列表中没有元素，返回True
+            return True
+        else:               #如果列表中有元素，返回False
+            return False
+
+
+#实例化一个栈
+mystack = Stack()
+
+#尾部添加
+mystack.push(1)
+mystack.push(2)
+
+# 获取列表尾部元素
+print(mystack.top())
+
+#获取栈的尾部元素并将这个元素从栈中删除
+print(mystack.pop())
+
+#判断栈是否为空 空返回True 非空返回False
+print(mystack.empty())
+</code></pre>
+<h1 id="一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10次反弹多高？"><a href="#一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10次反弹多高？" class="headerlink" title="一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10次反弹多高？"></a>一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10次反弹多高？</h1><pre><code class="python">a = [100]  #每个‘反弹落地’过程经过的路程，第1次只有落地（100米）
+h = 100  #每个‘反弹落地’过程，反弹的高度，第1次为100米
+print(&#39;第1次从%s米高落地，走过%s米，之后又反弹至%s米。&#39; % (h, a[0], h/2))
+for i in range(2,11):  #第1次已初始化，再循环9次
+    a.append(h)  #先计算路程，再高度减半，因为一个‘反弹落地’为2个高度
+    h = h / 2
+    print(&#39;第%s次从%s米高落地，共走过%s米，之后又反弹至%s米。&#39; % (i, h, sum(a), h / 2))
+</code></pre>
+<h1 id="反转字符串中的单词"><a href="#反转字符串中的单词" class="headerlink" title="反转字符串中的单词"></a>反转字符串中的单词</h1><p>输入: “Let’s take LeetCode contest”<br>输出: “s’teL ekat edoCteeL tsetnoc”</p>
+<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><pre><code class="python">def reverseWords(s):
+    l = s.split()
+    for i in range(len(l)):
+        l[i] = l[i][::-1]
+
+    return &#39; &#39;.join(l)
+
+print(reverseWords(&quot;Let’s take LeetCode contest&quot;))
+</code></pre>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><pre><code class="python">def reverseWords(s):
+    return &quot; &quot;.join(s.split()[::-1])[::-1]
+print(reverseWords(&quot;Let’s take LeetCode contest&quot;))
+</code></pre>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/07/11/python的几个数据类型方法/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://upyun.zhoulei.icu/blog_images/illust_49566364_20180413_110553.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://upyun.zhoulei.icu/blog_images/illust_49566364_20180413_110553.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                python数据类型方法</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/05/14/HeyUI + Django实现分页/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://s1.ax1x.com/2020/05/13/YaFbU1.md.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://s1.ax1x.com/2020/05/13/YaFbU1.md.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                HeyUI + Django实现分页</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GIGgtUFFhF1eP4QqGwrhtcnQ-gzGzoHsz",
+        appKey: "F7yAoS7oBrhfUctA9jVLVRGR",
+        notify: true, //邮件提醒
+        avatar:'wavatar', //用不同面孔和背景组合生成的头像
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-  <div class="post-thumb">
-    <a href="/2020/04/25/Python操作Redis的5种数据类型/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/25/B3MxCVEUyWa7294.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-25 00:04</div>
-      <a href="/2020/04/25/Python操作Redis的5种数据类型/" class="post-title">
-        <h3>Python操作Redis的5种数据类型</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/django/">django<em>·</em></a>
-          
-            <a href="/tags/python/">python<em>·</em></a>
-          
-            <a href="/tags/后端/">后端<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>Python操作Redis的5种数据类型</p>
-        <div class="post-bottom">
-          <a href="/2020/04/25/Python操作Redis的5种数据类型/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="zhoulei.icu" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/01.jpg" itemprop="image" alt="zhou" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="zhoulei.icu" itemprop="url" rel="author">zhou</a>
+            </h3>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/24/生成图片验证码/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/25/3vuyzlZ7rKQ14PW.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-24 00:04</div>
-      <a href="/2020/04/24/生成图片验证码/" class="post-title">
-        <h3>生成图片验证码</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/django/">django<em>·</em></a>
-          
-            <a href="/tags/后端/">后端<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>生成图片验证码</p>
-        <div class="post-bottom">
-          <a href="/2020/04/24/生成图片验证码/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/23/md5加密/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/20/52JI4kirojPqATU.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-23 12:04</div>
-      <a href="/2020/04/23/md5加密/" class="post-title">
-        <h3>MD5加密</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/django/">django<em>·</em></a>
-          
-            <a href="/tags/后端/">后端<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>django使用hashlib库来实现md加密</p>
-        <div class="post-bottom">
-          <a href="/2020/04/23/md5加密/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/23/vs code添加open with code功能，实现右键打开文件夹/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/20/pHuhAjgDWqNLolI.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-23 00:04</div>
-      <a href="/2020/04/23/vs code添加open with code功能，实现右键打开文件夹/" class="post-title">
-        <h3>VS Code添加open with code功能，实现右键打开文件夹</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>VS Code添加open with code功能，实现右键打开文件夹</p>
-        <div class="post-bottom">
-          <a href="/2020/04/23/vs code添加open with code功能，实现右键打开文件夹/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/22/Vue目录详解/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/22/ZIgF9JV82q3wEzM.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-22 00:04</div>
-      <a href="/2020/04/22/Vue目录详解/" class="post-title">
-        <h3>Vue目录详解</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/vue/">vue<em>·</em></a>
-          
-            <a href="/tags/web/">web<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>解释一下vue目录下每个文件的作用</p>
-        <div class="post-bottom">
-          <a href="/2020/04/22/Vue目录详解/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/21/hexo d 之后git pages 自定义域名失效/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2017/11/IMG_20171127_161530-1024x576.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-21 00:04</div>
-      <a href="/2020/04/21/hexo d 之后git pages 自定义域名失效/" class="post-title">
-        <h3>hexo博客上传后自定义域名无法访问博客</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>第一次push自定义域名可以访问，但修改之后再次push自定义域名无法访问</p>
-        <div class="post-bottom">
-          <a href="/2020/04/21/hexo d 之后git pages 自定义域名失效/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/21/vue安装以及简单语法/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/21/KyNwSLDRrm7EzPH.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-21 00:04</div>
-      <a href="/2020/04/21/vue安装以及简单语法/" class="post-title">
-        <h3>vue安装及基本语法</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>vue安装</p>
-        <div class="post-bottom">
-          <a href="/2020/04/21/vue安装以及简单语法/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/21/静态博客图片上传/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2019/06/74857125_p0.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-21 00:04</div>
-      <a href="/2020/04/21/静态博客图片上传/" class="post-title">
-        <h3>静态博客图片上传</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>先介绍两种方法 1.创建Images文件夹 2.使用图床</p>
-        <div class="post-bottom">
-          <a href="/2020/04/21/静态博客图片上传/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/20/Github Pages + Hexo搭建静态博客/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2018/02/illust_66799182_20180128_182352-1024x614.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-20 00:04</div>
-      <a href="/2020/04/20/Github Pages + Hexo搭建静态博客/" class="post-title">
-        <h3>Github Pages + Hexo搭建静态博客</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2020/04/20/Github Pages + Hexo搭建静态博客/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/04/09/进程和线程的简单理解/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-4-9 00:04</div>
-      <a href="/2020/04/09/进程和线程的简单理解/" class="post-title">
-        <h3>进程和线程的简单理解</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/悦读/">悦读<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/python/">python</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>单CPU：一台单核处理器计算机 = 一个车间；多CPU：一台多核处理器计算机 = 一座工厂；进程：一个车间 = 一个进程； （即一个运行的程序）多进程：一座工厂可以同时运行多个车间；CPU和进程：单CPU只能同时运行单个进程，多CPU可以同时运行多个进程。</p>
-        <div class="post-bottom">
-          <a href="/2020/04/09/进程和线程的简单理解/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-
-
-    </main>
-      <!-- 首页默认取最最新文章集 -->
-    <!-- 
-      <nav class="navigator">
-        
-        <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-back"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="iconfont icon-right"></i></a>
-      </nav>
-     -->
-  </div>
-  
-    <div id="pagination"><a href="/page/3/" class="">Previous</a></div>
-  
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>
     <div class="ins-search">
