@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">flask基础 | Zhou</title>
+  
+    <link rel="shortcut icon" href="/img/custom/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <!-- 第一种看板娘 -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "一只懒洋洋ZhouLei";
+  mashiro_option.author_name = "ZhouLei";
+  mashiro_option.site_url = "https://zhoulei.icu/";
+  mashiro_option.v_appId = "GIGgtUFFhF1eP4QqGwrhtcnQ-gzGzoHsz";
+  mashiro_option.v_appKey = "F7yAoS7oBrhfUctA9jVLVRGR";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/01.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/02.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/03.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/04.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/05.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/06.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/07.webp,https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/cover/08.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+
+<body
+  class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://zhoulei.icu/">
+          <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/01.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <!-- 原代码 -->
+        <!-- <p>Live your life with passion! With some drive!</p> -->
+        <!-- 添加一言API、诗词  包括下边两行-->
+        <p id="jinrishici-sentence">正在加载今日诗词....</p>
+        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/zl956973503" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://music.163.com/#/user/home?id=565312781" target="_blank" class="social-github" title="wangyiyun">
+                    <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/social/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="956973503@qq.com" target="_blank" class="social-github" title="email">
+                    <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/social/email.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">一只懒洋洋</span>
+            <span class="shironeko">ZhouLei</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/client/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+                    客户端
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(http://upyun.zhoulei.icu/blog_images/74015403.png);" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://upyun.zhoulei.icu/blog_images/74015403.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      flask基础</h1>
+      <p class="entry-census">
+        <span>
+          <a href="zhoulei.icu">
+            <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/01.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="zhoulei.icu">zhou</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-7-15<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="什么是Flask"><a href="#什么是Flask" class="headerlink" title="什么是Flask"></a>什么是Flask</h1><p>Flask是一个Python编写的Web微框架，让我们可以使用Python语言快速实现一个网站或Web服务。</p>
+<h1 id="Django和Flask有什么区别"><a href="#Django和Flask有什么区别" class="headerlink" title="Django和Flask有什么区别?"></a>Django和Flask有什么区别?</h1><h4 id="flask"><a href="#flask" class="headerlink" title="flask"></a>flask</h4><p>Flask自由、灵活，可扩展性强，第三方库的选择面广，开发时可以结合自己最喜欢用的轮子，也能结合最流行最强大的Python库<br>入门简单，即便没有多少web开发经验，也能很快做出网站<br>非常适用于小型网站<br>非常适用于开发web服务的API<br>开发大型网站无压力，但代码架构需要自己设计，开发成本取决于开发者的能力<br>各方面性能均等于或优于Django<br>Django自带的或第三方的好评如潮的功能，Flask上总会找到与之类似第三方<br>Flask灵活开发，Python高手基本都会喜欢Flask，但对Django却可能褒贬不<br>Flask与关系型数据库的配合使用不弱于Django，而其与NoSQL数据库的配合远远优于Django</p>
+<h4 id="django"><a href="#django" class="headerlink" title="django"></a>django</h4><p>Django太重了，除了web框架，自带ORM和模板引擎，灵活和自由度不够高<br>Django能开发小应用，但总会有“杀鸡焉用牛刀”的感觉<br>Django的自带ORM非常优秀，综合评价略高于SQLAlchemy<br>Django自带的模板引擎简单好用，但其强大程度和综合评价略低于Jinja2<br>Django自带ORM也使Django与关系型数据库耦合度过高，如果想使用MongoDB等NoSQL数据，需要选取合适的第三方库，且总感觉Django+SQL才是天生一对的搭配，Django+NoSQL砍掉了Django的半壁江山<br>Django目前支持Jinja等非官方模板引擎<br>Django自带的数据库管理app好评如潮<br>Django非常适合企业级网站的开发：快速、靠谱、稳定<br>Django成熟、稳定、完善，但相比于Flask，Django的整体生态相对封闭<br>Django是Python web框架的先驱，用户多，第三方库最丰富，最好的Python库，如果不能直接用到Django中，也一定能找到与之对应的移植<br>Django上手也比较容易，开发文档详细、完善，相关资料丰富</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>当安装 Flask 时，以下配套软件会被自动安装。</p>
+<ul>
+<li><a href="https://palletsprojects.com/p/werkzeug/" target="_blank" rel="noopener">Werkzeug</a> 用于实现 WSGI ，应用和服务之间的标准 Python 接口。</li>
+<li><a href="https://palletsprojects.com/p/jinja/" target="_blank" rel="noopener">Jinja</a> 用于渲染页面的模板语言。</li>
+<li><a href="https://palletsprojects.com/p/markupsafe/" target="_blank" rel="noopener">MarkupSafe</a> 与 Jinja 共用，在渲染页面时用于避免不可信的输入，防止注入攻击。</li>
+<li><a href="https://palletsprojects.com/p/itsdangerous/" target="_blank" rel="noopener">ItsDangerous</a> 保证数据完整性的安全标志数据，用于保护 Flask 的 session cookie.</li>
+<li><a href="https://palletsprojects.com/p/click/" target="_blank" rel="noopener">Click</a> 是一个命令行应用的框架。用于提供 <code>flask</code> 命令，并允许添加自定义 管理命令。</li>
+</ul>
+<h1 id="小应用"><a href="#小应用" class="headerlink" title="小应用"></a>小应用</h1><p>#代码案例</p>
+<pre><code class="python">from flask import Flask
+app = Flask(__name__)    #参数默认写为__name__
+
+@app.route(&#39;/&#39;)    #路由
+def hello_world():
+    return &#39;Hello_World&#39;
+
+
+if __name__ == &quot;__main__&quot;:    #写上这行可以直接运行该文件，不必在命令行敲命令
+    app.run()
+</code></pre>
+<p>启动命令</p>
+<pre><code class="python">set FLASK_APP=hello.py
+flask run
+</code></pre>
+<p><code>FLASK_APP</code> 环境变量中储存的是模块的名称，运行 <strong>flask run</strong> 命令就 会导入这个模块。如果模块的名称不对，那么就会出现导入错误。出现错误的时机是在 应用开始的时候。如果调试模式打开的情况下，会在运行到应用开始的时候出现导入 错误。出错信息会告诉你尝试导入哪个模块时出错，为什么会出错。</p>
+<p>最常见的错误是因为拼写错误而没有真正创建一个 <code>app</code> 对象。</p>
+<h1 id="关于配置"><a href="#关于配置" class="headerlink" title="关于配置"></a>关于配置</h1><h4 id="初始化参数"><a href="#初始化参数" class="headerlink" title="初始化参数"></a>初始化参数</h4><p><img src="http://upyun.zhoulei.icu/blog_content/image-20200727085511780.png" alt></p>
+<ul>
+<li><p>import_name</p>
+<ul>
+<li>Flask程序所在的包(模块)，传 <code>__name__</code> 就可以</li>
+<li>其可以决定 Flask 在访问静态文件时查找的路径</li>
+</ul>
+</li>
+<li><p>static_path</p>
+<ul>
+<li>静态文件访问路径(不推荐使用，使用 static_url_path 代替)</li>
+</ul>
+</li>
+<li><p>static_url_path</p>
+<ul>
+<li>静态文件访问路径，可以不传，默认为：<code>/ + static_folder</code></li>
+</ul>
+</li>
+<li><p>static_folder</p>
+<ul>
+<li>静态文件存储的文件夹，可以不传，默认为 <code>static</code></li>
+</ul>
+</li>
+<li><p>template_folder</p>
+<ul>
+<li>模板文件存储的文件夹，可以不传，默认为 <code>templates</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="调试模式"><a href="#调试模式" class="headerlink" title="调试模式"></a>调试模式</h4><p>每次应用代码 修改之后都需要手动重启服务器，所以可以设置DEBUG（调试模式），可以实现：</p>
+<ol>
+<li>程序代码修改后可以自动重启服务器</li>
+<li>在服务器出现相关错误的时候可以直接将错误信息进行抛出到控制台打印</li>
+</ol>
+<p>设置 Flask 配置有以下三种方式：</p>
+<ul>
+<li>从配置对象中加载(常用)<ul>
+<li>app.config.from_object()</li>
+</ul>
+</li>
+<li>从配置文件中加载<ul>
+<li>app.config.from_pyfile()</li>
+</ul>
+</li>
+<li>从环境变量中加载(了解)<ul>
+<li>app.config.from_envvar()</li>
+</ul>
+</li>
+</ul>
+<h5 id="配置对象"><a href="#配置对象" class="headerlink" title="配置对象"></a>配置对象</h5><pre><code class="python"># 配置对象，里面定义需要给 APP 添加的一系列配置
+class Config(object):
+    DEBUG = True
+
+# 创建 Flask 类的对象,指向程序所在的包的名称
+app = Flask(__name__)
+
+# 从配置对象中加载配置
+app.config.from_object(Config)
+</code></pre>
+<blockquote>
+<p>运行测试，在修改代码之后直接保存，会自动重启服务器</p>
+</blockquote>
+<h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><p>在该文件目录下新建<code>config.ini</code> 文件，并编辑内容为<code>DEBUG = True</code></p>
+<p><img src="http://upyun.zhoulei.icu/blog_content/image-20200727091341124.png" alt></p>
+<p>然后在hello.py中</p>
+<pre><code class="python"># 创建 Flask 类的对象,指向程序所在的包的名称
+app = Flask(__name__)
+
+# 从配置文件中加载配置
+app.config.from_pyfile(&#39;config.ini&#39;)
+</code></pre>
+<h5 id="直接写"><a href="#直接写" class="headerlink" title="直接写"></a>直接写</h5><p>在app.run()中直接写入<code>debug=True</code></p>
+<pre><code>if __name__ == &quot;__main__&quot;:
+    app.run(debug=True)
+</code></pre><h3 id="app-run的参数"><a href="#app-run的参数" class="headerlink" title="app.run的参数"></a>app.run的参数</h3><p>可以指定运行的主机IP地址，端口，是否开启调试模式</p>
+<pre><code class="python">app.run(host=&quot;0.0.0.0&quot;, port=5000, debug = True)
+</code></pre>
+<h1 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h1><p><strong>默认为srt类型</strong></p>
+<p>但是参数中不能带有<code>/</code></p>
+<pre><code class="python">@app.route(&#39;/&lt;username&gt;&#39;)
+def hello_world(username):
+    return &#39;%s&#39; % username
+</code></pre>
+<p><img src="http://upyun.zhoulei.icu/blog_content/image-20200727094721445.png" alt></p>
+<p><strong>int类型</strong></p>
+<p>只接收int类型的参数</p>
+<pre><code class="python">@app.route(&#39;/&lt;int:num&gt;&#39;)
+def hello_world(num):
+    return &#39;%d&#39; % num
+</code></pre>
+<p>path<img src="http://upyun.zhoulei.icu/blog_content/image-20200727094802128.png" alt></p>
+<p>类似字符串传参，但是参数中可以有<code>/</code></p>
+<pre><code class="python">@app.route(&#39;/&lt;path:abc&gt;&#39;)
+def hello_world(abc):
+    return &#39;%s&#39; % abc
+</code></pre>
+<p><img src="http://upyun.zhoulei.icu/blog_content/image-20200727094909972.png" alt></p>
+<p>除此之外还有：</p>
+<p>float 接受正浮点数    uuid接受 UUID 字符串</p>
+<blockquote>
+<p>若是传的参数不满足要求，则会报404</p>
+</blockquote>
+<p>这里可以看出flask通过get方法传参数不需要指定变量名，</p>
+<p>在<a href="mailto:`@app.route" target="_blank" rel="noopener">`@app.route</a>(‘/<username>‘)` 这里已经定义好了，所以路由后边直接写/+值就可以，比如</username></p>
+<pre><code class="python">http://127.0.0.1:5000/zhoulei
+</code></pre>
+<p>而如果是django的话则要写为</p>
+<pre><code class="python">http://127.0.0.1:5000/?username=zhoulei
+</code></pre>
+<h3 id="唯一的-URL-重定向行为"><a href="#唯一的-URL-重定向行为" class="headerlink" title="唯一的 URL / 重定向行为"></a>唯一的 URL / 重定向行为</h3><p>以下两条规则的不同之处在于是否使用尾部的斜杠</p>
+<pre><code class="python">@app.route(&#39;/projects/&#39;)
+def projects():
+    return &#39;The project page&#39;
+
+@app.route(&#39;/about&#39;)
+def about():
+    return &#39;The about page&#39;
+</code></pre>
+<p><code>projects</code> 的 URL 是中规中矩的，尾部有一个斜杠，看起来就如同一个文件夹。 访问一个没有斜杠结尾的 URL 时 Flask 会自动进行重定向，帮你在尾部加上一个斜杠。</p>
+<p><code>about</code> 的 URL 没有尾部斜杠，因此其行为表现与一个文件类似。如果访问这个 URL 时添加了尾部斜杠就会得到一个 404 错误。这样可以保持 URL 唯一，并帮助 搜索引擎避免重复索引同一页面。</p>
+<h1 id="指定请求方式"><a href="#指定请求方式" class="headerlink" title="指定请求方式"></a>指定请求方式</h1><p>在 Flask 中，定义一个路由，默认的请求方式为：</p>
+<ul>
+<li>GET</li>
+<li>OPTIONS(自带)</li>
+<li>HEAD(自带)</li>
+</ul>
+<p>如果想添加请求方试，那么可以如下指定：</p>
+<pre><code class="python">@app.route(&#39;/demo&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;])1
+def demo():
+    # 直接从请求中取到请求方式并返回
+    return request.method
+</code></pre>
+<h1 id="渲染模板"><a href="#渲染模板" class="headerlink" title="渲染模板"></a>渲染模板</h1><p>Flask 自动配置 <a href="http://jinja.pocoo.org/" target="_blank" rel="noopener">Jinja2</a> 模板引擎。</p>
+<p>使用 <a href="https://dormousehole.readthedocs.io/en/latest/api.html#flask.render_template" target="_blank" rel="noopener"><code>render_template()</code></a> 方法可以渲染模板，你只要提供模板名称和需要 作为参数传递给模板的变量就行了。下面是一个简单的模板渲染例子:</p>
+<pre><code class="python">from flask import render_template
+
+@app.route(&#39;/hello/&#39;)
+@app.route(&#39;/hello/&lt;name&gt;&#39;)
+def hello(name=None):
+    return render_template(&#39;hello.html&#39;, name=name)
+</code></pre>
+<p>Flask 会在 <code>templates</code> 文件夹内寻找模板。因此，如果你的应用是一个模块， 那么模板文件夹应该在模块旁边；如果是一个包，那么就应该在包里面：</p>
+<p><strong>情形 1</strong> : 一个模块:</p>
+<pre><code>/application.py
+/templates
+    /hello.html
+</code></pre><p><strong>情形 2</strong> : 一个包:</p>
+<pre><code>/application
+    /__init__.py
+    /templates
+        /hello.html
+</code></pre><p>模板示例：</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;title&gt;Hello from Flask&lt;/title&gt;
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% else %}
+  <h1>Hello, World!</h1>
+{% endif %}
+</code></pre><h1 id="返回json"><a href="#返回json" class="headerlink" title="返回json"></a>返回json</h1><pre><code class="python"># 返回JSON
+@app.route(&#39;/demo4&#39;)
+def demo4():
+    json_dict = {
+        &quot;user_id&quot;: 10,
+        &quot;user_name&quot;: &quot;zhoulei&quot;
+    }
+    return jsonify(json_dict)
+</code></pre>
+<p>使用 jsonify来返回json数据</p>
+<p>结果</p>
+<pre><code>{
+    &quot;user_id&quot;: 10,
+    &quot;user_name&quot;: &quot;zhoulei&quot;
+}
+</code></pre><h4 id="解决中文乱码问题"><a href="#解决中文乱码问题" class="headerlink" title="解决中文乱码问题"></a>解决中文乱码问题</h4><p>直接在代码中添加</p>
+<p><code>app.config[‘JSON_AS_ASCII&#39;] = False</code></p>
+<p>或者在config.ini中添加<code>JSON_AS_ASCII = False</code></p>
+<h1 id="跳转-重定向"><a href="#跳转-重定向" class="headerlink" title="跳转(重定向)"></a>跳转(重定向)</h1><p>跳转到百度</p>
+<pre><code class="python"># 重定向
+@app.route(&#39;/demo5&#39;)
+def demo5():
+    return redirect(&#39;http://www.baidu.com&#39;)
+</code></pre>
+<p>视图函数之间跳转</p>
+<pre><code class="python">@app.route(&#39;/demo1&#39;)
+def demo1():
+    return &#39;demo1&#39;
+
+# 重定向
+@app.route(&#39;/demo5&#39;)
+def demo5():
+    return redirect(url_for(&#39;demo1&#39;))
+</code></pre>
+<p>带参数跳转</p>
+<pre><code class="python"># 路由传递参数
+@app.route(&#39;/user/&lt;int:user_id&gt;&#39;)
+def user_info(user_id):
+    return &#39;hello %d&#39; % user_id
+
+# 重定向
+@app.route(&#39;/demo5&#39;)
+def demo5():
+    # 使用 url_for 生成指定视图函数所对应的 url
+    return redirect(url_for(&#39;user_info&#39;, user_id=100))
+</code></pre>
+<h1 id="flask-SQLAlchemy"><a href="#flask-SQLAlchemy" class="headerlink" title="flask SQLAlchemy"></a>flask SQLAlchemy</h1><pre><code class="python">pip install flask-sqlalchemy
+如果连接的是 mysql 数据库，需要安装 mysqldb
+pip install flask-mysqldb
+</code></pre>
+<p>在config.ini文件中配置</p>
+<pre><code class="python">SQLALCHEMY_DATABASE_URI = &#39;mysql://root:123@127.0.0.1:3306/test&#39;
+root代表用户名，123表示自己mysql的密码，最后的test则是已经存在的数据库
+</code></pre>
+<h3 id="在视图函数中定义模型类"><a href="#在视图函数中定义模型类" class="headerlink" title="在视图函数中定义模型类"></a>在视图函数中定义模型类</h3><pre><code class="python">from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+
+db = SQLAlchemy(app)
+
+
+class Role(db.Model):
+    # 定义列对象
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), unique=True)
+    us = db.relationship(&#39;User&#39;, backref=&#39;role&#39;)
+
+
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), unique=True, index=True)
+    email = db.Column(db.String(64),unique=True)
+    password = db.Column(db.String(64))
+    role_id = db.Column(db.Integer, db.ForeignKey(&#39;role.id&#39;))
+
+
+db.create_all()
+</code></pre>
+<h5 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h5><pre><code>db.create_all()
+</code></pre><h5 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h5><pre><code>db.drop_all()
+</code></pre><h5 id="插入一条数据"><a href="#插入一条数据" class="headerlink" title="插入一条数据"></a>插入一条数据</h5><pre><code class="python">ro1 = Role(name=&#39;admin&#39;)
+db.session.add(ro1)
+db.session.commit()
+#再次插入一条数据
+ro2 = Role(name=&#39;user&#39;)
+db.session.add(ro2)
+db.session.commit()
+</code></pre>
+<h5 id="一次插入多条数据"><a href="#一次插入多条数据" class="headerlink" title="一次插入多条数据"></a>一次插入多条数据</h5><pre><code>us1 = User(name=&#39;wang&#39;,email=&#39;wang@163.com&#39;,password=&#39;123456&#39;,role_id=ro1.id)
+us2 = User(name=&#39;zhang&#39;,email=&#39;zhang@189.com&#39;,password=&#39;201512&#39;,role_id=ro2.id)
+us3 = User(name=&#39;chen&#39;,email=&#39;chen@126.com&#39;,password=&#39;987654&#39;,role_id=ro2.id)
+us4 = User(name=&#39;zhou&#39;,email=&#39;zhou@163.com&#39;,password=&#39;456789&#39;,role_id=ro1.id)
+us5 = User(name=&#39;tang&#39;,email=&#39;tang@itheima.com&#39;,password=&#39;158104&#39;,role_id=ro2.id)
+us6 = User(name=&#39;wu&#39;,email=&#39;wu@gmail.com&#39;,password=&#39;5623514&#39;,role_id=ro2.id)
+us7 = User(name=&#39;qian&#39;,email=&#39;qian@gmail.com&#39;,password=&#39;1543567&#39;,role_id=ro1.id)
+us8 = User(name=&#39;liu&#39;,email=&#39;liu@itheima.com&#39;,password=&#39;867322&#39;,role_id=ro1.id)
+us9 = User(name=&#39;li&#39;,email=&#39;li@163.com&#39;,password=&#39;4526342&#39;,role_id=ro2.id)
+us10 = User(name=&#39;sun&#39;,email=&#39;sun@163.com&#39;,password=&#39;235523&#39;,role_id=ro2.id)
+db.session.add_all([us1,us2,us3,us4,us5,us6,us7,us8,us9,us10])
+db.session.commit()
+</code></pre><h1 id="增删改查"><a href="#增删改查" class="headerlink" title="增删改查"></a>增删改查</h1><h3 id="filter-by精确查询"><a href="#filter-by精确查询" class="headerlink" title="filter_by精确查询"></a>filter_by精确查询</h3><p>返回名字等于wang的所有人</p>
+<pre><code>User.query.filter_by(name=&#39;wang&#39;).all()
+</code></pre><h3 id="first-返回查询到的第一个对象"><a href="#first-返回查询到的第一个对象" class="headerlink" title="first()返回查询到的第一个对象"></a>first()返回查询到的第一个对象</h3><pre><code>User.query.first()
+</code></pre><h3 id="all-返回查询到的所有对象"><a href="#all-返回查询到的所有对象" class="headerlink" title="all()返回查询到的所有对象"></a>all()返回查询到的所有对象</h3><pre><code>User.query.all()
+</code></pre><h3 id="filter模糊查询，返回名字结尾字符为g的所有数据。"><a href="#filter模糊查询，返回名字结尾字符为g的所有数据。" class="headerlink" title="filter模糊查询，返回名字结尾字符为g的所有数据。"></a>filter模糊查询，返回名字结尾字符为g的所有数据。</h3><pre><code class="python">User.query.filter(User.name.endswith(&#39;g&#39;)).all()
+</code></pre>
+<h3 id="get-参数为主键，如果主键不存在没有返回内容"><a href="#get-参数为主键，如果主键不存在没有返回内容" class="headerlink" title="get():参数为主键，如果主键不存在没有返回内容"></a>get():参数为主键，如果主键不存在没有返回内容</h3><pre><code class="python">User.query.get()
+</code></pre>
+<h3 id="逻辑非，返回名字不等于wang的所有数据"><a href="#逻辑非，返回名字不等于wang的所有数据" class="headerlink" title="逻辑非，返回名字不等于wang的所有数据"></a>逻辑非，返回名字不等于wang的所有数据</h3><pre><code class="python">User.query.filter(User.name!=&#39;wang&#39;).all()
+</code></pre>
+<h3 id="not-相当于取反"><a href="#not-相当于取反" class="headerlink" title="not_ 相当于取反"></a>not_ 相当于取反</h3><pre><code class="python">from sqlalchemy import not_
+User.query.filter(not_(User.name==&#39;chen&#39;)).all()
+</code></pre>
+<h3 id="逻辑与，需要导入and，返回and-条件满足的所有数据"><a href="#逻辑与，需要导入and，返回and-条件满足的所有数据" class="headerlink" title="逻辑与，需要导入and，返回and()条件满足的所有数据"></a>逻辑与，需要导入and，返回and()条件满足的所有数据</h3><pre><code class="python">from sqlalchemy import and_
+User.query.filter(and_(User.name!=&#39;wang&#39;,User.email.endswith(&#39;163.com&#39;))).all()
+</code></pre>
+<h3 id="逻辑或，需要导入or"><a href="#逻辑或，需要导入or" class="headerlink" title="逻辑或，需要导入or_"></a>逻辑或，需要导入or_</h3><pre><code class="python">from sqlalchemy import or_
+User.query.filter(or_(User.name!=&#39;wang&#39;,User.email.endswith(&#39;163.com&#39;))).all()
+</code></pre>
+<h3 id="查询数据后删除"><a href="#查询数据后删除" class="headerlink" title="查询数据后删除"></a>查询数据后删除</h3><pre><code class="python">user = User.query.first()
+db.session.delete(user)
+db.session.commit()
+User.query.all()
+</code></pre>
+<h3 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a>更新数据</h3><pre><code class="python">user = User.query.first()
+user.name = &#39;dong&#39;
+db.session.commit()
+User.query.first()
+</code></pre>
+<h3 id="关联查询示例："><a href="#关联查询示例：" class="headerlink" title="关联查询示例："></a>关联查询示例：</h3><blockquote>
+<p>角色和用户的关系是一对多的关系，一个角色可以有多个用户，一个用户只能属于一个角色。</p>
+</blockquote>
+<ul>
+<li>查询角色的所有用户</li>
+</ul>
+<pre><code class="python">#查询roles表id为1的角色
+ro1 = Role.query.get(1)
+#查询该角色的所有用户
+ro1.us.all()
+</code></pre>
+<ul>
+<li>查询用户所属角色</li>
+</ul>
+<pre><code class="python">#查询users表id为3的用户
+us1 = User.query.get(3)
+#查询用户属于什么角色
+us1.role
+</code></pre>
+<h1 id="数据库迁移"><a href="#数据库迁移" class="headerlink" title="数据库迁移"></a>数据库迁移</h1><p>安装</p>
+<pre><code class="python">pip install flask-migrate
+</code></pre>
+<p>代码：</p>
+<pre><code class="python">from flask import Flask
+
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate,MigrateCommand
+from flask_script import Shell,Manager
+
+app = Flask(__name__)
+manager = Manager(app)
+
+db = SQLAlchemy(app)
+
+#第一个参数是Flask的实例，第二个参数是Sqlalchemy数据库实例
+migrate = Migrate(app,db) 
+
+#manager是Flask-Script的实例，这条语句在flask-Script中添加一个db命令
+manager.add_command(&#39;db&#39;,MigrateCommand)
+
+
+
+
+#模型类
+class Role(db.Model):
+    # 定义列对象
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), unique=True)
+    us = db.relationship(&#39;User&#39;, backref=&#39;role&#39;)
+
+
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), unique=True, index=True)
+    email = db.Column(db.String(64),unique=True)
+    password = db.Column(db.String(64))
+    role_id = db.Column(db.Integer, db.ForeignKey(&#39;role.id&#39;))
+
+
+if __name__ == &#39;__main__&#39;:
+    manager.run()
+
+</code></pre>
+<h5 id="创建迁移仓库"><a href="#创建迁移仓库" class="headerlink" title="创建迁移仓库"></a>创建迁移仓库</h5><pre><code>#这个命令会创建migrations文件夹，所有迁移文件都放在里面。
+python database.py db init
+#生成迁移文件
+python database.py db migrate -m &#39;注释&#39;
+</code></pre><h5 id="更新数据库"><a href="#更新数据库" class="headerlink" title="更新数据库"></a>更新数据库</h5><pre><code>python database.py db upgrade
+</code></pre><h5 id="返回以前的版本"><a href="#返回以前的版本" class="headerlink" title="返回以前的版本"></a>返回以前的版本</h5><p>可以根据history命令找到版本号,然后传给downgrade命令:</p>
+<pre><code>python app.py db history
+
+输出格式：&lt;base&gt; -&gt;  版本号 (head), initial migration
+</code></pre><ul>
+<li>回滚到指定版本</li>
+</ul>
+<pre><code>python app.py db downgrade 版本号 
+</code></pre><h1 id="蓝图"><a href="#蓝图" class="headerlink" title="蓝图"></a>蓝图</h1><h5 id="创建一个蓝图对象"><a href="#创建一个蓝图对象" class="headerlink" title="创建一个蓝图对象"></a>创建一个蓝图对象</h5><pre><code class="python">from flask import Blueprint
+#此处的admin自定义，一般为所在文件的名称
+admin=Blueprint(&#39;admin&#39;,__name__)
+</code></pre>
+<h5 id="在主应用注册蓝图"><a href="#在主应用注册蓝图" class="headerlink" title="在主应用注册蓝图"></a>在主应用注册蓝图</h5><pre><code class="python">app.register_blueprint(admin,url_prefix=&#39;/admin&#39;)
+#最后的admin为访问蓝图中的视图的方式，也就是项目启动后，需要先写/admin，再写蓝图中的路由
+</code></pre>
+<h1 id="勾子函数"><a href="#勾子函数" class="headerlink" title="勾子函数"></a>勾子函数</h1><p>在客户端和服务器交互的过程中，有些准备工作或扫尾工作需要处理，比如：</p>
+<ul>
+<li>在请求开始时，建立数据库连接；</li>
+<li>在请求开始时，根据需求进行权限校验；</li>
+<li>在请求结束时，指定数据的交互格式；</li>
+</ul>
+<p>为了让每个视图函数避免编写重复功能的代码，Flask提供了通用设施的功能，即请求钩子。</p>
+<p>请求钩子是通过装饰器的形式实现，Flask支持如下四种请求钩子：</p>
+<ul>
+<li>before_first_request<ul>
+<li>在处理第一个请求前执行</li>
+</ul>
+</li>
+<li>before_request<ul>
+<li>在每次请求前执行</li>
+<li>如果在某修饰的函数中返回了一个响应，视图函数将不再被调用</li>
+</ul>
+</li>
+<li>after_request<ul>
+<li>如果没有抛出错误，在每次请求后执行</li>
+<li>接受一个参数：视图函数作出的响应</li>
+<li>在此函数中可以对响应值在返回之前做最后一步修改处理</li>
+<li>需要将参数中的响应在此参数中进行返回</li>
+</ul>
+</li>
+<li>teardown_request：<ul>
+<li>在每次请求后执行</li>
+<li>接受一个参数：错误信息，如果有相关错误抛出</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/07/16/Flask-Restful/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://upyun.zhoulei.icu/blog_images/78443729_1.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://upyun.zhoulei.icu/blog_images/78443729_1.png">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Flask-Restful</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/07/12/python发送QQ邮件/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://upyun.zhoulei.icu/blog_images/73923117.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://upyun.zhoulei.icu/blog_images/73923117.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                python发送QQ邮件</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GIGgtUFFhF1eP4QqGwrhtcnQ-gzGzoHsz",
+        appKey: "F7yAoS7oBrhfUctA9jVLVRGR",
+        notify: true, //邮件提醒
+        avatar:'wavatar', //用不同面孔和背景组合生成的头像
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="zhoulei.icu" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/01.jpg" itemprop="image" alt="zhou" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="zhoulei.icu" itemprop="url" rel="author">zhou</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Zhou<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2018</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
+        </span>
+        <br>
+        <span><a style="display:inline-block"
+          href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral" target="blank" title="又拍云"><img
+            height="30" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png" alt="upyun" width="80" heigth='30'></a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<!-- 第一种看板娘 -->
+<!-- <script src="https://cdn.jsdelivr.net/gh/yremp/live2d@1.0/autoload.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+
+    <div class="changeSkin-gear no-select" style="background: none; visibility: visible; bottom: 0px;">
+      <div class="keys"> <span id="open-skinMenu"> 切换主题 | SCHEME TOOL &nbsp;<i
+            class="iconfont icon-gear inline-block rotating"></i> </span></div>
+    </div>
+
+    <div class="skin-menu no-select show">
+      <div class="theme-controls row-container">
+        <ul class="menu-list">
+          <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+          <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+          <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+          <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+          <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+          <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+          <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+          <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+        </ul>
+      </div>
+      <div class="font-family-controls row-container"> <button type="button" class="control-btn-serif selected"
+          data-mode="serif" onclick="mashiro_global.font_control.change_font()">Serif</button> <button type="button"
+          class="control-btn-sans-serif" data-mode="sans-serif" onclick="mashiro_global.font_control.change_font()">Sans
+          Serif</button></div>
+    </div>
+    <canvas id="night-mode-cover"></canvas>
+
+    <!-- 背景特效 -->
+    <!-- 背景出现樱花飘落 -->
+    <script src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"></script>
+    <!-- 背景显示飘动的彩带 -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/piao.js"></script> -->
+    <!-- 背景出现雪花飘落 第一种 -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/xuehuapiaoluo.js"></script> -->
+    <!-- 背景出现雪花飘落 第二种 -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/snow.js"></script> -->
+
+
+    <!-- 鼠标点击特效 -->
+    <!-- 点击出现社会主义彩色文字 -->
+    <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script>
+    <!-- 点击出现爱心 -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script> -->
+    <!-- 点击出现彩色气球爆炸效果 -->
+    <!-- <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/clickBom.js"></script> -->
+  
+    <!-- 添加看板娘 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> 
+    <!-- 这条在sakura中已有，可不添加 -->
+    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+    <!-- 预加载 -->
+    <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+  <!-- 实现换肤功能 -->
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/custom/01.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">一只懒洋洋ZhouLei</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/zl956973503" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=956973503&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/client/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+            客户端
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2423720388"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+
+</html>
