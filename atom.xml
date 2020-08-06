@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-08-05T08:42:11.244Z</updated>
+  <updated>2020-08-06T02:15:18.571Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Django2.0.4+Vue2.0实现Gitee三方登陆</title>
+    <link href="/2020/08/01/django2.0.4+vue2.0%E5%AE%9E%E7%8E%B0gitee%E4%B8%89%E6%96%B9%E7%99%BB%E9%99%86/"/>
+    <id>/2020/08/01/django2.0.4+vue2.0实现gitee三方登陆/</id>
+    <published>2020-07-31T16:00:00.000Z</published>
+    <updated>2020-08-06T02:15:18.571Z</updated>
+    
+    <summary type="html">
+    
+      之前写过微博三方登录，这次换成钉钉，流程都是差不多的
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+      <category term="django" scheme="/tags/django/"/>
+    
+  </entry>
   
   <entry>
     <title>微服务</title>
@@ -52,9 +74,9 @@
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="django" scheme="/tags/django/"/>
-    
       <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+      <category term="django" scheme="/tags/django/"/>
     
   </entry>
   
@@ -182,9 +204,9 @@
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="django" scheme="/tags/django/"/>
-    
       <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+      <category term="django" scheme="/tags/django/"/>
     
   </entry>
   
@@ -419,28 +441,6 @@
     
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    
-      <category term="vue" scheme="/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>七牛云上传文件</title>
-    <link href="/2020/04/30/%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/"/>
-    <id>/2020/04/30/七牛云上传文件/</id>
-    <published>2020-04-29T16:00:00.000Z</published>
-    <updated>2020-04-30T04:10:51.482Z</updated>
-    
-    <summary type="html">
-    
-      django + vue 七牛云上传文件
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="django" scheme="/tags/django/"/>
     
       <category term="vue" scheme="/tags/vue/"/>
     
