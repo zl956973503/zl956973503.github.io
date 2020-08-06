@@ -421,7 +421,7 @@
 <pre><code class="js">//gitee登陆
 gitee:function(){
     //创建应用后生成的Cliend ID
-    var clientId = &#39;590d2c0c23d87a19465776c7d5bbded1a2f418efc82fd36795ea7948631ed73f&#39;
+    var clientId = &#39;*********************************&#39;
     //应用回调地址
     var redirect_uri = &#39;http://127.0.0.1:8000/gitee_back&#39;
     //拼接要请求的地址
@@ -431,15 +431,21 @@ gitee:function(){
 },
 </code></pre>
 <h1 id="django代码"><a href="#django代码" class="headerlink" title="django代码"></a>django代码</h1><p>views.py</p>
-<pre><code class="python">#gitee三方登陆
+<pre><code class="python">from django.shortcuts import redirect
+import requests
+import json
+
+
+
+#gitee三方登陆
 class Gitee(APIView):
     def get(self,request):
         #获取gitee给的code
         code = request.GET.get(&#39;code&#39;)
-        #client_id
-        client_id = &#39;590d2c0c23d87a19465776c7d5bbded1a2f418efc82fd36795ea7948631ed73f&#39;
+        #自己的client_id
+        client_id = &#39;*********************************&#39;
         #client_secret
-        client_secret=&#39;ad503c42ed519df84af05605c9ed7deefb619ded2526d75f81a4d05b42bb541b&#39;
+        client_secret=&#39;******************************************8&#39;
         #应用回调地址
         redirect_uri=&#39;http://127.0.0.1:8000/gitee_back&#39;
         #拼接请求地址
