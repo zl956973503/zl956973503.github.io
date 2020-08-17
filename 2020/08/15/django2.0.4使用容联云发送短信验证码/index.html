@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">静态博客图片上传 | Zhou</title>
+  <title itemprop="name">django2.0.4使用容联云发送短信验证码 | Zhou</title>
   
     <link rel="shortcut icon" href="/img/custom/favicon.ico">
   
@@ -382,11 +382,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://2heng.xin/wp-content/uploads//2019/06/74857125_p0.png);" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2019/06/74857125_p0.png">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(http://upyun.zhoulei.icu/blog_images/76921080.jpg);" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://upyun.zhoulei.icu/blog_images/76921080.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      静态博客图片上传</h1>
+      django2.0.4使用容联云发送短信验证码</h1>
       <p class="entry-census">
         <span>
           <a href="zhoulei.icu">
@@ -398,7 +398,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2020-4-21<span class="bull">
+        2020-8-15<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -412,39 +412,31 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <blockquote>
-<p>先前已经把博客搭建好了，但是写博客没有图片怎么能忍，所以来说说图片上传问题</p>
-</blockquote>
-<p>目前我知道有两种方法</p>
-<h1 id="方法一、创建Images文件夹"><a href="#方法一、创建Images文件夹" class="headerlink" title="方法一、创建Images文件夹"></a>方法一、创建Images文件夹</h1><p>1、<code>cd</code>到博客等根目录下 查看<code>_config.yml</code>文件 查找 <code>post_asset_folder</code> 字段确定<code>post_asset_folder</code> 设置为<code>true</code> -&gt; <code>post_asset_folder:true</code></p>
-<p>2、当您设置 <code>post_asset_folder</code>  参数后，在建立文件时，Hexo 会自动建立一个与文章同名的文件夹，您可以把与该文章相关的所有资源都放到那个文件夹，这样你就可以更方便的使用资源。</p>
-<p>3、在博客的根目录执行命令来进行插件的安装。</p>
-<blockquote>
-<p>npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a> –save</p>
-</blockquote>
-<p>4、然后创建一文章 <code>hexo new &quot;test&quot;</code> 然后查看博客的 <code>../source/_posts</code> 目录下的文件，会看到存在一个<code>test 文件夹</code> 和 <code>test.md</code> 文件</p>
-<p>5、将所需要的图片资源放到<code>test 文件夹</code> 内 目录结构如下：</p>
-<p>6、书写文章使用<code>test文件内</code> 的图片</p>
-<p>7、使用<code>hexo s</code> 命令运行本地博客如图</p>
-<p>8、使用<code>hexo clean</code> <code>hexo g</code> <code>hexo deploy</code> 将本地博客推送到远程。</p>
-<h1 id="方法二、使用图床"><a href="#方法二、使用图床" class="headerlink" title="方法二、使用图床"></a>方法二、使用图床</h1><blockquote>
-<p>简单说图床就是一个在网络上存储图片的地方，目的是为了节省本地服务器空间，加快图片打开速度，主要是个人博客和网站使用，我也就是想省一下github pages空间</p>
-</blockquote>
-<p><strong>这里推荐几个图床网站</strong></p>
-<p><a href="https://sm.ms/" target="_blank" rel="noopener">SM.SM</a>    <a href="https://moetu.org/" target="_blank" rel="noopener">meotu</a>    <a href="https://www.z4a.net/" target="_blank" rel="noopener">z4a</a>    <a href="https://www.superbed.cn/" target="_blank" rel="noopener">聚合图床</a>    <a href="https://niupic.com/" target="_blank" rel="noopener">牛图网</a>    <a href="https://imgbb.com/" target="_blank" rel="noopener">imgbb</a>    </p>
-<p>详细介绍请看这里 <a href="https://www.jianshu.com/p/c35091dcba84" target="_blank" rel="noopener">https://www.jianshu.com/p/c35091dcba84</a></p>
-<p>我以<a href="https://sm.ms/" target="_blank" rel="noopener">SM.SM</a>为例</p>
-<blockquote>
-<p>首先进入该网站,看下图。</p>
-</blockquote>
-<p><img src="https://i.loli.net/2020/04/09/bj75UMnpxsztmYQ.gif" alt></p>
-<blockquote>
-<p>上传成功后点击<code>image URL</code>，并复制下方的链接。</p>
-</blockquote>
-<p><img src="https://i.loli.net/2020/04/08/QjYEvSsxkGFlwBA.png" alt></p>
-<p>使用md语法插入图片，将链接粘贴到 <code>输入图片路径中链接</code>中，稍等片刻，图片便会加载好出现。</p>
-<p><img src="https://i.loli.net/2020/04/08/RcbaHvS8BxjFsNy.png" alt></p>
-<p>接着便是<code>hexo g</code> …. 等等正常操作了</p>
+          <h1 id="使用容联云"><a href="#使用容联云" class="headerlink" title="使用容联云"></a>使用容联云</h1><h3 id="登陆并注册"><a href="#登陆并注册" class="headerlink" title="登陆并注册"></a>登陆并注册</h3><p><a href="https://www.yuntongxun.com/user/login" target="_blank" rel="noopener">https://www.yuntongxun.com/user/login</a> </p>
+<h3 id="保存好自己的信息"><a href="#保存好自己的信息" class="headerlink" title="保存好自己的信息"></a>保存好自己的信息</h3><p><img src="http://upyun.zhoulei.icu/blog_content/%E5%AE%B9%E8%81%94%E4%BA%91%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B1.png" alt></p>
+<h3 id="设置测试号码"><a href="#设置测试号码" class="headerlink" title="设置测试号码"></a>设置测试号码</h3><p><img src="http://upyun.zhoulei.icu/blog_content/%E5%AE%B9%E8%81%94%E4%BA%91%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B2.png" alt></p>
+<h1 id="代码编写"><a href="#代码编写" class="headerlink" title="代码编写"></a>代码编写</h1><h3 id="安装容联云sdk"><a href="#安装容联云sdk" class="headerlink" title="安装容联云sdk"></a>安装容联云sdk</h3><pre><code>pip install ronglian_sms_sdk
+</code></pre><p>免费测试文档地址:<a href="https://doc.yuntongxun.com/p/5a531a353b8496dd00dcdfe2" target="_blank" rel="noopener">https://doc.yuntongxun.com/p/5a531a353b8496dd00dcdfe2</a></p>
+<pre><code class="python">from ronglian_sms_sdk import SmsSDK
+
+#设置自己的信息
+accId = &#39;***********************&#39;
+accToken = &#39;***********************&#39;
+appId = &#39;***********************&#39;
+
+
+def send_message(phone, datas):
+    sdk = SmsSDK(accId, accToken, appId)
+    tid = &#39;1&#39;  # 测试模板id为: 1. 内容为: 【云通讯】您的验证码是{1}，请于{2}分钟内正确输入。
+    # mobile = &#39;13303479527&#39;
+    # datas = (&#39;666777&#39;, &#39;5&#39;)  # 模板中的参数按照位置传递，第一个是验证码，第二个是有效时间
+    resp = sdk.sendMessage(tid, phone, datas)
+    resp_dict = json.loads(resp)
+    if resp_dict.get(&#39;statusCode&#39;) == &#39;000000&#39;:
+        return &#39;0&#39;
+    #发送失败返回-1
+    return &#39;-1&#39;
+</code></pre>
 
         </div>
         <!-- .entry-content -->
@@ -476,15 +468,15 @@
           
             <div class="post-nepre half previous">
           
-            <a href="/2020/04/21/vue安装以及简单语法/" rel="prev">
+            <a href="/2020/08/17/django2.0.4设置缓存实现图片验证码/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2020/04/21/KyNwSLDRrm7EzPH.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2020/04/21/KyNwSLDRrm7EzPH.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://upyun.zhoulei.icu/blog_images/65053285.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://upyun.zhoulei.icu/blog_images/65053285.jpg">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                vue安装及基本语法</h3>
+                django2.0.4设置缓存实现图片验证码</h3>
                 <hr>
               </div>
             </a>
@@ -494,15 +486,15 @@
           
             <div class="post-nepre half next">
           
-            <a href="/2020/04/20/Github Pages + Hexo搭建静态博客/" rel="next">
+            <a href="/2020/08/01/django2.0.4+vue2.0实现gitee三方登陆/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2018/02/illust_66799182_20180128_182352-1024x614.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://2heng.xin/wp-content/uploads//2018/02/illust_66799182_20180128_182352-1024x614.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/zl956973503/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://upyun.zhoulei.icu/blog_images/76033613.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://upyun.zhoulei.icu/blog_images/76033613.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                Github Pages + Hexo搭建静态博客</h3>
+                Django2.0.4+Vue2.0实现Gitee三方登陆</h3>
                 <hr>
               </div>
             </a>
