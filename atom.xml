@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="/"/>
+  <link href="https://zhoulei.icu/"/>
   <updated>2020-08-17T12:12:11.145Z</updated>
-  <id>/</id>
+  <id>https://zhoulei.icu/</id>
   
   <author>
     <name>Zhou</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>django2.0.4设置缓存实现图片验证码</title>
-    <link href="/2020/08/17/django2.0.4%E8%AE%BE%E7%BD%AE%E7%BC%93%E5%AD%98%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
-    <id>/2020/08/17/django2.0.4设置缓存实现图片验证码/</id>
+    <link href="https://zhoulei.icu/2020/08/17/django2.0.4%E8%AE%BE%E7%BD%AE%E7%BC%93%E5%AD%98%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
+    <id>https://zhoulei.icu/2020/08/17/django2.0.4设置缓存实现图片验证码/</id>
     <published>2020-08-16T16:00:00.000Z</published>
     <updated>2020-08-17T12:12:11.145Z</updated>
     
@@ -29,19 +29,19 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="django" scheme="https://zhoulei.icu/tags/django/"/>
     
-      <category term="django" scheme="/tags/django/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>django2.0.4使用容联云发送短信验证码</title>
-    <link href="/2020/08/15/django2.0.4%E4%BD%BF%E7%94%A8%E5%AE%B9%E8%81%94%E4%BA%91%E5%8F%91%E9%80%81%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
-    <id>/2020/08/15/django2.0.4使用容联云发送短信验证码/</id>
+    <link href="https://zhoulei.icu/2020/08/15/django2.0.4%E4%BD%BF%E7%94%A8%E5%AE%B9%E8%81%94%E4%BA%91%E5%8F%91%E9%80%81%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
+    <id>https://zhoulei.icu/2020/08/15/django2.0.4使用容联云发送短信验证码/</id>
     <published>2020-08-14T16:00:00.000Z</published>
     <updated>2020-08-17T12:06:23.638Z</updated>
     
@@ -51,19 +51,19 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="django" scheme="https://zhoulei.icu/tags/django/"/>
     
-      <category term="django" scheme="/tags/django/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>Django2.0.4+Vue2.0实现Gitee三方登陆</title>
-    <link href="/2020/08/01/django2.0.4+vue2.0%E5%AE%9E%E7%8E%B0gitee%E4%B8%89%E6%96%B9%E7%99%BB%E9%99%86/"/>
-    <id>/2020/08/01/django2.0.4+vue2.0实现gitee三方登陆/</id>
+    <link href="https://zhoulei.icu/2020/08/01/django2.0.4+vue2.0%E5%AE%9E%E7%8E%B0gitee%E4%B8%89%E6%96%B9%E7%99%BB%E9%99%86/"/>
+    <id>https://zhoulei.icu/2020/08/01/django2.0.4+vue2.0实现gitee三方登陆/</id>
     <published>2020-07-31T16:00:00.000Z</published>
     <updated>2020-08-06T06:35:51.586Z</updated>
     
@@ -73,19 +73,19 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="django" scheme="https://zhoulei.icu/tags/django/"/>
     
-      <category term="django" scheme="/tags/django/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>微服务</title>
-    <link href="/2020/07/30/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    <id>/2020/07/30/微服务/</id>
+    <link href="https://zhoulei.icu/2020/07/30/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    <id>https://zhoulei.icu/2020/07/30/微服务/</id>
     <published>2020-07-29T16:00:00.000Z</published>
     <updated>2020-08-05T08:42:11.244Z</updated>
     
@@ -95,17 +95,17 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>Django中间件</title>
-    <link href="/2020/07/28/Django%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
-    <id>/2020/07/28/Django中间件/</id>
+    <link href="https://zhoulei.icu/2020/07/28/Django%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    <id>https://zhoulei.icu/2020/07/28/Django中间件/</id>
     <published>2020-07-27T16:00:00.000Z</published>
     <updated>2020-08-05T08:35:19.953Z</updated>
     
@@ -115,19 +115,19 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="django" scheme="https://zhoulei.icu/tags/django/"/>
     
-      <category term="django" scheme="/tags/django/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>高并发的解决方案</title>
-    <link href="/2020/07/27/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>/2020/07/27/高并发的解决方案/</id>
+    <link href="https://zhoulei.icu/2020/07/27/%E9%AB%98%E5%B9%B6%E5%8F%91%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://zhoulei.icu/2020/07/27/高并发的解决方案/</id>
     <published>2020-07-26T16:00:00.000Z</published>
     <updated>2020-08-05T08:35:06.181Z</updated>
     
@@ -137,39 +137,17 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mysql的锁</title>
-    <link href="/2020/07/26/mysql%E9%94%81/"/>
-    <id>/2020/07/26/mysql锁/</id>
-    <published>2020-07-25T16:00:00.000Z</published>
-    <updated>2020-08-05T08:28:02.104Z</updated>
-    
-    <summary type="html">
-    
-      mysql的锁
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-      <category term="mysql" scheme="/tags/mysql/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>聚簇和非聚簇索引</title>
-    <link href="/2020/07/26/%E8%81%9A%E7%B0%87%E5%92%8C%E9%9D%9E%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/"/>
-    <id>/2020/07/26/聚簇和非聚簇索引/</id>
+    <link href="https://zhoulei.icu/2020/07/26/%E8%81%9A%E7%B0%87%E5%92%8C%E9%9D%9E%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/"/>
+    <id>https://zhoulei.icu/2020/07/26/聚簇和非聚簇索引/</id>
     <published>2020-07-25T16:00:00.000Z</published>
     <updated>2020-08-05T08:44:06.554Z</updated>
     
@@ -179,19 +157,41 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
-      <category term="mysql" scheme="/tags/mysql/"/>
+      <category term="mysql" scheme="https://zhoulei.icu/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql的锁</title>
+    <link href="https://zhoulei.icu/2020/07/26/mysql%E9%94%81/"/>
+    <id>https://zhoulei.icu/2020/07/26/mysql锁/</id>
+    <published>2020-07-25T16:00:00.000Z</published>
+    <updated>2020-08-05T08:28:02.104Z</updated>
+    
+    <summary type="html">
+    
+      mysql的锁
+    
+    </summary>
+    
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+      <category term="mysql" scheme="https://zhoulei.icu/tags/mysql/"/>
     
   </entry>
   
   <entry>
     <title>mysql的一般优化</title>
-    <link href="/2020/07/25/mysql%E7%9A%84%E4%B8%80%E8%88%AC%E4%BC%98%E5%8C%96/"/>
-    <id>/2020/07/25/mysql的一般优化/</id>
+    <link href="https://zhoulei.icu/2020/07/25/mysql%E7%9A%84%E4%B8%80%E8%88%AC%E4%BC%98%E5%8C%96/"/>
+    <id>https://zhoulei.icu/2020/07/25/mysql的一般优化/</id>
     <published>2020-07-24T16:00:00.000Z</published>
     <updated>2020-08-05T08:26:21.652Z</updated>
     
@@ -201,19 +201,19 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
-      <category term="mysql" scheme="/tags/mysql/"/>
+      <category term="mysql" scheme="https://zhoulei.icu/tags/mysql/"/>
     
   </entry>
   
   <entry>
     <title>mysql 的引擎和事务</title>
-    <link href="/2020/07/23/mysql%20%E7%9A%84%E5%BC%95%E6%93%8E%E5%92%8C%E4%BA%8B%E5%8A%A1/"/>
-    <id>/2020/07/23/mysql 的引擎和事务/</id>
+    <link href="https://zhoulei.icu/2020/07/23/mysql%20%E7%9A%84%E5%BC%95%E6%93%8E%E5%92%8C%E4%BA%8B%E5%8A%A1/"/>
+    <id>https://zhoulei.icu/2020/07/23/mysql 的引擎和事务/</id>
     <published>2020-07-22T16:00:00.000Z</published>
     <updated>2020-08-05T08:24:03.271Z</updated>
     
@@ -223,19 +223,19 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
-      <category term="mysql" scheme="/tags/mysql/"/>
+      <category term="mysql" scheme="https://zhoulei.icu/tags/mysql/"/>
     
   </entry>
   
   <entry>
     <title>Jwt+celery</title>
-    <link href="/2020/07/22/Jwt+celery/"/>
-    <id>/2020/07/22/Jwt+celery/</id>
+    <link href="https://zhoulei.icu/2020/07/22/Jwt+celery/"/>
+    <id>https://zhoulei.icu/2020/07/22/Jwt+celery/</id>
     <published>2020-07-21T16:00:00.000Z</published>
     <updated>2020-08-05T08:22:58.386Z</updated>
     
@@ -245,19 +245,19 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="django" scheme="https://zhoulei.icu/tags/django/"/>
     
-      <category term="django" scheme="/tags/django/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>B-tree，B+tree</title>
-    <link href="/2020/07/21/B-tree%EF%BC%8CB+tree/"/>
-    <id>/2020/07/21/B-tree，B+tree/</id>
+    <link href="https://zhoulei.icu/2020/07/21/B-tree%EF%BC%8CB+tree/"/>
+    <id>https://zhoulei.icu/2020/07/21/B-tree，B+tree/</id>
     <published>2020-07-20T16:00:00.000Z</published>
     <updated>2020-08-05T08:16:13.099Z</updated>
     
@@ -267,17 +267,17 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>websoket的优缺点及使用场景</title>
-    <link href="/2020/07/20/websoket%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/"/>
-    <id>/2020/07/20/websoket的优缺点及使用场景/</id>
+    <link href="https://zhoulei.icu/2020/07/20/websoket%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/"/>
+    <id>https://zhoulei.icu/2020/07/20/websoket的优缺点及使用场景/</id>
     <published>2020-07-19T16:00:00.000Z</published>
     <updated>2020-08-05T08:24:53.035Z</updated>
     
@@ -287,17 +287,17 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>Redis-分布式锁</title>
-    <link href="/2020/07/19/Redis-%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/"/>
-    <id>/2020/07/19/Redis-分布式锁/</id>
+    <link href="https://zhoulei.icu/2020/07/19/Redis-%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/"/>
+    <id>https://zhoulei.icu/2020/07/19/Redis-分布式锁/</id>
     <published>2020-07-18T16:00:00.000Z</published>
     <updated>2020-08-05T07:50:53.853Z</updated>
     
@@ -307,19 +307,19 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
-      <category term="redis" scheme="/tags/redis/"/>
+      <category term="redis" scheme="https://zhoulei.icu/tags/redis/"/>
     
   </entry>
   
   <entry>
     <title>Redis命令以及关于事务操作</title>
-    <link href="/2020/07/18/redis%E5%91%BD%E4%BB%A4/"/>
-    <id>/2020/07/18/redis命令/</id>
+    <link href="https://zhoulei.icu/2020/07/18/redis%E5%91%BD%E4%BB%A4/"/>
+    <id>https://zhoulei.icu/2020/07/18/redis命令/</id>
     <published>2020-07-17T16:00:00.000Z</published>
     <updated>2020-08-05T07:47:05.426Z</updated>
     
@@ -329,19 +329,19 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
-      <category term="redis" scheme="/tags/redis/"/>
+      <category term="redis" scheme="https://zhoulei.icu/tags/redis/"/>
     
   </entry>
   
   <entry>
     <title>Flask-Restful</title>
-    <link href="/2020/07/16/Flask-Restful/"/>
-    <id>/2020/07/16/Flask-Restful/</id>
+    <link href="https://zhoulei.icu/2020/07/16/Flask-Restful/"/>
+    <id>https://zhoulei.icu/2020/07/16/Flask-Restful/</id>
     <published>2020-07-15T16:00:00.000Z</published>
     <updated>2020-08-05T07:34:13.033Z</updated>
     
@@ -351,19 +351,19 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
-      <category term="flask" scheme="/tags/flask/"/>
+      <category term="flask" scheme="https://zhoulei.icu/tags/flask/"/>
     
   </entry>
   
   <entry>
     <title>flask基础</title>
-    <link href="/2020/07/15/Flask%E5%9F%BA%E7%A1%80/"/>
-    <id>/2020/07/15/Flask基础/</id>
+    <link href="https://zhoulei.icu/2020/07/15/Flask%E5%9F%BA%E7%A1%80/"/>
+    <id>https://zhoulei.icu/2020/07/15/Flask基础/</id>
     <published>2020-07-14T16:00:00.000Z</published>
     <updated>2020-08-05T07:45:33.925Z</updated>
     
@@ -373,19 +373,19 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
-      <category term="flask" scheme="/tags/flask/"/>
+      <category term="flask" scheme="https://zhoulei.icu/tags/flask/"/>
     
   </entry>
   
   <entry>
     <title>python发送QQ邮件</title>
-    <link href="/2020/07/12/python%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6/"/>
-    <id>/2020/07/12/python发送QQ邮件/</id>
+    <link href="https://zhoulei.icu/2020/07/12/python%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6/"/>
+    <id>https://zhoulei.icu/2020/07/12/python发送QQ邮件/</id>
     <published>2020-07-11T16:00:00.000Z</published>
     <updated>2020-08-05T07:12:47.031Z</updated>
     
@@ -395,19 +395,19 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
-      <category term="python" scheme="/tags/python/"/>
+      <category term="python" scheme="https://zhoulei.icu/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>python数据类型方法</title>
-    <link href="/2020/07/11/python%E7%9A%84%E5%87%A0%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%96%B9%E6%B3%95/"/>
-    <id>/2020/07/11/python的几个数据类型方法/</id>
+    <link href="https://zhoulei.icu/2020/07/11/python%E7%9A%84%E5%87%A0%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%96%B9%E6%B3%95/"/>
+    <id>https://zhoulei.icu/2020/07/11/python的几个数据类型方法/</id>
     <published>2020-07-10T16:00:00.000Z</published>
     <updated>2020-08-05T07:12:13.872Z</updated>
     
@@ -417,19 +417,19 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
-      <category term="python基础" scheme="/tags/python%E5%9F%BA%E7%A1%80/"/>
+      <category term="python基础" scheme="https://zhoulei.icu/tags/python%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>算法面试题</title>
-    <link href="/2020/07/10/%E7%AE%97%E6%B3%95%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>/2020/07/10/算法面试题/</id>
+    <link href="https://zhoulei.icu/2020/07/10/%E7%AE%97%E6%B3%95%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>https://zhoulei.icu/2020/07/10/算法面试题/</id>
     <published>2020-07-09T16:00:00.000Z</published>
     <updated>2020-08-05T06:59:48.962Z</updated>
     
@@ -439,12 +439,12 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://zhoulei.icu/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://zhoulei.icu/tags/%E6%82%A6%E8%AF%BB/"/>
     
-      <category term="面试题" scheme="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+      <category term="面试题" scheme="https://zhoulei.icu/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
